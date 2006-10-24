@@ -32,7 +32,7 @@ fdi/policy/30user/Makefile
 
 dnl ==========================================================================
 echo "
-                    HAL-INFO $VERSION
+                    hal-info $VERSION
                   ========================
 
         prefix:                     ${prefix}
