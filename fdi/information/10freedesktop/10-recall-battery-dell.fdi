@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deviceinfo version="0.2">
+  <device>
+
+    <match key="battery.model" contains="DELL">
+      <match key="battery.vendor" string="Sony">
+
+        <match key="battery.model" contains="1K055">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C5446">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="F2100">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="KD494">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="W5915">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="Y1333">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="3K590">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C6269">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="F5132">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="OR331">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5308">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="Y4500">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="5P474">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C6270">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="GD785">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="M3006">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5329">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="Y5466">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="6P922">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="D2961">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="H3191">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="RD857">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5332">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C2603">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="D5555">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="J1524">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="TD349">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5333">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C5339">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="D6024">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="JD616">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="U5867">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5875">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="C5340">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="D6025">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="JD617">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="U5882">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+        <match key="battery.model" contains="X5877">
+          <merge key="info.is_recalled" type="bool">true</merge>
+        </match>
+
+        <!-- only matching on model DELL and vendor Sony -->
+        <match key="info.is_recalled" bool="true">
+          <merge key="info.recall.vendor" type="string">Dell</merge>
+          <merge key="info.recall.website_url" type="string">https://www.dellbatteryprogram.com</merge>
+        </match>
+
+      </match>
+    </match>
+
+  </device>
+</deviceinfo>
