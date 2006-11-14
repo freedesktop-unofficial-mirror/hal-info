@@ -1,6 +1,6 @@
 AC_PREREQ(2.57)
 
-AC_INIT(hal-info, 20061024, david@fubar.dk)
+AC_INIT(hal-info, 20061106, david@fubar.dk)
 AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -16,18 +16,10 @@ AC_SUBST(DATADIR, $datadir)
 AC_OUTPUT([
 Makefile
 fdi/Makefile
-fdi/preprobe/Makefile
-fdi/preprobe/10osvendor/Makefile
-fdi/preprobe/20thirdparty/Makefile
-fdi/preprobe/30user/Makefile
 fdi/information/Makefile
 fdi/information/10freedesktop/Makefile
 fdi/information/20thirdparty/Makefile
 fdi/information/30user/Makefile
-fdi/policy/Makefile
-fdi/policy/10osvendor/Makefile
-fdi/policy/20thirdparty/Makefile
-fdi/policy/30user/Makefile
 ])
 
 dnl ==========================================================================

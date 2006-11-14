@@ -1,2 +1,1 @@
-
-SUBDIRS = information policy preprobe
+SUBDIRS = information
