@@ -7,12 +7,16 @@ dist_fdi_DATA = 10-usb-card-readers.fdi		\
 		10-camera-ptp.fdi		\
 		10-usb-pda.fdi			\
 		10-usbcsr-mice.fdi		\
-		10-cd-dvd-burner.fdi		\
+		10-cd-dvd-burner.fdi
+
+if BUILD_RECALL
+dist_fdi_DATA +=				\
 		10-recall-battery-dell.fdi	\
 		10-recall-battery-ibm.fdi	\
 		10-recall-battery-fujitsu.fdi	\
 		10-recall-battery-gateway.fdi	\
 		10-recall-battery-toshiba.fdi
+endif
 
 check:
 	for f in $(dist_fdi_DATA); do \
