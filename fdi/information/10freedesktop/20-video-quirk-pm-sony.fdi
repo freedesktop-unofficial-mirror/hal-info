@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<deviceinfo version="0.2">
+  <device>
+    <match key="smbios.system.manufacturer" string="Sony Corporation">
+      <match key="smbios.system.product" string="VGN-FS115B">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="VGN-FS115Z">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" prefix="PCG-U101">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

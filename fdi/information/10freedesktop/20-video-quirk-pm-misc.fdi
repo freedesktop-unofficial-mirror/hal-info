@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<deviceinfo version="0.2">
+  <device>
+    <match key="smbios.system.manufacturer" contains="ERGOUK">
+      <match key="smbios.system.product" contains="M2N">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" string="Compaq">
+      <match key="smbios.system.product" contains="N620c ">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" prefix="LG">
+      <match key="smbios.system.product" string="M1-3DGBG">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" contains="Matsushita">
+      <match key="smbios.system.product" contains="CF-51E">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" string="Samsung">
+      <match key="smbios.system.product" string="SQ10">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <!-- VIA EPIA M Mini-ITX Motherboard with onboard gfx -->
+  <device>
+    <match key="smbios.system.manufacturer" prefix="VIA">
+      <match key="smbios.system.product" string="VT8623-8235">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" string="ECS">
+      <match key="smbios.system.product" contains="G556 Centrino">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" prefix="Samsung">
+      <match key="smbios.system.product" contains="NX05S">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="SX20S">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <match key="smbios.system.manufacturer" prefix="SHARP">
+      <match key="smbios.system.product" contains="PC-MM20 Series">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

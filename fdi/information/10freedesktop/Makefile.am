@@ -18,6 +18,21 @@ dist_fdi_DATA +=				\
 		10-recall-battery-toshiba.fdi
 endif
 
+if BUILD_VIDEO
+dist_fdi_DATA +=				\
+		20-video-quirk-pm-acer.fdi	\
+		20-video-quirk-pm-apple.fdi	\
+		20-video-quirk-pm-asus.fdi	\
+		20-video-quirk-pm-dell.fdi	\
+		20-video-quirk-pm-fujitsu.fdi	\
+		20-video-quirk-pm-hp.fdi	\
+		20-video-quirk-pm-ibm.fdi	\
+		20-video-quirk-pm-lenovo.fdi	\
+		20-video-quirk-pm-misc.fdi	\
+		20-video-quirk-pm-sony.fdi	\
+		20-video-quirk-pm-toshiba.fdi
+endif
+
 check:
 	for f in $(dist_fdi_DATA); do \
             echo -n "Validate XML in $$f : "; \

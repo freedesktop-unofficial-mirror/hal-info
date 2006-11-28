@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<deviceinfo version="0.2">
+  <device>
+    <match key="smbios.system.manufacturer" prefix="ASUS">
+      <match key="smbios.system.product" string="L2000D">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="L3000D">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="L7000G">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" prefix="M6Ne">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" prefix="M6VA">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" prefix="W5A">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="V6V">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

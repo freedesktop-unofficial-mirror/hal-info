@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<deviceinfo version="0.2">
+  <device>
+    <match key="smbios.system.manufacturer" prefix="Acer">
+      <match key="smbios.system.product" prefix="TravelMate">
+        <match key="smbios.system.product" contains="C300">
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="3220">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="4650">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="290">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="660">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="650">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="3000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="8100">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="smbios.system.product" prefix="Aspire">
+        <match key="smbios.system.product" contains="2000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="3000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        </match>
+        <match key="smbios.system.product" contains="1690">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="smbios.system.product" string="Extensa 4150">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="smbios.system.product" string="Ferrari 4000">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+</deviceinfo>
