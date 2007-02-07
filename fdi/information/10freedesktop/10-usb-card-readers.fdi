@@ -92,32 +92,32 @@
       </match>
 
       <!-- Lexar CF Reader -->
-      <match key="@storage.physical_device:usb.vendor_id" int="0x05dc">
-        <match key="@storage.physical_device:usb.product_id" int="0x0002">
+      <match key="@storage.originating_device:usb.vendor_id" int="0x05dc">
+        <match key="@storage.originating_device:usb.product_id" int="0x0002">
           <merge key="storage.drive_type" type="string">compact_flash</merge>
         </match>
       </match>
 
       <!-- SanDisk ImageMate II CF Reader -->
-      <match key="@storage.physical_device:usb.vendor_id" int="0x0781">
-        <match key="@storage.physical_device:usb.product_id" int="0x0002">
+      <match key="@storage.originating_device:usb.vendor_id" int="0x0781">
+        <match key="@storage.originating_device:usb.product_id" int="0x0002">
           <merge key="storage.drive_type" type="string">compact_flash</merge>
         </match>
       </match>
 
       <!-- Sony Ericsson Handys with Memory Stick (Duo) -->
-      <match key="@storage.physical_device:usb.vendor_id" int="0xfce">
+      <match key="@storage.originating_device:usb.vendor_id" int="0xfce">
         <!-- K750i -->
-	<match key="@storage.physical_device:usb.product_id" int="0xd016">
+	<match key="@storage.originating_device:usb.product_id" int="0xd016">
           <merge key="storage.drive_type" type="string">memory_stick</merge>
-          <merge key="info.vendor" type="copy_property">@storage.physical_device:usb.vendor</merge>
-          <merge key="storage.vendor" type="copy_property">@storage.physical_device:usb.vendor</merge>
+          <merge key="info.vendor" type="copy_property">@storage.originating_device:usb.vendor</merge>
+          <merge key="storage.vendor" type="copy_property">@storage.originating_device:usb.vendor</merge>
 	</match>
 	<!-- General match-->
 	<match key="storage.model" contains="Memory Stick">
           <merge key="storage.drive_type" type="string">memory_stick</merge>
-          <merge key="info.vendor" type="copy_property">@storage.physical_device:usb.vendor</merge>
-          <merge key="storage.vendor" type="copy_property">@storage.physical_device:usb.vendor</merge>
+          <merge key="info.vendor" type="copy_property">@storage.originating_device:usb.vendor</merge>
+          <merge key="storage.vendor" type="copy_property">@storage.originating_device:usb.vendor</merge>
 	</match>
       </match>
 
