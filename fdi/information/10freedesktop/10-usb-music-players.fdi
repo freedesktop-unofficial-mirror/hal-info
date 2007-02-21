@@ -27,6 +27,7 @@
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
+	  <append key="portable_audio_player.audio_folders" type="strlist">PSP/MUSIC/</append>
           <merge key="storage.drive_type" type="string">memory_stick</merge>
         </match>
       </match>
