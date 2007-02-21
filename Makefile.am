@@ -24,9 +24,9 @@ $(srcdir)/ChangeLog:
 
 .PHONY: ChangeLog $(srcdir)/ChangeLog
 
-DISTCLEANFILES = intltool-extract intltool-merge intltool-update
+DISTCLEANFILES =
 
-EXTRA_DIST = HACKING intltool-extract.in intltool-merge.in intltool-update.in mkinstalldirs ChangeLog
+EXTRA_DIST = HACKING ChangeLog
 
 clean-local :
 	rm -f *~

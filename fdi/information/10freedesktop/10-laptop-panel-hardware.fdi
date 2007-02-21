@@ -8,7 +8,7 @@
   <device>
     <match key="info.category" string="laptop_panel">
       <match key="/org/freedesktop/Hal/devices/computer:smbios.system.manufacturer" string="IBM">
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" string="ThinkPad X31">
+        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" contains="ThinkPad">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>

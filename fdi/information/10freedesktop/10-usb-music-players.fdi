@@ -27,6 +27,7 @@
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
+	  <append key="portable_audio_player.audio_folders" type="strlist">PSP/MUSIC/</append>
           <merge key="storage.drive_type" type="string">memory_stick</merge>
         </match>
       </match>
@@ -183,6 +184,22 @@
           </match>
         </match>
 
+        <!-- Philips --> 
+        <match key="@storage.originating_device:usb.vendor_id" int="0x471">
+          <!-- Philips GoGear SA1330 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x165">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
+        </match>
+
  	<!--Panasonic -->
         <match key="@storage.originating_deviceusb.vendor_id" int="0x4da">
 	  <!--Panasonic SV-MP31V-->
@@ -225,6 +242,19 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	  </match>	
+	  <!-- Samsung YP-MT6V -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x5026">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
 	  <!-- YP-F1 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x502b">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
@@ -356,6 +386,17 @@
     	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
     	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
+          <!--Transcend (T.Sonic ??? White) -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x821f">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
           <!-- Jens of Sweeden (JoS) MP-120 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x82d4">
             <append key="info.capabilities" type="strlist">portable_audio_player</append>
@@ -368,10 +409,34 @@
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
+	  <!-- TrekStor i.Beat jump MP3 Player -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x835d">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
         </match>
 
 	<!-- RCA -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x69b">
+	  <!-- Lyra RD1072-->
+	  <match key="@storage.originating_device:usb.product_id" int="0x713">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/audible</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
 	  <!-- Lyra RD2212 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x718">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
@@ -402,7 +467,44 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
+	  <!-- Sansa m250 (maybe others as well) -->
+          <match key="@storage.originating_device:usb.product_id" int="0x7401">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+           <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
+          </match>
+          <!-- Sansa e270 (maybe others as well) -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x7421">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
+          </match>
 	</match>
+
+        <!-- Feiya Technology Corp Memory Bar -->
+        <match key="@storage.originating_device:usb.vendor_id" int="0x090c">
+          <match key="@storage.originating_device:usb.product_id" int="0x1000">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+          </match>
+        </match>
 
 	<!-- Peak Digital Audio Player -->
         <match key="@storage.originating_device:usb.vendor_id" int="0xd7d">
@@ -421,6 +523,20 @@
           </match>
         </match>
         
+	<!-- Danger Research -->
+	<match key="@storage.originating_device:usb.vendor_id" int="0x0da0">
+	  <!-- Hiptop/Sidekick 3 -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x1001">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+	  </match>
+	</match>
+
 	<!-- Cowon -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0xe21">
 	  <!-- iAudio M3 -->
@@ -473,6 +589,23 @@
 	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	  </match>
+	  <!-- iAudio U2 -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x600">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/FM/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	  </match>
 	  <!-- iAudio G3 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x601">
@@ -532,15 +665,14 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">VOICE</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">RECORD</append>
 	    <append key="portable_audio_player.playlist_formats" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/FM</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN</append>
-	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">VOICE/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORD/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/FM/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	  </match>
 	</match>
 
@@ -598,6 +730,8 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MP3/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MSSEMC/Media files/audio/</append>
 	  </match>
 	</match>
 
@@ -665,14 +799,15 @@
 	  </match>
 	</match>
      
-	<!-- Foston -->
+	<!-- Foston, MPMan -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x10d6">
-	  <!-- Foston 256MB -->
+	  <!-- Foston 256MB / MPMan MP-Ki 128 Player -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x1100">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
 	    <merge key="info.category" type="string">portable_audio_player</merge>
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.folder_depth" type="int">0</merge>
 	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -712,8 +847,38 @@
 	  </match>
 	</match>
 
+        <!-- Nexia NX58XX (including Super*Talent MegaScreen) -->
+        <match key="@storage.originating_device:usb.vendor_id" int="0x1718">
+          <match key="@storage.originating_device:usb.product_id" int="0x1013">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
+          </match>
+        </match>
+
         <!-- Motorola -->
         <match key="@storage.originating_device:usb.vendor_id" int="0x22b8">
+          <!-- Motorola iTunes enabled phone -->
+          <match key="@storage.originating_device:usb.product_id" int="0x4810">
+	    <merge key="storage.model" type="string">V360</merge>
+	    <merge key="storage.vendor" type="string">Motorola</merge>
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.type" type="string">ipod</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">mobile/audio/</append>
+	    <merge key="storage.requires_eject" type="bool">true</merge>
+          </match>
           <!-- ROKR e2 Memory Card mode -->
           <match key="@storage.originating_device:usb.product_id" int="0x608d">
             <merge key="storage.model" type="string">ROKR e2</merge>
@@ -733,6 +898,18 @@
 	<match key="@storage.originating_device:usb.vendor_id" int="0x4102">
 	  <!-- T30 UMS -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x1018">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+          </match>
+	  <!-- T10 UMS -->
+          <match key="@storage.originating_device:usb.product_id" int="0x1020">
             <append key="info.capabilities" type="strlist">portable_audio_player</append>
             <merge key="info.category" type="string">portable_audio_player</merge>
             <merge key="portable_audio_player.type" type="string">generic</merge>
@@ -859,129 +1036,9 @@
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
-
 	</match>
+
       </match>
-
-      <!-- Philips --> 
-      <match key="@storage.originating_device:usb.vendor_id" int="0x471">
-        <!-- Philips GoGear SA1330 -->
-        <match key="@storage.originating_device:usb.product_id" int="0x165">
-           <append key="info.capabilities" type="strlist">portable_audio_player</append>
-           <merge key="info.category" type="string">portable_audio_player</merge>
-           <merge key="portable_audio_player.type" type="string">generic</merge>
-           <merge key="portable_audio_player.access_method" type="string">storage</merge>
-           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-           <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
-           <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
-	</match>
-      </match>
-
-      <!-- Motorola iTunes enabled phone -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x22b8">
-        <match key="@storage.originating_device:usb.product_id" int="0x4810">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-          <merge key="portable_audio_player.type" type="string">ipod</merge>
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
-          <merge key="storage.requires_eject" type="bool">true</merge>
-        </match>
-      </match>
-
-      <!-- Sandisk Corp. Sansa m250 (maybe others as well) -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x0781">
-        <match key="@storage.originating_device:usb.product_id" int="0x7401">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
-        </match>
-      </match>
-
-      <!-- TrekStor i.Beat jump MP3 Player -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x066f">
-        <match key="@storage.originating_device:usb.product_id" int="0x835d">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
-        </match>
-      </match>
-
-      <!-- Nexia NX58XX (including Super*Talent MegaScreen) -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x1718">
-        <match key="@storage.originating_device:usb.product_id" int="0x1013">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
-        </match>
-      </match>
-
-      <!-- Feiya Technology Corp Memory Bar -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x090c">
-        <match key="@storage.originating_device:usb.product_id" int="0x1000">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-        </match>
-      </match>
-
-      <!-- MPMan MP-Ki 128 Player -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x10d6">
-        <match key="@storage.originating_device:usb.product_id" int="0x1100">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.folder_depth" type="int">0</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
-        </match>
-      </match>
-
-      <!-- Sandisk Corp. Sansa e270 (maybe others as well) -->
-      <match key="@storage.originating_device:usb.vendor_id" int="0x0781">
-        <match key="@storage.originating_device:usb.product_id" int="0x7421">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
-          <merge key="info.category" type="string">portable_audio_player</merge>
-          <merge key="portable_audio_player.type" type="string">generic</merge>
-          <merge key="portable_audio_player.access_method" type="string">storage</merge>
-          <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-          <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
-         </match>
-      </match>
-
     </match>      
 
     <!-- USB devices that are music players but uses a user-space library -->
