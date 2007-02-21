@@ -226,7 +226,7 @@
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	  </match>	
 	  <!-- Samsung YP-MT6V -->
-	  <match key="@storage.physical_device:usb.product_id" int="0x5026">
+	  <match key="@storage.originating_device:usb.product_id" int="0x5026">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
 	    <merge key="info.category" type="string">portable_audio_player</merge>
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
@@ -488,7 +488,7 @@
 	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
 	  </match>
 	  <!-- iAudio U2 -->
-	  <match key="@storage.physical_device:usb.product_id" int="0x600">
+	  <match key="@storage.originating_device:usb.product_id" int="0x600">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
 	    <merge key="info.category" type="string">portable_audio_player</merge>
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
@@ -762,6 +762,18 @@
 	<match key="@storage.originating_device:usb.vendor_id" int="0x4102">
 	  <!-- T30 UMS -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x1018">
+            <append key="info.capabilities" type="strlist">portable_audio_player</append>
+            <merge key="info.category" type="string">portable_audio_player</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+          </match>
+	  <!-- T10 UMS -->
+          <match key="@storage.originating_device:usb.product_id" int="0x1020">
             <append key="info.capabilities" type="strlist">portable_audio_player</append>
             <merge key="info.category" type="string">portable_audio_player</merge>
             <merge key="portable_audio_player.type" type="string">generic</merge>
