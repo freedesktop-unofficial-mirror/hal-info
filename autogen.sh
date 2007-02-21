@@ -82,10 +82,11 @@ esac
       echo "Running autoconf ..."
       autoconf
 
-glib-gettextize --force --copy                              || exit 1
-intltoolize --copy --force --automake                  || exit 1
+#glib-gettextize --force --copy                              || exit 1
+#intltoolize --copy --force --automake                  || exit 1
 
-conf_flags="--enable-maintainer-mode --enable-gtk-doc"
+#conf_flags="--enable-maintainer-mode --enable-gtk-doc"
+conf_flags="--enable-maintainer-mode"
 
 if test x$NOCONFIGURE = x; then
   echo Running $srcdir/configure $conf_flags "$@" ...
