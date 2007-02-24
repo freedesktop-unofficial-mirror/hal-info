@@ -340,6 +340,24 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
+	  <!-- MSCNMMC MP3 Player / Tevion MD80946 -->
+	  <match key="@storage.physical_device:usb.product_id" int="0x8004">
+	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
+	    <merge key="info.category" type="string">portable_audio_player</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">/</append>
+	    <append key="portable_audio_player.playlist_formats" type="strlist">audio/x-mpegurl</append>
+	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
+	    <match key="storage.lun" int="1">
+	      <merge key="storage.drive_type" type="string">sd_mmc</merge>
+	    </match>
+          </match>
 	  <!-- EXATEL i-BEAD100 Player -->
           <match key="@storage.originating_device:usb.product_id" int="0x8008">
             <append key="info.capabilities" type="strlist">portable_audio_player</append>
@@ -717,6 +735,8 @@
 	    <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MP3/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">MSSEMC/Media files/audio/</append>
 	  </match>
 
 	  <!-- W800 Walkman Phone -->
@@ -801,7 +821,7 @@
      
 	<!-- Foston, MPMan -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x10d6">
-	  <!-- Foston 256MB / MPMan MP-Ki 128 Player -->
+	  <!-- Foston 128/256MB / MPMan MP-Ki 128 Player -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x1100">
 	    <append key="info.capabilities" type="strlist">portable_audio_player</append>
 	    <merge key="info.category" type="string">portable_audio_player</merge>
