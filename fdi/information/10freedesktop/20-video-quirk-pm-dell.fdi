@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
-    <match key="smbios.system.manufacturer" prefix="Dell">
-      <match key="smbios.system.product" prefix="Latitude">
-        <match key="smbios.system.product" contains="D410">
+    <match key="system.hardware.vendor" prefix="Dell">
+      <match key="system.hardware.product" prefix="Latitude">
+        <match key="system.hardware.product" contains="D410">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D610">
+        <match key="system.hardware.product" contains="D610">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="110L">
+        <match key="system.hardware.product" contains="110L">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D510">
+        <match key="system.hardware.product" contains="D510">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D810">
+        <match key="system.hardware.product" contains="D810">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="X1">
+        <match key="system.hardware.product" contains="X1">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="X300">
+        <match key="system.hardware.product" contains="X300">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="110L">
+        <match key="system.hardware.product" contains="110L">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D410">
+        <match key="system.hardware.product" contains="D410">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D510">
+        <match key="system.hardware.product" contains="D510">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D810">
+        <match key="system.hardware.product" contains="D810">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="X300">
+        <match key="system.hardware.product" contains="X300">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D800">
+        <match key="system.hardware.product" contains="D800">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="C600">
+        <match key="system.hardware.product" contains="C600">
           <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="D600">
+        <match key="system.hardware.product" contains="D600">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
       </match>
-      <match key="smbios.system.product" prefix="Inspiron">
-        <match key="smbios.system.product" contains="700m">
+      <match key="system.hardware.product" prefix="Inspiron">
+        <match key="system.hardware.product" contains="700m">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="1200">
+        <match key="system.hardware.product" contains="1200">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="6000">
+        <match key="system.hardware.product" contains="6000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8100">
+        <match key="system.hardware.product" contains="8100">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8200">
+        <match key="system.hardware.product" contains="8200">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8600">
+        <match key="system.hardware.product" contains="8600">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="9300">
+        <match key="system.hardware.product" contains="9300">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="700m">
+        <match key="system.hardware.product" contains="700m">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="1200">
+        <match key="system.hardware.product" contains="1200">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="6000">
+        <match key="system.hardware.product" contains="6000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8100">
+        <match key="system.hardware.product" contains="8100">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8200">
+        <match key="system.hardware.product" contains="8200">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8600">
+        <match key="system.hardware.product" contains="8600">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="9300">
+        <match key="system.hardware.product" contains="9300">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="5150">
+        <match key="system.hardware.product" contains="5150">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
-        <match key="smbios.system.product" contains="8000">
+        <match key="system.hardware.product" contains="8000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         </match>
       </match>
-      <match key="smbios.system.product" contains="Precision M20">
+      <match key="system.hardware.product" contains="Precision M20">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>

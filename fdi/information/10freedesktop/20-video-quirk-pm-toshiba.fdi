@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
-    <match key="smbios.system.manufacturer" string="TOSHIBA">
+    <match key="system.hardware.vendor" string="TOSHIBA">
       <!-- Toshiba Satellite 4080XCDT -->
-      <match key="smbios.system.product" string="Portable PC">
-        <match key="smbios.system.version" string="Version 1.0">
-          <match key="smbios.bios.version" string="Version 7.80">
+      <match key="system.hardware.product" string="Portable PC">
+        <match key="system.hardware.version" string="Version 1.0">
+          <match key="system.firmware.version" string="Version 7.80">
             <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
           </match>
         </match>
       </match>
-      <match key="smbios.system.product" string="Satellite A30">
+      <match key="system.hardware.product" string="Satellite A30">
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="Satellite L10">
+      <match key="system.hardware.product" string="Satellite L10">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="Satellite 1900">
+      <match key="system.hardware.product" prefix="Satellite 1900">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="libretto U100">
+      <match key="system.hardware.product" prefix="libretto U100">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="P4000">
+      <match key="system.hardware.product" prefix="P4000">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="PORTEGE A100">
+      <match key="system.hardware.product" prefix="PORTEGE A100">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="PORTEGE A200">
+      <match key="system.hardware.product" prefix="PORTEGE A200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="PORTEGE M200">
+      <match key="system.hardware.product" prefix="PORTEGE M200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="PORTEGE R200">
+      <match key="system.hardware.product" prefix="PORTEGE R200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="TECRA A2">
+      <match key="system.hardware.product" prefix="TECRA A2">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="TECRA A5">
+      <match key="system.hardware.product" prefix="TECRA A5">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="TECRA M2">
+      <match key="system.hardware.product" prefix="TECRA M2">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>

@@ -7,22 +7,22 @@
        This is a hardware "feature" seen on some IBM and Lenovo laptops. -->
   <device>
     <match key="info.category" string="laptop_panel">
-      <match key="/org/freedesktop/Hal/devices/computer:smbios.system.manufacturer" string="IBM">
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" contains="ThinkPad">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="IBM">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="ThinkPad">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>
-      <match key="/org/freedesktop/Hal/devices/computer:smbios.system.manufacturer" string="LENOVO">
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" string="ThinkPad Z31t">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="LENOVO">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="ThinkPad Z31t">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" string="ThinkPad T60">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="ThinkPad T60">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" string="ThinkPad X60">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="ThinkPad X60">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
-        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" string="ThinkPad X60s">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="ThinkPad X60s">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>

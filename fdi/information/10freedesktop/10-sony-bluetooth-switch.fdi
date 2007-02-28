@@ -4,7 +4,7 @@
 
   <device>
     <match key="system.kernel.name" string="Linux"> 
-      <match key="smbios.system.manufacturer" string="Sony Corporation">
+      <match key="system.hardware.vendor" string="Sony Corporation">
         <match key="system.formfactor" string="laptop">
 	  <match key="system.product" contains="VGN-S1XP">
             <spawn udi="/org/freedesktop/Hal/devices/sonypic_bluetooth_switch"/>

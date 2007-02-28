@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
-    <match key="smbios.system.manufacturer" prefix="FUJITSU">
-      <match key="smbios.system.product" prefix="Amilo M">
+    <match key="system.hardware.vendor" prefix="FUJITSU">
+      <match key="system.hardware.product" prefix="Amilo M">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" prefix="Amilo A7640">
+      <match key="system.hardware.product" prefix="Amilo A7640">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="LifeBook S Series">
+      <match key="system.hardware.product" string="LifeBook S Series">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="LIFEBOOK S6120">
+      <match key="system.hardware.product" string="LIFEBOOK S6120">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="LIFEBOOK P7010">
+      <match key="system.hardware.product" string="LIFEBOOK P7010">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="Stylistic ST5000">
+      <match key="system.hardware.product" string="Stylistic ST5000">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="SCENIC W300/W600">
+      <match key="system.hardware.product" string="SCENIC W300/W600">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>

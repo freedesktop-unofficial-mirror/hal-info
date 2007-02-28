@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
-    <match key="smbios.system.manufacturer" prefix="Apple">
-      <match key="smbios.system.product" string="MacBook1,1">
+    <match key="system.hardware.vendor" prefix="Apple">
+      <match key="system.hardware.product" string="MacBook1,1">
         <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
       </match>
-      <match key="smbios.system.product" string="MacBookPro2,2">
+      <match key="system.hardware.product" string="MacBookPro2,2">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
