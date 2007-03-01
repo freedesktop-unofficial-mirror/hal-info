@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- Some SanDisk USB sticks expose an extra LUN that is, I suppose, used for
+	 Windows drivers (Geez, guys, thanks a lot.). Ignore this. RH #208512 -->
+    <match key="storage.bus" string="usb">
+      <match key="storage.drive_type" string="cdrom">
+	<match key="storage.lun" int="1">
+          <match key="storage.vendor" string="SanDisk">
+            <match key="storage.model" string="U3 Cruzer Micro">
+	      <merge key="info.ignore" type="bool">true</merge>
+	    </match>
+	  </match>
+	</match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>
