@@ -1,6 +1,6 @@
 AC_PREREQ(2.57)
 
-AC_INIT(hal-info, 20070206, david@fubar.dk)
+AC_INIT(hal-info, 20070228, david@fubar.dk)
 AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
@@ -34,6 +34,10 @@ fdi/information/Makefile
 fdi/information/10freedesktop/Makefile
 fdi/information/20thirdparty/Makefile
 fdi/information/30user/Makefile
+fdi/preprobe/Makefile
+fdi/preprobe/10freedesktop/Makefile
+fdi/preprobe/20thirdparty/Makefile
+fdi/preprobe/30user/Makefile
 ])
 
 dnl ==========================================================================
