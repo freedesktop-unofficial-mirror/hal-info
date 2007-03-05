@@ -88,6 +88,25 @@
 	  </match>
 	</match>
 	
+        <match key="@storage.originating_device:usb.vendor_id" int="0x421">
+  	  <!-- Nokia 770 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x431">
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+          </match>
+          <!-- Nokia N800 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x4c3">
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+          </match>
+        </match>
+
 	<!-- SONICblue -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x045a">
 	  <!-- Rio Forge -->
@@ -231,7 +250,7 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
 	  <!-- MSCNMMC MP3 Player / Tevion MD80946 -->
-	  <match key="@storage.physical_device:usb.product_id" int="0x8004">
+	  <match key="@storage.originating_device:usb.product_id" int="0x8004">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
@@ -904,6 +923,6 @@
         </match>
       </match>
     </match>
-
+    
   </device>
 </deviceinfo>

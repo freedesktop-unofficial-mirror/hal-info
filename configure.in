@@ -1,6 +1,6 @@
 AC_PREREQ(2.57)
 
-AC_INIT(hal-info, 20070228, david@fubar.dk)
+AC_INIT(hal-info, 20070304, david@fubar.dk)
 AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
 AM_CONFIG_HEADER(config.h)
 
