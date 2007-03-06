@@ -4,7 +4,7 @@
     <match key="system.hardware.vendor" prefix="Acer">
       <match key="system.hardware.product" prefix="TravelMate">
         <match key="system.hardware.product" contains="C300">
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="3220">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -16,37 +16,37 @@
         </match>
         <match key="system.hardware.product" contains="290">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="660">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="650">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="3000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="8100">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
       <match key="system.hardware.product" prefix="Aspire">
         <match key="system.hardware.product" contains="2000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="3000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="1690">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
       </match>
@@ -56,7 +56,7 @@
       </match>
       <match key="system.hardware.product" string="Ferrari 4000">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbe_save" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
     </match>
