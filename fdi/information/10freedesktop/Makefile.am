@@ -14,6 +14,7 @@ if BUILD_RECALL
 dist_fdi_DATA +=				\
 		10-recall-battery-dell.fdi	\
 		10-recall-battery-ibm.fdi	\
+		10-recall-battery-lenovo.fdi	\
 		10-recall-battery-fujitsu.fdi	\
 		10-recall-battery-gateway.fdi	\
 		10-recall-battery-toshiba.fdi
