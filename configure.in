@@ -12,20 +12,12 @@ dnl - Should we ship the recall data
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(recall, [  --enable-recall         include recall data],enable_recall=$enableval,enable_recall=yes)
 AM_CONDITIONAL(BUILD_RECALL, test x$enable_recall == xyes)
-AC_SUBST(BUILD_RECALL, $enable_recall)
 
 dnl ---------------------------------------------------------------------------
 dnl - Should we ship the video suspend data
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(video, [  --enable-video          include video suspend data],enable_video=$enableval,enable_video=yes)
 AM_CONDITIONAL(BUILD_VIDEO, test x$enable_video == xyes)
-AC_SUBST(BUILD_VIDEO, $enable_video)
-
-dnl ---------------------------------------------------------------------------
-dnl - Make paths available for source files
-dnl ---------------------------------------------------------------------------
-AS_AC_EXPAND(SYSCONFDIR, $sysconfdir)
-AS_AC_EXPAND(DATADIR, $datadir)
 
 AC_OUTPUT([
 Makefile
@@ -46,8 +38,9 @@ echo "
                   ========================
 
         prefix:                     ${prefix}
-        datadir:                    ${DATADIR}
-        sysconfdir:                 ${SYSCONFDIR}
+        datarootdir:                ${datarootdir:-unused}
+        datadir:                    ${datadir}
+        sysconfdir:                 ${sysconfdir}
         hardware recall data:       ${enable_recall}
         video suspend data:         ${enable_video}
 "
