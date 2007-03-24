@@ -17,8 +17,8 @@
 
   <device>
     <match key="info.udi" string="/org/freedesktop/Hal/devices/sonypic_bluetooth_switch">
-      <append key="info.capabilities" type="strlist">bluetooth_switch</append>
-      <merge key="info.category" type="string">bluetooth_switch</merge>
+      <append key="info.capabilities" type="strlist">killswitch</append>
+      <merge key="info.category" type="string">killswitch</merge>
       <merge key="info.product" type="string">Sony Bluetooth Switch</merge>
       <merge key="killswitch.type" type="string">bluetooth</merge>
       <merge key="killswitch.access_method" type="string">sonypic</merge>
