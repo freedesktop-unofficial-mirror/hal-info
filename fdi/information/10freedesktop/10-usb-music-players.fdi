@@ -308,6 +308,13 @@
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
+          <!--Transcend (T.Sonic 610) -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x82e0">
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
 	  <!-- TrekStor i.Beat jump MP3 Player -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x835d">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
