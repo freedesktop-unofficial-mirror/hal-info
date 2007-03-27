@@ -1,3 +1,3 @@
 
-SUBDIRS = 10freedesktop 20thirdparty
+SUBDIRS = 10osvendor 20thirdparty
 

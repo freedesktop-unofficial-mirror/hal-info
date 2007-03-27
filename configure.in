@@ -26,7 +26,7 @@ fdi/information/Makefile
 fdi/information/10freedesktop/Makefile
 fdi/information/20thirdparty/Makefile
 fdi/preprobe/Makefile
-fdi/preprobe/10freedesktop/Makefile
+fdi/preprobe/10osvendor/Makefile
 fdi/preprobe/20thirdparty/Makefile
 ])
 
