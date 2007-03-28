@@ -3,6 +3,17 @@
 <deviceinfo version="0.2">
   <device>
 
+    <!-- some specual device handling -->
+    <match key="info.subsystem" string="usb"> 
+      <!-- copy information to identify the v3i Motorola  -->
+      <match key="@info.parent:usb_device.product" contains="Motorola Phone (V3i)">
+        <match key="usb.product" string="USB Mass Storage Interface">
+           <merge key="info.product" type="copy_property">@info.parent:usb_device.product</merge>
+           <prepend key="info.product" type="string">USB Mass Storage Interface at </prepend>
+        </match>
+      </match>
+    </match>
+
     <match key="info.category" string="storage">
       <!-- Apple iPod - TODO: use USB ids to determine exact output formats  -->
       <match key="storage.vendor" contains="Apple">
@@ -657,10 +668,14 @@
         <match key="@storage.originating_device:usb.vendor_id" int="0x22b8">
           <!-- Motorola iTunes enabled phone -->
           <match key="@storage.originating_device:usb.product_id" int="0x4810">
-	    <merge key="storage.model" type="string">V360</merge>
+	    <merge key="storage.model" type="string">V3 series</merge>
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <match key="@storage.physical_device:info.product" contains="Motorola Phone (V3i)">
+               <merge key="storage.model" type="string">Motorola Phone (V3i)</merge>
+               <merge key="portable_audio_player.type" type="string">ipod</merge>
+            </match>
 	    <merge key="storage.vendor" type="string">Motorola</merge>
             <merge key="portable_audio_player.access_method" type="string">storage</merge>
-            <merge key="portable_audio_player.type" type="string">ipod</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">mobile/audio/</append>
