@@ -5,8 +5,8 @@
 
     <!-- some specual device handling -->
     <match key="info.subsystem" string="usb"> 
-      <!-- copy information to identify the v3i Motorola  -->
-      <match key="@info.parent:usb_device.product" contains="Motorola Phone (V3i)">
+      <!-- copy information to identify the Motorola Phones  -->
+      <match key="@info.parent:usb_device.product" contains="Motorola Phone">
         <match key="usb.product" string="USB Mass Storage Interface">
            <merge key="info.product" type="copy_property">@info.parent:usb_device.product</merge>
            <prepend key="info.product" type="string">USB Mass Storage Interface at </prepend>
@@ -672,6 +672,10 @@
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <match key="@storage.physical_device:info.product" contains="Motorola Phone (V3i)">
                <merge key="storage.model" type="string">Motorola Phone (V3i)</merge>
+               <merge key="portable_audio_player.type" type="string">ipod</merge>
+            </match>
+	    <match key="@storage.physical_device:info.product" contains_ncase="iTunes">
+               <merge key="storage.model" type="string">Motorola iTunes Phone</merge>
                <merge key="portable_audio_player.type" type="string">ipod</merge>
             </match>
 	    <merge key="storage.vendor" type="string">Motorola</merge>
