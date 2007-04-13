@@ -3,17 +3,6 @@
 <deviceinfo version="0.2">
   <device>
 
-    <!-- some specual device handling -->
-    <match key="info.subsystem" string="usb"> 
-      <!-- copy information to identify the Motorola Phones  -->
-      <match key="@info.parent:usb_device.product" contains="Motorola Phone">
-        <match key="usb.product" string="USB Mass Storage Interface">
-           <merge key="info.product" type="copy_property">@info.parent:usb_device.product</merge>
-           <prepend key="info.product" type="string">USB Mass Storage Interface at </prepend>
-        </match>
-      </match>
-    </match>
-
     <match key="info.category" string="storage">
       <!-- Apple iPod - TODO: use USB ids to determine exact output formats  -->
       <match key="storage.vendor" contains="Apple">
@@ -684,11 +673,11 @@
           <match key="@storage.originating_device:usb.product_id" int="0x4810">
 	    <merge key="storage.model" type="string">V3 series</merge>
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
-	    <match key="@storage.physical_device:info.product" contains="Motorola Phone (V3i)">
+	    <match key="@storage.originating_device:@info.parent:usb_device.product" contains="Motorola Phone (V3i)">
                <merge key="storage.model" type="string">Motorola Phone (V3i)</merge>
                <merge key="portable_audio_player.type" type="string">ipod</merge>
             </match>
-	    <match key="@storage.physical_device:info.product" contains_ncase="iTunes">
+	    <match key="@storage.originating_device:@info.parent:usb_device.product" contains_ncase="iTunes">
                <merge key="storage.model" type="string">Motorola iTunes Phone</merge>
                <merge key="portable_audio_player.type" type="string">ipod</merge>
             </match>
