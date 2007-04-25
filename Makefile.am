@@ -46,7 +46,7 @@ release-real:
 	@autoreconf
 	@make dist
 	@scp hal-info-`cat VERSION`.tar.gz david@people.freedesktop.org:public_html/dist
-	@git-commit -m "version `cat VERSION`" -a
+	@git-commit -m "version `cat VERSION`" VERSION
 	@git-tag -s HAL_INFO_`cat VERSION`
 	@git-push
 	@echo "From: $(GIT_AUTHOR_NAME) <$(GIT_AUTHOR_EMAIL)>" > .release-mail
