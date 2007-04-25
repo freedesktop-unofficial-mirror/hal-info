@@ -87,7 +87,8 @@
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
 	</match>
-	
+
+	<!-- Nokia -->
         <match key="@storage.originating_device:usb.vendor_id" int="0x421">
   	  <!-- Nokia 770 -->
           <match key="@storage.originating_device:usb.product_id" int="0x431">
@@ -105,6 +106,14 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
           </match>
+          <!-- Nokia E60 -->
+          <match key="@storage.physical_device:usb.product_id" int="0x0434">
+            <merge key="storage.requires_eject" type="bool">true</merge>
+          </match>
+          <!-- Nokia E70 -->
+	  <match key="@storage.physical_device:usb.product_id" int="0x0433">
+	    <merge key="storage.requires_eject" type="bool">true</merge>
+	  </match>
         </match>
 
 	<!-- SONICblue -->
