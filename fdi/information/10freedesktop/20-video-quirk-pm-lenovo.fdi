@@ -11,6 +11,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="63664DU">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <!-- T60p -->
       <match key="system.hardware.product" prefix="1706">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
