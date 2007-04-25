@@ -47,8 +47,9 @@ release-real:
 	@make dist
 	@scp hal-info-`cat VERSION`.tar.gz david@people.freedesktop.org:public_html/dist
 	@git-commit -m "version `cat VERSION`" VERSION
-	@git-tag -s HAL_INFO_`cat VERSION`
 	@git-push
+	@git-tag -m "version `cat VERSION`" -s HAL_INFO_`cat VERSION`
+	@git-push --tags
 	@echo "From: $(GIT_AUTHOR_NAME) <$(GIT_AUTHOR_EMAIL)>" > .release-mail
 	@echo "To: hal@lists.freedesktop.org" >> .release-mail
 	@echo "Subject: hal-info `cat VERSION` release" >> .release-mail
