@@ -22,7 +22,7 @@
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
       </match>
-      <!-- T42p -->
+      <!-- X40 -->
       <match key="system.hardware.product" prefix="2371">
         <match key="system.hardware.version" string="ThinkPad X40">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
