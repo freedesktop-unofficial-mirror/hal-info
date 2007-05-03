@@ -28,26 +28,6 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="110L">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="D410">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="D510">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="D810">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="X300">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
         <match key="system.hardware.product" contains="D800">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
@@ -62,34 +42,6 @@
         </match>
       </match>
       <match key="system.hardware.product" prefix="Inspiron">
-        <match key="system.hardware.product" contains="700m">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="1200">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="6000">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="8100">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="8200">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="8600">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="9300">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
         <match key="system.hardware.product" contains="700m">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
