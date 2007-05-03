@@ -25,6 +25,13 @@
     </match>
   </device>
   <device>
+    <match key="system.hardware.vendor" contains="MAXDATA">
+      <match key="system.hardware.product" contains="Pro 6100X">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
     <match key="system.hardware.vendor" contains="Matsushita">
       <match key="system.hardware.product" contains="CF-51E">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
