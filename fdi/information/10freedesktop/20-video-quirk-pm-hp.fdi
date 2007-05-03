@@ -38,46 +38,6 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains="nc4200">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nx6110">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc6120">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc6220">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc8230">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="dv1000">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="zt3000">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="zd7000">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="Tx1100">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="TR1105">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" contains="R4100">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>

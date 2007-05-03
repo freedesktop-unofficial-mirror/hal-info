@@ -56,30 +56,10 @@
     </match>
   </device>
   <device>
-    <match key="system.hardware.vendor" string="ECS">
-      <match key="system.hardware.product" contains="G556 Centrino">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-    </match>
-  </device>
-  <device>
     <match key="system.hardware.vendor" prefix="Samsung">
-      <match key="system.hardware.product" contains="NX05S">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" string="SX20S">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-    </match>
-  </device>
-  <device>
-    <match key="system.hardware.vendor" prefix="SHARP">
-      <match key="system.hardware.product" contains="PC-MM20 Series">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
