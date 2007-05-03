@@ -23,7 +23,7 @@
         </match>
       </match>
       <match key="system.hardware.product" contains="nx6125">
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" contains="nc6230">
@@ -40,7 +40,7 @@
       </match>
       <match key="system.hardware.product" contains="nc4200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" contains="nx6110">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
