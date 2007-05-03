@@ -89,6 +89,24 @@
       </match>
       <match key="storage.model" string="IC1210    MMC/SD">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
+</match>
+
+      <!-- Noname multi-card Reader -->
+      <match key="@storage.physical_device:usb.vendor_id" int="0x05e3">
+	  <match key="@storage.physical_device:usb.product_id" int="0x0760">
+	     <match key="storage.lun" int="0">
+		     <merge key="storage.drive_type" type="string">compact_flash</merge>
+	     </match>
+	     <match key="storage.lun" int="1">
+		     <merge key="storage.drive_type" type="string">memory_stick</merge>
+	     </match>
+	     <match key="storage.lun" int="2">
+		     <merge key="storage.drive_type" type="string">sd_mmc</merge>
+	     </match>
+	     <match key="storage.lun" int="3">
+		     <merge key="storage.drive_type" type="string">smart_media</merge>
+	     </match>
+        </match>
       </match>
 
       <!-- Lexar CF Reader -->
