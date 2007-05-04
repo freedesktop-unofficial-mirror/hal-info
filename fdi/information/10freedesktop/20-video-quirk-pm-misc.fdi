@@ -10,9 +10,18 @@
   </device>
   <device>
     <match key="system.hardware.vendor" string="Compaq">
-      <match key="system.hardware.product" contains="N620c ">
+      <match key="system.hardware.product" contains="N620c">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
+    <!-- vbe mode does not work, text size changes. -->
+    <match key="system.hardware.vendor" prefix="Compaq ">
+      <match key="system.hardware.product" prefix="Evo N800w">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -63,4 +72,23 @@
       </match>
     </match>
   </device>
+
+  <device>
+    <match key="system.hardware.vendor" string="AVERATEC">
+      <match key="system.hardware.product" string="3700 Series">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
+  <device>
+    <match key="system.hardware.vendor" prefix="BenQ">
+      <match key="system.hardware.product" string="Joybook R22">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
 </deviceinfo>

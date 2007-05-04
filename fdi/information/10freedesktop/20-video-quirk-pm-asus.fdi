@@ -19,6 +19,23 @@
       <match key="system.hardware.product" string="V6V">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="M6N ">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="M5N">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="M7A">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+    <!-- ASUS a7v600 motherboard, has no usable sys_* entries besides bios_version -->
+    <match key="smbios.bios.version" prefix="ASUS A7V600">
+      <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
     </match>
   </device>
 </deviceinfo>

@@ -22,6 +22,18 @@
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
       </match>
+      <match key="system.hardware.product" prefix="Presario R3200">	
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="Pavilion dv4000">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="Pavilion zt3300">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" contains="nx6125">
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
