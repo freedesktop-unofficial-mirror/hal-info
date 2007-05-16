@@ -2,6 +2,9 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="Apple">
+      <match key="system.hardware.product" string="MacBookPro1,1">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" string="MacBook1,1">
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
