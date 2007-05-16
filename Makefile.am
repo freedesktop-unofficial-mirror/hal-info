@@ -50,18 +50,19 @@ release-real:
 	@git-push
 	@git-tag -m "version `cat VERSION`" -s HAL_INFO_`cat VERSION`
 	@git-push --tags
-	@echo "From: $(GIT_AUTHOR_NAME) <$(GIT_AUTHOR_EMAIL)>" > .release-mail
-	@echo "To: hal@lists.freedesktop.org" >> .release-mail
-	@echo "Subject: hal-info `cat VERSION` release" >> .release-mail
-	@echo "X-Mailer: hal-info release script" >> .release-mail
-	@echo "" >> .release-mail
-	@echo "There's a new hal-info `cat VERSION` release available. Download from" >> .release-mail
-	@echo "" >> .release-mail
-	@echo " http://people.freedesktop.org/~david/dist/hal-info-`cat VERSION`.tar.gz" >> .release-mail
-	@echo "" >> .release-mail
-	@echo "." >> .release-mail
-	@echo "" >> .release-mail
-	@cat .release-mail | $(MAIL) davidz@redhat.com hal@lists.freedesktop.org
+
+#	@echo "From: $(GIT_AUTHOR_NAME) <$(GIT_AUTHOR_EMAIL)>" > .release-mail
+#	@echo "To: hal@lists.freedesktop.org" >> .release-mail
+#	@echo "Subject: hal-info `cat VERSION` release" >> .release-mail
+#	@echo "X-Mailer: hal-info release script" >> .release-mail
+#	@echo "" >> .release-mail
+#	@echo "There's a new hal-info `cat VERSION` release available. Download from" >> .release-mail
+#	@echo "" >> .release-mail
+#	@echo " http://people.freedesktop.org/~david/dist/hal-info-`cat VERSION`.tar.gz" >> .release-mail
+#	@echo "" >> .release-mail
+#	@echo "." >> .release-mail
+#	@echo "" >> .release-mail
+#	@cat .release-mail | $(MAIL) davidz@redhat.com hal@lists.freedesktop.org
 
 
 
