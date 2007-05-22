@@ -38,13 +38,20 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- G40 -->
+      <!-- T43 -->
       <match key="system.hardware.product" prefix="2668">
         <match key="system.hardware.version" string="ThinkPad T43">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
       </match>
+      <match key="system.hardware.product" prefix="1871">
+        <match key="system.hardware.version" string="ThinkPad T43">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+      </match>
+      <!-- G40 -->
       <match key="system.hardware.product" prefix="2388">
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
