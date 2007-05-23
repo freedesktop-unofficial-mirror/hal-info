@@ -48,14 +48,6 @@
       </match>
     </match>
   </device>
-  <device>
-    <match key="system.hardware.vendor" string="Samsung">
-      <match key="system.hardware.product" string="SQ10">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-    </match>
-  </device>
   <!-- VIA EPIA M Mini-ITX Motherboard with onboard gfx -->
   <device>
     <match key="system.hardware.vendor" prefix="VIA">
@@ -69,6 +61,10 @@
       <match key="system.hardware.product" string="SX20S">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="SQ10">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
