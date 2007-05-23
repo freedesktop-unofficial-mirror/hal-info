@@ -45,8 +45,8 @@
       <!-- T43 -->
       <match key="system.hardware.product" prefix="2668">
         <match key="system.hardware.version" string="ThinkPad T43">
-          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
       <match key="system.hardware.product" prefix="1871">
