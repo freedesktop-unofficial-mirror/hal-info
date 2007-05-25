@@ -25,6 +25,9 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="ThinkPad X60s">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="3000 N100">
+          <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
+        </match>
       </match>
     </match>
   </device>
