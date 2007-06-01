@@ -55,6 +55,9 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains="5610">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
       </match>
       <match key="system.hardware.product" string="Extensa 4150">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
