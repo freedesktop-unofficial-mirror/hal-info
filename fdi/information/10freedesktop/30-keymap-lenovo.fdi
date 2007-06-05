@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- These are raw scancodes produced by the atkbd driver -->
+    <match key="@input.originating_device:info.linux.driver" string="atkbd">
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LENOVO">
+        <match key="/org/freedesktop/Hal/devices/computer:smbios.system.version" contains="3000">
+          <append key="input.keymap.data" type="strlist">e016:wlan</append> <!-- Fn+F5 wireless -->
+          <append key="input.keymap.data" type="strlist">e017:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">e018:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+    </match>
+
+    <!-- These are buttons synthesized in other kernel drivers -->
+    <match key="input.product" string="ThinkPad Extra Buttons">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LENOVO">
+        <append key="input.keymap.data" type="strlist">007f:coffee</append> <!-- thinkvantage -->
+        <append key="info.capabilities" type="strlist">input.keymap</append>
+      </match>
+    </match>
+
+  </device>
+</deviceinfo>
+
