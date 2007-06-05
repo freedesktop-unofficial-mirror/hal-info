@@ -37,6 +37,11 @@ dist_fdi_DATA +=				\
 		20-video-quirk-pm-toshiba.fdi
 endif
 
+if BUILD_KEYMAPS
+dist_fdi_DATA +=				\
+		30-keymap-lenovo.fdi
+endif
+
 check:
 	for f in $(dist_fdi_DATA); do \
             echo -n "Validate XML in $$f : "; \
