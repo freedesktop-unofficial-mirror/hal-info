@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- These are raw scancodes produced by the atkbd driver -->
+    <match key="@input.originating_device:info.linux.driver" string="atkbd">
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Latitude">
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D420">
+	    <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+	    <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
+	    <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+	    <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+	    <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+	    <append key="input.keymap.data" type="strlist">e005:f13</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
+	    <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+	    <append key="info.capabilities" type="strlist">input.keymap</append>
+	  </match>
+	</match>
+      </match>
+
+    </match>
+
+  </device>
+</deviceinfo>
+

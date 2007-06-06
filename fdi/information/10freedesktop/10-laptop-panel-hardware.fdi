@@ -7,6 +7,13 @@
        This is a hardware "feature" seen on some IBM and Lenovo laptops. -->
   <device>
     <match key="info.category" string="laptop_panel">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Latitude">
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D420">
+	    <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
+	  </match>
+	</match>
+      </match>
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="IBM">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="ThinkPad">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
