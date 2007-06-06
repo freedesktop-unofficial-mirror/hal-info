@@ -14,6 +14,24 @@
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MICRO-STAR">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="INFINITY">
+          <append key="input.keymap.data" type="strlist">e064:prog1</append> <!-- Fn-F3   Touchpad disable -->
+          <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F4   Brightness down -->
+          <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F5   Brightness up -->
+          <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
+          <append key="input.keymap.data" type="strlist">e030:volumeup</append> <!-- Fn-F8   Volume up -->
+          <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
+          <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F12  Sleep -->
+          <append key="input.keymap.data" type="strlist">e06c:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">e032:www</append> <!-- e button -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- satellite dish1 -->
+          <append key="input.keymap.data" type="strlist">e062:bluetooth</append> <!-- satellite dish2 -->
+          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- Search -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
     </match>
 
   </device>
