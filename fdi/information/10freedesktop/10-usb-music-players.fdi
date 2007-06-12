@@ -6,12 +6,13 @@
     <match key="info.category" string="storage">
       <!-- Apple iPod - TODO: use USB ids to determine exact output formats  -->
       <match key="storage.vendor" contains="Apple">
-	<match key="storage.model" contains="iPod">
+        <match key="storage.model" contains="iPod">
           <merge key="portable_audio_player.access_method" type="string">storage</merge>
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">ipod</addset>
           <merge key="portable_audio_player.type" type="string">ipod</merge>
-          <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+          <addset key="portable_audio_player.output_formats" type="strlist">audio/aac</addset>
           <merge key="storage.requires_eject" type="bool">true</merge>
-	</match>
+        </match>
       </match>
 
       <!-- USB Mass Storage devices that are music players -->
