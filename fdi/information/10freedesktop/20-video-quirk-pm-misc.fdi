@@ -87,4 +87,13 @@
     </match>
   </device>
 
+  <device>
+    <match key="system.hardware.vendor" prefix="Elonex PLC">
+      <match key="system.hardware.product" contains="M5A">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
 </deviceinfo>
