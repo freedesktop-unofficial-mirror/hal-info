@@ -2,6 +2,13 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="Dell">
+      <match key="system.hardware.product" prefix="Precision">
+        <match key="system.hardware.product" contains="M65">
+          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+      </match>
       <match key="system.hardware.product" prefix="Latitude">
         <match key="system.hardware.product" contains="C600">
           <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
