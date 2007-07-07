@@ -58,6 +58,9 @@
         <match key="system.hardware.product" suffix="X1">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains="X300">
+          <merge key="power_management.quirk.vmestate_restore" type="bool">true</merge>
+        </match>
       </match>
       <match key="system.hardware.product" prefix="Inspiron">
         <match key="system.hardware.product" contains="5150">
