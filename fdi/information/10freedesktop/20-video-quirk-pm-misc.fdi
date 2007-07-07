@@ -96,4 +96,17 @@
     </match>
   </device>
 
+  <device>
+    <match key="system.hardware.vendor" string="MiTAC">
+      <!-- Mitac 8350
+       system.hardware.product = ''  (string)
+       system.hardware.serial = ''  (string)
+       system.hardware.uuid = '64DBBBB4-5631-DA11-8000-4E45435F4349'  (string)
+       system.hardware.vendor = 'MiTAC'  (string)
+       system.hardware.version = '5a'  (string)
+       -->
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+  </device>
 </deviceinfo>
