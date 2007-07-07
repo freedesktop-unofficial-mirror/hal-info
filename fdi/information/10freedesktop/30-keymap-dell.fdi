@@ -31,10 +31,20 @@
 	  <append key="input.keymap.data" type="strlist">e015:prog1</append> <!-- Shutter button Takes a picture if optional camera available -->
 	  <append key="info.capabilities" type="strlist">input.keymap</append>
 	</match>
+
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Inspiron">
+	   <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="8500">
+	     <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+	     <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+	     <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+	     <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
+	     <append key="input.keymap.data" type="strlist">e009:ejectclosedcd</append> <!-- Fn+F10 Eject CD -->
+	     <append key="info.capabilities" type="strlist">input.keymap</append>
+	   </match>
+	</match>
       </match>
-
     </match>
-
   </device>
 </deviceinfo>
+
 
