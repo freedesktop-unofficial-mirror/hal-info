@@ -97,6 +97,14 @@
   </device>
 
   <device>
+    <match key="system.hardware.vendor" prefix="MTC">
+      <match key="system.hardware.product" string="Montara-GML">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
+  <device>
     <match key="system.hardware.vendor" string="MiTAC">
       <!-- Mitac 8350
        system.hardware.product = ''  (string)
