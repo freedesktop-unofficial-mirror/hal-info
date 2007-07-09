@@ -28,25 +28,25 @@ AM_CONDITIONAL(BUILD_KEYMAPS, test x$enable_keymaps == xyes)
 dnl ---------------------------------------------------------------------------
 dnl - Should we enable WLAN killswitch support for Dell laptops?
 dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(killswitch_dell_wlan, [  --enable-killswitch-dell-wlan include support for WLAN killswitch],enable_killswitch_dell_wlan=$enableval,enable_killswitch_dell_wlan=yes)
+AC_ARG_ENABLE(killswitch_dell_wlan, [  --enable-killswitch-dell-wlan   Include support for WLAN killswitch],enable_killswitch_dell_wlan=$enableval,enable_killswitch_dell_wlan=yes)
 AM_CONDITIONAL(BUILD_KILLSWITCH_DELL_WLAN, test x$enable_killswitch_dell_wlan == xyes)
 
 dnl ---------------------------------------------------------------------------
 dnl - Should we enable Bluetooth killswitch support for Dell laptops?
 dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(killswitch_dell_bluetooth, [  --enable-killswitch-dell-bluetooth include support for Bluetooth killswitch],enable_killswitch_dell_bluetooth=$enableval,enable_killswitch_dell_bluetooth=yes)
+AC_ARG_ENABLE(killswitch_dell_bluetooth, [  --enable-killswitch-dell-bluetooth   Include support for Bluetooth killswitch],enable_killswitch_dell_bluetooth=$enableval,enable_killswitch_dell_bluetooth=yes)
 AM_CONDITIONAL(BUILD_KILLSWITCH_DELL_BLUETOOTH, test x$enable_killswitch_dell_bluetooth == xyes)
 
 dnl ---------------------------------------------------------------------------
 dnl - Should we enable Bluetooth killswitch support for Sony laptops?
 dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(killswitch_sony_bluetooth, [  --enable-killswitch-sony-bluetooth include support for Bluetooth killswitch],enable_killswitch_sony_bluetooth=$enableval,enable_killswitch_sony_bluetooth=yes)
+AC_ARG_ENABLE(killswitch_sony_bluetooth, [  --enable-killswitch-sony-bluetooth   Include support for Bluetooth killswitch],enable_killswitch_sony_bluetooth=$enableval,enable_killswitch_sony_bluetooth=yes)
 AM_CONDITIONAL(BUILD_KILLSWITCH_SONY_BLUETOOTH, test x$enable_killswitch_sony_bluetooth == xyes)
 
 dnl ---------------------------------------------------------------------------
 dnl - Should we enable WLAN killswitch support for ipw chipsets?
 dnl ---------------------------------------------------------------------------
-AC_ARG_ENABLE(killswitch_ipw_wlan, [  --enable-killswitch-ipw-wlan include support for WLAN killswitch],enable_killswitch_ipw_wlan=$enableval,enable_killswitch_ipw_wlan=yes)
+AC_ARG_ENABLE(killswitch_ipw_wlan, [  --enable-killswitch-ipw-wlan   Include support for WLAN killswitch (requires hal >= 0.5.10)],enable_killswitch_ipw_wlan=$enableval,enable_killswitch_ipw_wlan=yes)
 AM_CONDITIONAL(BUILD_KILLSWITCH_IPW_WLAN, test x$enable_killswitch_ipw_wlan == xyes)
 
 AC_OUTPUT([
