@@ -31,6 +31,10 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="S6F">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
     </match>
     <!-- ASUS a7v600 motherboard, has no usable sys_* entries besides bios_version -->
     <match key="smbios.bios.version" prefix="ASUS A7V600">
