@@ -40,6 +40,7 @@ endif
 if BUILD_KEYMAPS
 dist_fdi_DATA +=				\
 		30-keymap-misc.fdi		\
+		30-keymap-hp.fdi		\
 		30-keymap-compaq.fdi		\
 		30-keymap-lenovo.fdi		\
 		30-keymap-dell.fdi
