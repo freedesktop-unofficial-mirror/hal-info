@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <deviceinfo version="0.2">
-
- <device>
+  <device>
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
@@ -12,21 +11,20 @@
       </match>
     </match>
   </device>
-  
 
-<device>
+  <device>
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
-	<match key="info.linux.driver" string="ipw2200">
+        <match key="info.linux.driver" string="ipw2200">
           <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
         </match>
       </match>
     </match>
   </device>
   
-
- <device>
+  
+  <device>
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
@@ -35,9 +33,8 @@
         </match>
       </match>
     </match>
- </device>
+  </device>
   
-
   <device>
     <match key="info.udi" string="/org/freedesktop/Hal/devices/ipw_wlan_switch">
       <append key="info.capabilities" type="strlist">killswitch</append>
