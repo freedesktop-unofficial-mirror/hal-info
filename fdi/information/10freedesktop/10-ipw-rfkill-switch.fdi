@@ -6,12 +6,9 @@
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
-	<!-- Don't use generic ipw rfkill on Sonys -->
-	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Sony">
-	        <match key="info.linux.driver" string="ipw3945">
-        	  <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
-        	</match>
-	</match>
+        <match key="info.linux.driver" string="ipw3945">
+          <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
+        </match>
       </match>
     </match>
   </device>
@@ -21,12 +18,9 @@
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
-	<!-- Don't use generic ipw rfkill on Sonys -->
-	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Sony">
-	        <match key="info.linux.driver" string="ipw2200">
-        	  <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
-        	</match>
-	</match>
+	<match key="info.linux.driver" string="ipw2200">
+          <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
+        </match>
       </match>
     </match>
   </device>
@@ -36,15 +30,12 @@
     <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
       <!-- Don't use generic ipw rfkill on Dells -->
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Dell">
-	<!-- Don't use generic ipw rfkill on Sonys -->
-	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains_not="Sony">
-	        <match key="info.linux.driver" string="ipw2100">
-        	  <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
-        	</match>
-	</match>
+	<match key="info.linux.driver" string="ipw2100">
+          <spawn udi="/org/freedesktop/Hal/devices/ipw_wlan_switch"/>
+        </match>
       </match>
     </match>
-  </device>
+ </device>
   
 
   <device>
