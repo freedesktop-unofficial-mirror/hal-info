@@ -8,9 +8,24 @@ dist_fdi_DATA = 10-usb-card-readers.fdi		\
 		10-usb-pda.fdi			\
 		10-usbcsr-mice.fdi		\
 		10-laptop-panel-hardware.fdi	\
-		10-cd-dvd-burner.fdi		\
-		10-sony-bluetooth-switch.fdi	\
-		10-dell-rfkill-switch.fdi
+		10-cd-dvd-burner.fdi
+
+if BUILD_KILLSWITCH_DELL_WLAN
+dist_fdi_DATA += 10-dell-rfkill-switch-wlan.fdi 
+endif
+
+if BUILD_KILLSWITCH_DELL_BLUETOOTH
+dist_fdi_DATA += 10-dell-rfkill-switch-bluetooth.fdi 
+endif
+
+if BUILD_KILLSWITCH_SONY_BLUETOOTH
+dist_fdi_DATA += 10-sony-bluetooth-switch.fdi
+endif
+
+if BUILD_KILLSWITCH_IPW_WLAN
+dist_fdi_DATA += 10-ipw-rfkill-switch.fdi
+endif
+
 
 if BUILD_RECALL
 dist_fdi_DATA +=				\
