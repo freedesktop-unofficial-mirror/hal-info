@@ -7,6 +7,14 @@
     <match key="@input.originating_device:info.linux.driver" string="atkbd">
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Hewlett-Packard">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx5000">
+          <append key="input.keymap.data" type="strlist">e001:lock</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo/Presentation -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e00a:lock</append>	<!-- Lock -->
+          <append key="input.keymap.data" type="strlist">e057:wlan</append>	<!-- Wlan -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc6120">
           <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
           <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
