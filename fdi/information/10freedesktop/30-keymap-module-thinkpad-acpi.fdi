@@ -17,7 +17,7 @@
           <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
           <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
           <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
-          <append key="input.keymap.data" type="strlist">0x17:blue</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
