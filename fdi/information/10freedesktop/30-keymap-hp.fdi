@@ -13,6 +13,12 @@
           <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc6320">
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
       </match>
     </match>
   </device>
