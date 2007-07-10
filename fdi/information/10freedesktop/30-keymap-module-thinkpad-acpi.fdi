@@ -84,8 +84,8 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="T4">
           <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
-          <append key="input.keymap.data" type="strlist">0x07:radio</append> <!-- Fn+F8 switch radio -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
           <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
           <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
