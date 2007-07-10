@@ -36,9 +36,9 @@
             <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e013:autobrightness</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="input.keymap.data" type="strlist">e013:f13</append> <!-- Fn+Left arrow Auto Brightness -->
             <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
-            <append key="input.keymap.data" type="strlist">e008:WirelessOnOff</append> <!-- Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e008:radio</append> <!-- Turn On/Off Wireless -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
         </match>
