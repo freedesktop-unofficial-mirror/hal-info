@@ -33,6 +33,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="Satellite Pro 6100">
+        <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+      </match>      
       <match key="system.hardware.product" prefix="TECRA 8200">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
