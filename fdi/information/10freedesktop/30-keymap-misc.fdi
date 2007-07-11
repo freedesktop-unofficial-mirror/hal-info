@@ -31,7 +31,26 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
+      
+      <match key="/org/freedesktop/Hal/devices/computer:system.chassis.manufacturer" prefix="MICRO-STAR">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="0131">
+          <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F4   Brightness up -->
+          <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F5   Brightness down -->
+          <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
+          <append key="input.keymap.data" type="strlist">e030:volumeup</append> <!-- Fn-F8   Volume up -->
+          <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
+          <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F12  Sleep -->
+          <append key="input.keymap.data" type="strlist">e06c:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">e032:www</append> <!-- www button -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- wlan -->
+          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- search -->
+          <append key="input.keymap.data" type="strlist">e071:unknown</append> <!-- plug -->
+          <append key="input.keymap.data" type="strlist">e072:unknown</append> <!-- unplug -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
 
+	
     </match>
 
   </device>
