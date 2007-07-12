@@ -62,7 +62,7 @@
           <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Wirelesss switch -->
           <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- FIXME Bluetooth switch (same as wireless) -->
           <append key="input.keymap.data" type="strlist">e012:media</append> <!-- Dell MediaDirect button Opens Dell Media Experience (a sort of media player) -->
-          <append key="input.keymap.data" type="strlist">e015:prog1</append> <!-- Shutter button Takes a picture if optional camera available -->
+          <append key="input.keymap.data" type="strlist">e015:camera</append> <!-- Shutter button Takes a picture if optional camera available -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 
