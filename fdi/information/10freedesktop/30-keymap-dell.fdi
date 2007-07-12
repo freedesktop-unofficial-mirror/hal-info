@@ -14,7 +14,7 @@
             <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e005:f13</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
+            <append key="input.keymap.data" type="strlist">e005:f23</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
             <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
@@ -24,7 +24,7 @@
             <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e013:f13</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
             <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
             <append key="input.keymap.data" type="strlist">e008:radio</append> <!-- Turn On/Off Wireless -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
@@ -35,7 +35,7 @@
             <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e013:autobrightness</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
             <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
             <append key="input.keymap.data" type="strlist">e008:radio</append> <!-- Turn On/Off Wireless -->
             <append key="input.keymap.data" type="strlist">e011:prog1</append> <!-- Wifi Catcher (DELL Specific) -->
@@ -47,7 +47,7 @@
             <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e013:f13</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
             <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
@@ -72,7 +72,7 @@
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
             <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
-            <append key="input.keymap.data" type="strlist">e009:ejectclosedcd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
         </match>
@@ -81,8 +81,8 @@
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
             <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- Fn+F2 bluetooth -->
-            <append key="input.keymap.data" type="strlist">e009:ejectclosedcd</append> <!-- Fn+F10 Eject CD -->
-            <append key="input.keymap.data" type="strlist">e00a:hibernate</append> <!-- Fn+F1 Hibernate -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 Hibernate -->
             <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
             <append key="input.keymap.data" type="strlist">e012:media</append> <!-- MediaDirect button (house icon) -->
             <append key="info.capabilities" type="strlist">input.keymap</append>

@@ -6,7 +6,7 @@
     <match key="input.product" string="ThinkPad Extra Buttons">
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="IBM">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="600">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:search</append> <!-- Fn+F8 screen expand -->
@@ -16,7 +16,7 @@
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="750">
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:search</append> <!-- Fn+F8 screen expand -->
@@ -26,7 +26,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="A2">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
@@ -37,7 +37,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="G40">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:radio</append> <!-- Fn+F8 switch radio -->
@@ -49,7 +49,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="R3">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
@@ -71,7 +71,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="T3">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
@@ -82,7 +82,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="T4">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
@@ -94,7 +94,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X2">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
@@ -105,7 +105,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X3">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:radio</append> <!-- Fn+F8 switch radio -->
@@ -117,7 +117,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X4">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
@@ -136,7 +136,7 @@
           <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
-          <append key="input.keymap.data" type="strlist">0x04:wifi</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:f22</append> <!-- Fn+F8 touchpadtoggle -->
           <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
@@ -151,10 +151,10 @@
           <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
-          <append key="input.keymap.data" type="strlist">0x04:wifi</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:prog1</append> <!-- Fn+F8 ultranav -->
-          <append key="input.keymap.data" type="strlist">0x08:eject</append> <!-- Fn+F9 eject -->
+          <append key="input.keymap.data" type="strlist">0x08:ejectcd</append> <!-- Fn+F9 eject -->
           <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
           <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
           <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
@@ -166,7 +166,7 @@
           <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
-          <append key="input.keymap.data" type="strlist">0x04:wifi</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
           <append key="input.keymap.data" type="strlist">0x07:f22</append> <!-- Fn+F8 touchpad toggle -->
           <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
