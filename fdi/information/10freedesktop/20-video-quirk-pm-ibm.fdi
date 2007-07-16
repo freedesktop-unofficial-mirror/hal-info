@@ -49,14 +49,14 @@
         </match>
       </match>
       <!-- T43 -->
-      <match key="system.hardware.product" prefix="2668">
-        <match key="system.hardware.version" string="ThinkPad T43">
+      <match key="system.hardware.version" string="ThinkPad T43">
+        <!-- Models 2668, 2669, 2678, 2679, 2686, 2687 use ATI graphics -->
+        <match key="system.hardware.product" prefix="26">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-      </match>
-      <match key="system.hardware.product" prefix="1871">
-        <match key="system.hardware.version" string="ThinkPad T43">
+        <!-- Models 1871, 1872, 1873, 1874, 1875, 1876 use Intel graphics -->
+        <match key="system.hardware.product" prefix="18">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
