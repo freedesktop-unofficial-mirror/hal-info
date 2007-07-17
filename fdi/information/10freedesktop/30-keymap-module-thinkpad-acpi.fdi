@@ -130,7 +130,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X4">
-          <append key="input.keymap.data" type="strlist">0x02:lock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
           <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
