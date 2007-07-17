@@ -146,7 +146,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LENOVO">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X6">
-          <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
@@ -161,7 +161,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="R6">
-          <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
@@ -176,7 +176,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="Z6">
-          <append key="input.keymap.data" type="strlist">0x01:coffee</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
           <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
           <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
