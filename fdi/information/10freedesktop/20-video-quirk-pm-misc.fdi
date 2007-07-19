@@ -117,4 +117,14 @@
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
   </device>
+
+  <device>
+    <match key="system.hardware.vendor" prefix="Matsushita Electric Industrial C
+o.,Ltd.">
+      <match key="system.hardware.product" string="CF-Y2FWPZZBM">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
 </deviceinfo>
