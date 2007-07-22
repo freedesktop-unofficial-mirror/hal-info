@@ -112,6 +112,23 @@
             <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="3610">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:f14</append> <!-- FIXME Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:f15</append> <!-- FIXME Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
           <!-- Aspire 3020 and Aspire 5020 are identical -->
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="5020">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
