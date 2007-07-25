@@ -32,37 +32,34 @@ clean-local :
 	rm -f *~
 
 release:
+	@echo "-----------------------------------------------------------------"
+	@echo "First check that all your changes are committed and pushed to"
+	@echo "the remote master repository."
 	@echo ""
-	@echo "Check that all your changes are committed and pushed to"
-	@echo "the remote master repository. Then run 'make release-real'."
-	@echo ""
-
-MAIL=/usr/sbin/sendmail
+	@echo "Then run 'make release-real' for instructions on how to make a release."
+	@echo "-----------------------------------------------------------------"
 
 release-real:
-	@make check
-	@date +%Y%m%d > VERSION
-	@rm -rf autom4te.cache
-	@autoreconf
-	@make dist
-	@scp hal-info-`cat VERSION`.tar.gz david@people.freedesktop.org:public_html/dist
-	@git-commit -m "version `cat VERSION`" VERSION
-	@git-push
-	@git-tag -m "version `cat VERSION`" -s HAL_INFO_`cat VERSION`
-	@git-push --tags
-
-#	@echo "From: $(GIT_AUTHOR_NAME) <$(GIT_AUTHOR_EMAIL)>" > .release-mail
-#	@echo "To: hal@lists.freedesktop.org" >> .release-mail
-#	@echo "Subject: hal-info `cat VERSION` release" >> .release-mail
-#	@echo "X-Mailer: hal-info release script" >> .release-mail
-#	@echo "" >> .release-mail
-#	@echo "There's a new hal-info `cat VERSION` release available. Download from" >> .release-mail
-#	@echo "" >> .release-mail
-#	@echo " http://people.freedesktop.org/~david/dist/hal-info-`cat VERSION`.tar.gz" >> .release-mail
-#	@echo "" >> .release-mail
-#	@echo "." >> .release-mail
-#	@echo "" >> .release-mail
-#	@cat .release-mail | $(MAIL) davidz@redhat.com hal@lists.freedesktop.org
+	@echo "-----------------------------------------------------------------"
+	@echo "Run the commands below, one by one"
+	@echo "-----------------------------------------------------------------"
+	@echo "-----------------------------------------------------------------"
+	@echo "export HAL_INFO_VERSION=`date +%Y%m%d`"
+	@echo "make check"
+	@echo "echo \$$HAL_INFO_VERSION > VERSION"
+	@echo "rm -rf autom4te.cache"
+	@echo "autoreconf"
+	@echo "make dist"
+	@echo "scp hal-info-\$$HAL_INFO_VERSION.tar.gz hal.freedesktop.org:/srv/hal.freedesktop.org/www/releases"
+	@echo "git-commit -m \"Released hal-info \$$HAL_INFO_VERSION\" VERSION"
+	@echo "git-push"
+	@echo "git-tag -m \"Released hal-info \$$HAL_INFO_VERSION\" -s HAL_INFO_\$$HAL_INFO_VERSION"
+	@echo "git-push --tags"
+	@echo "-----------------------------------------------------------------"
+	@echo "-----------------------------------------------------------------"
+	@echo ""
+	@echo "Please send a note to hal@lists.freedesktop.org about this release."
+	@echo "-----------------------------------------------------------------"
 
 
 
