@@ -77,7 +77,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Aspire 3030 and Aspire 5030 are identical -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="3020">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="3030">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
