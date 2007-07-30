@@ -16,7 +16,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MICRO-STAR">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="INFINITY">
-          <append key="input.keymap.data" type="strlist">e064:prog1</append> <!-- Fn-F3   Touchpad disable -->
+          <append key="input.keymap.data" type="strlist">e064:f22</append> <!-- Fn-F3   Touchpad disable -->
           <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F4   Brightness down -->
           <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F5   Brightness up -->
           <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
