@@ -42,15 +42,24 @@
           <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F12  Sleep -->
           <append key="input.keymap.data" type="strlist">e06c:email</append> <!-- envelope button -->
           <append key="input.keymap.data" type="strlist">e032:www</append> <!-- www button -->
-          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- wlan -->
-          <append key="input.keymap.data" type="strlist">e062:bluetooth</append> <!-- satellite dish2 -->
-          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- search -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- satellite dish: wlan -->
+          <append key="input.keymap.data" type="strlist">e062:bluetooth</append> <!-- satellite dish: bluetooth -->
+          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- search button -->
           <append key="input.keymap.data" type="strlist">e071:unknown</append> <!-- plug -->
           <append key="input.keymap.data" type="strlist">e072:unknown</append> <!-- unplug -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.vendor" string="MEDIONNB">
+        <match key="/org/freedesktop/Hal/devices/computer:system.product" prefix="A555">
+          <append key="input.keymap.data" type="strlist">67:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">63:www</append> <!-- N button -->
+          <append key="input.keymap.data" type="strlist">66:prog1</append> <!-- link 1 button -->
+          <append key="input.keymap.data" type="strlist">69:prog2</append> <!-- link 2 button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
 	
     </match>
 
