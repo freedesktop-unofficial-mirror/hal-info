@@ -780,18 +780,26 @@
 	  </match>
 	</match>
      
-	<!-- Foston, MPMan -->
+	<!-- Foston, MPMan, Actions Semiconductor -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x10d6">
 	  <!-- Foston 128/256MB / MPMan MP-Ki 128 Player -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x1100">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
-            <merge key="portable_audio_player.folder_depth" type="int">0</merge>
+            <merge key="portable_audio_player.folder_depth" type="int">1</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
-   
+	  <!-- A similar 2GB MP3 Player -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x1101">
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.folder_depth" type="int">1</merge>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
 	</match>
 
         <!-- Jens of Sweden -->
