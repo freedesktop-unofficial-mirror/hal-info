@@ -371,6 +371,18 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
+          <!-- TrekStor vibez --> 
+          <match key="@storage.originating_device:usb.product_id" int="0x842a">
+	   <merge key="portable_audio_player.type" type="string">generic</merge>           
+	   <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	   <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	   <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	   <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	   <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>       
+	   <append key="portable_audio_player.playlist_format" type="strlist">audio/x-scpls</append>
+	   <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>           
+	   <append key="portable_audio_player.playlist_format" type="strlist">application/vnd.ms-wpl</append>
+	 </match>
         </match>
 
 	<!-- RCA -->
