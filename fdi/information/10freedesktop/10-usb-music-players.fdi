@@ -673,6 +673,13 @@
 	    <append key="portable_audio_player.audio_folders" type="strlist">MSSEMC/Media files/audio/</append>
 	  </match>
 
+	  <!-- K610i mobile phone -->
+	  <match key="@storage.originating_device:usb.product_id" int="0xe046">
+	    <merge key="portable_audio_player.type" type="string">generic</merge>
+	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+	  </match>
+
 	  <!-- W800 Walkman Phone -->
 	  <!-- media files go in mp3/$ARTIST/$ALBUM/$TRACKNAME -->
 	  <match key="@storage.originating_device:usb.product_id" int="0xd028">
