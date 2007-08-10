@@ -86,6 +86,10 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
+      <!-- Dell XPS M1210 -->
+      <match key="system.hardware.product" prefix="MXC062">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
     </match>
   </device>
 </deviceinfo>
