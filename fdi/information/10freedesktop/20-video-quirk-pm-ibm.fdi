@@ -18,6 +18,7 @@
       </match>
       <!-- X40 -->
       <match key="system.hardware.product" prefix="2672">
+	<merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
