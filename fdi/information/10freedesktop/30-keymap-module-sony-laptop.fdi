@@ -16,8 +16,7 @@
           <append key="input.keymap.data" type="strlist">0x10:suspend</append> <!-- Fn+F12 hibernate -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
-      </match>
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Sony">
+
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="VGN-FS790B">
           <append key="input.keymap.data" type="strlist">0x06:mute</append> <!-- Fn+F2 mute -->
           <append key="input.keymap.data" type="strlist">0x07:volumedown</append> <!-- Fn+F3 mixer down -->
