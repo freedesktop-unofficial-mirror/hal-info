@@ -9,9 +9,9 @@
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Compaq">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="E500">
           <append key="input.keymap.data" type="strlist">e023:www</append>	<!-- I key -->
-          <append key="input.keymap.data" type="strlist">e01f:homepage</append>	<!-- Home key -->
           <append key="input.keymap.data" type="strlist">e01a:search</append>	<!-- Search key -->
           <append key="input.keymap.data" type="strlist">e01e:email</append>	<!-- Email -->
+          <append key="input.keymap.data" type="strlist">e01f:homepage</append>	<!-- Home key -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
