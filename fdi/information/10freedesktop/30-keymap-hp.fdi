@@ -21,10 +21,58 @@
           <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc6230">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append>	<!-- FnF6 Lock -->
+          <append key="input.keymap.data" type="strlist">e033:f22</append>      <!-- FIXME: Auto brightness -->
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc6320">
           <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
           <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
           <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc6400">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nw8440">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append>	<!-- FnF6 Lock -->
+          <append key="input.keymap.data" type="strlist">e033:f22</append>      <!-- FIXME: Auto brightness -->
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx6125">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx6325">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append>	<!-- FnF6 Lock -->
+          <append key="input.keymap.data" type="strlist">e033:f22</append>      <!-- FIXME: Auto brightness -->
+          <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx7400">
+          <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
+          <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append>	<!-- FnF6 Lock -->
+          <append key="input.keymap.data" type="strlist">e033:f22</append>     	<!-- FIXME: Auto brightness -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
