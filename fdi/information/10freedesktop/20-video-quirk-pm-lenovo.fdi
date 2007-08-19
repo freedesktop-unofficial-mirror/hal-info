@@ -39,6 +39,10 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.version" string="ThinkPad Z61t">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
       <!-- T61 -->
       <match key="system.hardware.version" string="766314G">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
