@@ -66,5 +66,9 @@ if [ ! -z "`echo $result | grep FAILED`" ]; then
 	retval=1
 fi
 
+if [ -e /tmp/quirk-keymap-list.txt ]; then
+	rm -rf /tmp/quirk-keymap-list.txt
+fi
+
 exit $retval
 
