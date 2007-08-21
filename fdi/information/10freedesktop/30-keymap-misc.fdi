@@ -61,6 +61,14 @@
         </match>
       </match>
 	
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="INVENTEC">
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SYMPHONY 6.0/7.0">
+	  <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P2" programmable button -->
+	  <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "P1" programmable button -->
+	  <append key="info.capabilities" type="strlist">input.keymap</append>
+	</match>
+      </match>
+
     </match>
 
   </device>
