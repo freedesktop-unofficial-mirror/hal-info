@@ -229,7 +229,7 @@
             <append key="input.keymap.data" type="strlist">0x68:up</append> 
             <append key="input.keymap.data" type="strlist">0x69:down</append> 
             <append key="input.keymap.data" type="strlist">0x6b:fn</append> 
-            <append key="input.keymap.data" type="strlist">0x6c:lockscreen</append> 
+            <append key="input.keymap.data" type="strlist">0x6c:screenlock</append> 
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- TravelMate 3000 -->
