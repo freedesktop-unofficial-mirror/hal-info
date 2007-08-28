@@ -7,6 +7,13 @@
     <match key="@input.originating_device:info.linux.driver" string="atkbd">
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Hewlett-Packard">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="dv2500">
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
+          <append key="input.keymap.data" type="strlist">e031:help</append>	<!-- FnF1 (help) -->
+          <append key="input.keymap.data" type="strlist">e059:f22</append>	<!-- touchpad on  -->
+          <append key="input.keymap.data" type="strlist">e058:f22</append>	<!-- touchpad off -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx5000">
           <append key="input.keymap.data" type="strlist">e001:screenlock</append>	<!-- FnEsc -->
           <append key="input.keymap.data" type="strlist">e008:tv</append>	<!-- SVideo/Presentation -->
