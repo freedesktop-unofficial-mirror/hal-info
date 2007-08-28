@@ -63,24 +63,13 @@
           </match>
         </match> <!-- prefix="Latitude" -->
 
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="MP061"> <!-- Dell Inspiron 9400 -->
+	<!-- Dell Inspiron 9400, 640m, E1505/6400 -->
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix_outof="MP061;MXC061;MM061"> 
           <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
           <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
           <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
           <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
           <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- FIXME Bluetooth switch (same as wireless) -->
-          <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
-          <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
-          <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
-          <append key="input.keymap.data" type="strlist">e012:media</append> <!-- MediaDirect button (house icon) -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
-        </match>
-
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="MXC061"> <!-- Dell Inspiron 640m -->
-          <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-          <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
-          <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
-          <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
           <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
           <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
           <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
@@ -110,17 +99,6 @@
             <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
-        </match>
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="MM061">  <!-- Inspiron E1505/6400 -->
-          <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-          <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
-          <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
-          <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- Fn+F2 bluetooth -->
-          <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
-          <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 Hibernate -->
-          <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
-          <append key="input.keymap.data" type="strlist">e012:media</append> <!-- MediaDirect button (house icon) -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
     </match>
