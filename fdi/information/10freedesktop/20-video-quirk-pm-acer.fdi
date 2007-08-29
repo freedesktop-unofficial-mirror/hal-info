@@ -6,25 +6,17 @@
         <match key="system.hardware.product" contains="C300">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="3220">
+        <match key="system.hardware.product" contains_outof="3220;4650">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="4650">
-          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="3000">
+        <match key="system.hardware.product" contains_outof="3000;4100">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
 
-      <match key="system.hardware.product" prefix="TravelMate 240">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="TravelMate 250">
+      <match key="system.hardware.product" prefix_outof="TravelMate 240;TravelMate 250">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
@@ -41,10 +33,6 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="TravelMate 4100">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" prefix="TravelMate 8000">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
@@ -55,11 +43,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="3610">
-          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="3620">
+        <match key="system.hardware.product" contains_outof="3610;3620">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
