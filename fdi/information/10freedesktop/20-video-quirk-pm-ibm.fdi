@@ -7,11 +7,6 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- T30 -->
-      <match key="system.hardware.product" prefix="1860">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
       <!-- X31 -->
       <match key="system.hardware.product" prefix="2366">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
@@ -34,12 +29,8 @@
       <match key="system.hardware.product" prefix="2525">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <!-- T41p -->
-      <match key="system.hardware.product" prefix="2373">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="2374">
+      <!-- T30, T41p, T41p, Z60t, Z60m -->
+      <match key="system.hardware.product" prefix_outof="1860;2373;2374;2513;2529">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
@@ -65,16 +56,6 @@
       <!-- G40 -->
       <match key="system.hardware.product" prefix="2388">
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <!-- Z60m -->
-      <match key="system.hardware.product" prefix="2529">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <!-- Z60t -->
-      <match key="system.hardware.product" prefix="2513">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
   </device>

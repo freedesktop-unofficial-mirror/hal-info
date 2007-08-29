@@ -9,29 +9,10 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="M6Ne">
+      <match key="system.hardware.product" prefix_outof="M6Ne;V6V">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="M6VA">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" string="V6V">
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="M6N ">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="M5N">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="M7A">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="S6F">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>

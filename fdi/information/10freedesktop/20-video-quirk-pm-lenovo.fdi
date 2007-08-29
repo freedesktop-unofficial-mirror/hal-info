@@ -3,46 +3,32 @@
   <device>
     <match key="system.hardware.vendor" string="LENOVO">
       <!-- X60 / X60s -->
-      <match key="system.hardware.product" prefix="1702">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="1704">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="1709">
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix="63664DU">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
-      <!-- T60p -->
-      <match key="system.hardware.product" prefix="1706">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
+
+      <!-- R60 -->
       <match key="system.hardware.version" prefix_ncase="ThinkPad R60">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.version" string="ThinkPad T60">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+
+      <!-- T60*, Z61* -->
+      <match key="system.hardware.version" prefix="ThinkPad ">
+        <match key="system.hardware.version" suffix="T60">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.version" contains_outof="T60p;Z61m;Z61t">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
       </match>
-      <match key="system.hardware.version" string="ThinkPad T60p">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.version" string="ThinkPad Z61m">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.version" string="ThinkPad Z61t">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
+
       <!-- T61 -->
       <match key="system.hardware.version" string="766314G">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>

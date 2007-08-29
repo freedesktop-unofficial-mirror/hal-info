@@ -10,15 +10,25 @@
   </device>
   <device>
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
+
+      <match key="system.hardware.product" contains_outof="ze2000;R4100">
+    	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" contains_outof="nx6125;nc6230;nx8220">
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" contains_outof="nx7000;nx7300;nc6120;nc6320">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+
       <match key="system.hardware.product" contains="nx5000">
         <match key="system.firmware.version" prefix="68BCU">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-      </match>
-      <match key="system.hardware.product" contains="ze2000">
-    	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" contains="nc6000">
         <match key="system.firmware.version" prefix="68BDD">
@@ -38,40 +48,8 @@
       <match key="system.hardware.product" prefix="Pavilion zt3300">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains="nx6125">
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc6230">
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nx7000">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nx8220">
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" contains="nc4200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="R4100">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nx7300">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc6120">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains="nc6320">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
