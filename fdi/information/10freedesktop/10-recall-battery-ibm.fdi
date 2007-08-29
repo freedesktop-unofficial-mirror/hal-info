@@ -5,40 +5,7 @@
     <match key="battery.model" contains="IBM">
       <match key="battery.vendor" string="SONY">
 
-        <match key="battery.model" contains="92P1072">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1073">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1088">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1089">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1142">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1141">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1170">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1169">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="93P5028">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1174">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="92P1173">
-          <merge key="info.is_recalled" type="bool">true</merge>
-        </match>
-        <match key="battery.model" contains="93P5030">
+        <match key="battery.model" contains_outof="92P1072;92P1073;92P1088;92P1089;92P1142;92P1141;92P1170;92P1169;93P5028;92P1174;92P1173;93P5030">
           <merge key="info.is_recalled" type="bool">true</merge>
         </match>
 

@@ -4,19 +4,7 @@
 
     <match key="battery.vendor" string="Gateway">
 
-      <match key="battery.model" contains="916C4610F">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="916C4720F">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="916C4730F">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="916C5010F">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="W230">
+      <match key="battery.model" contains_outof="916C4610F;916C4720F;916C4730F;916C5010F;W230">
         <merge key="info.is_recalled" type="bool">true</merge>
       </match>
 

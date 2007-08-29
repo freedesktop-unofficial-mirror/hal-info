@@ -4,22 +4,7 @@
 
     <match key="battery.vendor" string="TOSHIBA">
 
-      <match key="battery.model" contains="PA3465U">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="PA3399U">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="PA3400U">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="PA3465U">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="PA3399U">
-        <merge key="info.is_recalled" type="bool">true</merge>
-      </match>
-      <match key="battery.model" contains="PA3400U">
+      <match key="battery.model" contains_outof="PA3465U;PA3399U;PA3400U;PA3465U;PA3399U;PA3400U">
         <merge key="info.is_recalled" type="bool">true</merge>
       </match>
 
