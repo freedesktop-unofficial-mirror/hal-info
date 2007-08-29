@@ -26,18 +26,8 @@
         </match>
 
 	<!-- Receiver for Cordless Keyboard + Mouse combo -->
-        <match key="usb_device.product_id" int="0xc512"> 
+        <match key="usb_device.product_id" int_outof="0xc512;0xc505"> 
           <merge key="info.product" type="string">Cordless Keyboard+Mouse Receiver</merge>
-          <merge key="battery.type" type="string">keyboard</merge>
-	  <!-- proprietary properties defining the behavior -->
-          <merge key="battery.csr.has_res" type="bool">false</merge>
-          <merge key="battery.csr.has_sms" type="bool">false</merge>
-          <merge key="battery.csr.is_dual" type="bool">false</merge>
-        </match>
-
-        <!-- Logitech, Inc. Cordless Mouse+Keyboard Receiver -->
-        <match key="usb_device.product_id" int="0xc505"> 
-          <merge key="info.product" type="string">Cordless Mouse+Keyboard Receiver</merge>
           <merge key="battery.type" type="string">keyboard</merge>
 	  <!-- proprietary properties defining the behavior -->
           <merge key="battery.csr.has_res" type="bool">false</merge>
