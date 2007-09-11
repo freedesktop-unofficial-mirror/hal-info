@@ -31,6 +31,9 @@
       <match key="system.hardware.product" prefix="TECRA 8200">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="Satellite P105">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
     </match>
   </device>
 </deviceinfo>
