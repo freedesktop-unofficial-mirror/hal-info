@@ -169,16 +169,16 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>	
-	  <!-- Samsung Yepp YP-ST5, YP-F1 -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x5021;0x502b">
+	  <!-- Samsung Yepp YP-ST5 -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x5021">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	  </match>	
-	  <!-- Samsung YP-MT6V, YP-U1, YP-U2Z -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x5026;0x503b;0x5050">
+	  <!-- Samsung YP-MT6V, YP-F1,YP-U1, YP-U2Z -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x5026;0x502b;0x503b;0x5050">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
