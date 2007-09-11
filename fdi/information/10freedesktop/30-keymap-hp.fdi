@@ -52,7 +52,7 @@
           <append key="input.keymap.data" type="strlist">e059:www</append>	<!-- I key -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nx7400">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="nx7300;nx7400">
           <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
           <append key="input.keymap.data" type="strlist">e009:battery</append>	<!-- FnF8 (battery) -->
           <append key="input.keymap.data" type="strlist">e00a:screenlock</append>	<!-- FnF6 Lock -->
