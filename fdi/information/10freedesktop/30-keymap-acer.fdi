@@ -66,11 +66,11 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="TravelMate">
           <!-- TravelMate C300 -->
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="C300">
-            <append key="input.keymap.data" type="strlist">0x68:f22</append> <!-- FIXME: rotate screen --> 
+            <append key="input.keymap.data" type="strlist">0x67:f22</append> <!-- FIXME: rotate screen --> 
             <append key="input.keymap.data" type="strlist">0x68:up</append> 
             <append key="input.keymap.data" type="strlist">0x69:down</append> 
             <append key="input.keymap.data" type="strlist">0x6b:fn</append> 
-            <append key="input.keymap.data" type="strlist">0x6c:screenlock</append> 
+            <append key="input.keymap.data" type="strlist">0x6c:f23</append> <!-- FIXME: lock tablet device/buttons-->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- TravelMate 3000 -->
