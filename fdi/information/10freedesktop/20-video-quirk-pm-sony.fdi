@@ -12,6 +12,17 @@
       <match key="system.hardware.product" string="VGN-FS730">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="VGN-TX5MN_W">
+	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
+
+      <!---> machines which need no quirks -->
+      <match key="system.hardware.product" string_outof="VGN-TX3HP">
+	<merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" contains="VGN-TZ11">
+	<merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
     </match>
   </device>
 </deviceinfo>
