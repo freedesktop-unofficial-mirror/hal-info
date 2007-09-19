@@ -25,7 +25,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Aspire 1690 taken from hotkey-setup -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1690;3020;3030;3040;3610;3620;5020;5030;5040;5650">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1690;3020;3030;3040;3050;3610;3620;5020;5030;5040;5050;5650">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
