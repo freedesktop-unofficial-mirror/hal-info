@@ -33,6 +33,13 @@
       <match key="system.hardware.version" string="766314G">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+
+      <!-- X61 Tablet , system.hardware.version='ThinkPad X61 Tablet' -->
+      <match key="system.hardware.product" string="7767C3U">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
