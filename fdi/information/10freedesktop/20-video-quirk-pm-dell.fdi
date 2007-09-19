@@ -82,6 +82,11 @@
       <match key="system.hardware.product" prefix="MXC062">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
+      <!-- Dell XPS M1330 -->
+      <match key="system.hardware.product" string="XPS M1330">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
     </match>
   </device>
 </deviceinfo>
