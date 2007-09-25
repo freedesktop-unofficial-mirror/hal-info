@@ -98,13 +98,13 @@
 		     <merge key="storage.drive_type" type="string">compact_flash</merge>
 	     </match>
 	     <match key="storage.lun" int="1">
-		     <merge key="storage.drive_type" type="string">memory_stick</merge>
+		     <merge key="storage.drive_type" type="string">smart_media</merge>
 	     </match>
 	     <match key="storage.lun" int="2">
 		     <merge key="storage.drive_type" type="string">sd_mmc</merge>
 	     </match>
 	     <match key="storage.lun" int="3">
-		     <merge key="storage.drive_type" type="string">smart_media</merge>
+		     <merge key="storage.drive_type" type="string">memory_stick</merge>
 	     </match>
         </match>
       </match>
