@@ -34,9 +34,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- T42 -->
-      <match key="system.hardware.product" prefix="2378">
-        <match key="system.hardware.version" string="ThinkPad T42">
+      <!-- T42, T42p -->
+      <match key="system.hardware.product" prefix_outof="2378;2379">
+        <match key="system.hardware.version" prefix="ThinkPad T42">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
       </match>
