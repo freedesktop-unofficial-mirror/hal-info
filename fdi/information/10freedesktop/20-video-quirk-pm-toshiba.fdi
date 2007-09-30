@@ -2,6 +2,10 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="TOSHIBA">
+      <!-- Toshiba Satellite S1110 -->
+      <match key="system.hardware.product" string="S1110">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
       <!-- Toshiba Satellite 4080XCDT -->
       <match key="system.hardware.product" string="Portable PC">
         <match key="system.hardware.version" string="Version 1.0">
