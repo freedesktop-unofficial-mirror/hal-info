@@ -14,11 +14,11 @@
           <append key="input.keymap.data" type="strlist">0x031:volumedown</append>
           <append key="input.keymap.data" type="strlist">0x030:volumeup</append>
           <!-- Disable touchpad -->
-          <!-- <append ket="input.keymap.data" type="strlist">0x06b:</append> -->
+          <!-- <append ket="input.keymap.data" type="strlist">0x06b:unknown</append> -->
           <append key="input.keymap.data" type="strlist">0x05d:wlan</append>
           <append key="input.keymap.data" type="strlist">0x07e:bluetooth</append>
           <!-- Performance -->
-          <!-- <append key="input.keymap.data" type="strlist">0x05c:</append> -->
+          <!-- <append key="input.keymap.data" type="strlist">0x05c:unknown</append> -->
           <append key="input.keymap.data" type="strlist">0x08a:tv</append>
           <!-- TODO: sleep/power buttons -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
