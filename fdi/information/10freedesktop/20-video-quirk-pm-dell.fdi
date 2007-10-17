@@ -58,7 +58,7 @@
 
       <!-- Dell Inspiron -->
       <match key="system.hardware.product" prefix="Inspiron">
-        <match key="system.hardware.product" contains_outof="5150;8000">
+        <match key="system.hardware.product" contains_outof="5150;8000;1420">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
