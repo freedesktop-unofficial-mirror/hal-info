@@ -31,7 +31,7 @@
                DO NOT use with intel X.org driver 2.x version (not needed and causes problems)
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge> -->
         </match>
-        <match key="system.hardware.product" contains_outof="D600;D610">
+        <match key="system.hardware.product" contains_outof="D600;D610;D630">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
