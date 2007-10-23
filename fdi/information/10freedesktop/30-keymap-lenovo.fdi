@@ -21,7 +21,7 @@
           <append key="input.keymap.data" type="strlist">006e:left</append> <!-- left on d-pad -->
           <append key="input.keymap.data" type="strlist">0071:up</append> <!-- up on d-pad -->
           <append key="input.keymap.data" type="strlist">006f:down</append> <!-- down on d-pad -->
-          <append key="input.keymap.data" type="strlist">0069:kpenter</append> <!-- enter on d-pad -->
+          <append key="input.keymap.data" type="strlist">0069:enter</append> <!-- enter on d-pad -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 
