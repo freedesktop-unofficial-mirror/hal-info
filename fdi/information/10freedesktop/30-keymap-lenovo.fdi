@@ -26,7 +26,7 @@
             <append key="input.keymap.data" type="strlist">0069:enter</append> <!-- enter on d-pad -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
-
+        </match>
       </match>
 
     </match>
