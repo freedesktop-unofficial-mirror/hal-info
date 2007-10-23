@@ -2,13 +2,15 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="LENOVO">
+    <!-- ThinkPads -->
+
       <!-- X60 / X60s -->
-      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709">
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- X61 Tablet -->
-      <match key="system.hardware.product" prefix_outof="7764;7675">
+      <!-- X61* Tablet -->
+      <match key="system.hardware.product" prefix_outof="7669;7764;7675">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix="63664DU">
@@ -27,21 +29,42 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.version" contains_outof="T60p;Z61m;Z61t;Z60m">
+        <match key="system.hardware.version" contains_outof="T60p;Z61m;Z61t;Z60m;Z61p">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
       </match>
 
       <!-- T61 -->
-      <match key="system.hardware.version" string="766314G">
+      <match key="system.hardware.product" string="7663">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix_outof="7658;8895">
+	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+
+      <!-- R61 -->
+      <match key="system.hardware.product" prefix="8919">
+	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      
 
       <!-- X61 Tablet , system.hardware.version='ThinkPad X61 Tablet' -->
       <match key="system.hardware.product" string="7767C3U">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+
+    <!-- Lenovos non-ThinkPads -->
+      <match key="system.hardware.version" prefix_ncase="3000 N100">
+        <match key="system.hardware.product" prefix_outof="07686VG;076831G;076835U">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" prefix="07687MM">
+	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
       </match>
 
     </match>
