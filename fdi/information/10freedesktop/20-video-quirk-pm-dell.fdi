@@ -21,15 +21,9 @@
         <match key="system.hardware.product" contains="D400">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="D410">
+        <match key="system.hardware.product" contains_outof="D410;D420">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="D420">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <!-- ONLY needed with i810 X.org driver 1.x versions,
-               DO NOT use with intel X.org driver 2.x version (not needed and causes problems)
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge> -->
         </match>
         <match key="system.hardware.product" contains_outof="D600;D610;D630">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
