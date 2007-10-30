@@ -21,18 +21,18 @@
         <match key="system.hardware.product" contains="D400">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="D410;D420">
+        <match key="system.hardware.product" contains_outof="CPx J800GT;D410;D420;D520;C610">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="C400;D500;D505;D620;D800;X200">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="D600;D610;D630">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains_outof="D620;D800">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="D820">
           <!-- ONLY needed with i810 X.org driver 1.x versions,
@@ -52,9 +52,13 @@
 
       <!-- Dell Inspiron -->
       <match key="system.hardware.product" prefix="Inspiron">
-        <match key="system.hardware.product" contains_outof="5150;8000;1420">
+        <match key="system.hardware.product" contains_outof="1420;5150;8000;8500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="600m">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="700m">
         <!-- ONLY needed with i810 X.org driver 1.x versions,
@@ -72,15 +76,21 @@
         </match>
       </match>
 
-      <!-- Dell XPS M1210 -->
-      <match key="system.hardware.product" prefix="MXC062">
+      <!-- Dell Inspiron 640m, XPS M1210 -->
+      <match key="system.hardware.product" contains_outof="MXC061;MXC062">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
       <!-- Dell XPS M1330 -->
       <match key="system.hardware.product" string="XPS M1330">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+
+      <!-- these need no quirks : DXP051, Inspiron: 1300, E1702/E1705, 630m; M1710 (only resumes with vesafb) -->
+      <match key="system.hardware.product" contains_outof="DXP051;ME051;MP061;MXC051;MXG061">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
