@@ -18,6 +18,11 @@
         <match key="system.hardware.product" contains="C800">
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains_outof="X300;D820">
+	  <!-- the Dell D820 is also reported to work with vbe_post+vbemode_restore and
+               need may dpms_on -->
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="D400">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
@@ -34,19 +39,8 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="D820">
-          <!-- ONLY needed with i810 X.org driver 1.x versions,
-               DO NOT use with intel X.org driver 2.x version (not needed and causes problems)
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>-->
-          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-        </match>
         <match key="system.hardware.product" suffix="X1">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="X300">
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
 
