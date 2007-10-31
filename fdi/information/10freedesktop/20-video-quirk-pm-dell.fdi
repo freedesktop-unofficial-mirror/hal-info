@@ -21,11 +21,11 @@
         <match key="system.hardware.product" contains="D400">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="CPx J800GT;D410;D420;D520;C610">
+        <match key="system.hardware.product" contains_outof="CPx J800GT;D410;D420;D520;C610;D620">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="C400;D500;D505;D620;D800;X200">
+        <match key="system.hardware.product" contains_outof="C400;D500;D505;D800;X200">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
