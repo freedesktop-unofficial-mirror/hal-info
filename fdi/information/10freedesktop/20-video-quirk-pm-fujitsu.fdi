@@ -2,23 +2,87 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="FUJITSU">
-      <match key="system.hardware.product" prefix="Amilo A7640">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      
+      <match key="system.hardware.product" contains_ncase="amilo">
+        <match key="system.hardware.product" contains="A1667G Serie">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Xi 1546;Si 1520">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V8010">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="M        ;A Series">
+          <match key="system.hardware.version" contains_outof="-1 ;0.01">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          </match>
+        </match>
+        <match key="system.hardware.product" contains="A7640">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="A7645">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="Pro V2040">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
       </match>
+
+      <match key="system.hardware.product" contains_ncase="lifebook">
+        <match key="system.hardware.product" contains="S2110">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="T4010">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="S7110">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.reset_brightness" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="E4010">
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="T4210">
+          <!-- this need a key we currently not have in HAL:
+	  <merge key="power_management.quirk.pci_restore" type="bool">true</merge>
+	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+	  -->
+        </match>
+        <match key="system.hardware.product" contains_outof="B Series;S7010">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+
+      <match key="system.hardware.product" prefix="SCENIC">
+        <match key="system.hardware.product" contains_outof="N300/N600;W300/W600">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" suffix=" W">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+      </match>
+
       <match key="system.hardware.product" string="Stylistic ST5000">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="SCENIC W300/W600">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+   
+      <match key="system.hardware.product" string="P6VAP-AP">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="LifeBook S7110">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.reset_brightness" type="bool">true</merge>
-      </match>
+
     </match>
   </device>
 </deviceinfo>
