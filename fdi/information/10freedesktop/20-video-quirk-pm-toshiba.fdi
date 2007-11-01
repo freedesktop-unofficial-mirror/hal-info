@@ -19,7 +19,7 @@
       </match>
       <match key="system.hardware.product" string="Satellite L10">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix_outof="P2000;P4000;PORTEGE A100">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
