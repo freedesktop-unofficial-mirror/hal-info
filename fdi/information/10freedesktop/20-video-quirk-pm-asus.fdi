@@ -2,26 +2,52 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="ASUS">
-      <match key="system.hardware.product" string="L2000D">
+      <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne;V6V">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="L3000D">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="A6M">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix_outof="L3000D;M3N ">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix_outof="M6Ne;V6V">
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      <match key="system.hardware.product" prefix="A6U ">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F">
+      <!-- these need no quirks, whitelist them -->
+      <match key="system.hardware.product" prefix_outof="A2H/L ;A6Km ;A6T">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+    </match>
+    <!-- ASUS Laptop with different vendor string (M2400N) -->
+    <match key="system.hardware.vendor" prefix="ERGOUK">
+      <match key="system.hardware.product" prefix="M2N ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
+
     <!-- ASUS a7v600 motherboard, has no usable sys_* entries besides bios_version -->
     <match key="smbios.bios.version" prefix="ASUS A7V600">
       <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
     </match>
+    <!-- another ASUS Mainboard -->
+    <match key="smbios.bios.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101">
+      <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+    </match>
+    <!-- another ASUS Mainboard, this need no quirk -->
+    <match key="smbios.bios.version" prefix="ASUS M2N-E ACPI BIOS Revision">
+      <merge key="power_management.quirk.none" type="bool">true</merge>
+    </match>
+
     <match key="system.hardware.product" string="F3Sc">
       <match key="system.hardware.version" string="1.0">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
