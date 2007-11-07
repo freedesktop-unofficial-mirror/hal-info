@@ -2,6 +2,64 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="TOSHIBA">
+      <!-- Satellite Laptops -->
+      <match key="system.hardware.product" prefix="Satellite">
+        <match key="system.hardware.product" contains=" M30X">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="M35X;P200; A100">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" suffix=" P10">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="P105">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="L10">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="A30">
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="Pro 6100">
+          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+        </match>
+	<!-- these need no quirks-->
+        <match key="system.hardware.product" contains_outof="A80;Pro4600">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>      
+      </match>      
+
+      <!-- Tecra Laptops -->
+      <match key="system.hardware.product" prefix="TECRA">
+        <match key="system.hardware.product" contains_outof="8100;8200">
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+	<!-- these need no quirks-->
+        <match key="system.hardware.product" contains=" S3">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>      
+      </match> 
+
+      <!-- Portege Laptops -->
+      <match key="system.hardware.product" prefix="PORTEGE">
+        <match key="system.hardware.product" contains="M300">
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="A100">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+	<!-- these need no quirks-->
+        <match key="system.hardware.product" contains="R100">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match> 
+      </match>
+
       <!-- Toshiba Satellite S1110 -->
       <match key="system.hardware.product" string="S1110">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -14,30 +72,21 @@
           </match>
         </match>
       </match>
-      <match key="system.hardware.product" string="Satellite A30">
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" string="Satellite L10">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix_outof="P2000;P4000;PORTEGE A100">
+      <match key="system.hardware.product" prefix_outof="P2000;P4000">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="Satellite M35X">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="Satellite Pro 6100">
-        <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
-      </match>      
-      <match key="system.hardware.product" prefix="TECRA 8200">
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" prefix="Satellite P105">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-      </match>
+
+      <!-- these need no quirks-->
+      <match key="system.hardware.product" contains="Libretto L5/TNK">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match> 
+      <match key="system.hardware.product" string="SP4600">
+        <match key="system.hardware.version" string="Version 1.0">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match> 
+      </match> 
+
     </match>
   </device>
 </deviceinfo>
