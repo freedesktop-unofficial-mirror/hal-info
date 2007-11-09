@@ -48,6 +48,7 @@ dist_fdi_DATA +=				\
 		20-video-quirk-pm-ibm.fdi	\
 		20-video-quirk-pm-lenovo.fdi	\
 		20-video-quirk-pm-misc.fdi	\
+		20-video-quirk-pm-samsung.fdi   \
 		20-video-quirk-pm-sony.fdi	\
 		20-video-quirk-pm-toshiba.fdi
 endif

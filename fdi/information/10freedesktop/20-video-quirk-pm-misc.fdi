@@ -39,18 +39,6 @@
       </match>
     </match>
   </device>
-  <device>
-    <match key="system.hardware.vendor" prefix="Samsung">
-      <match key="system.hardware.product" string="SX20S">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" string="SQ10">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
-    </match>
-  </device>
 
   <device>
     <match key="system.hardware.vendor" string="AVERATEC">
