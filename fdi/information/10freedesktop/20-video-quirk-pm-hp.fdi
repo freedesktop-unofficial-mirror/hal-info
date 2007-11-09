@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
+
+    <!-- Old Compaq machines. Add them to the HP file -->
+    <match key="system.hardware.vendor" prefix="Compaq">
+      <!-- Compaq Amada -->
+      <match key="system.hardware.product" prefix="Armada">
+        <match key="system.hardware.product" contains="    E500  ">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+        <!-- This Armada m300 seems not to have a useful model description, so to make sure also check the bios_version-->
+        <match key="system.hardware.product" contains="                                     ">
+          <match key="system.firmware.version" string="1.35">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
+          </match>
+        </match>
+      </match>
+
+      <match key="system.hardware.product" prefix="Evo">
+        <match key="system.hardware.product" contains="N800w ">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <!-- VBE_MODE does not work, text size changes -->
+	  <match key="system.hardware.version" string="F.05">
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          </match>
+          <!-- has a later BIOS and needs different Options -->
+	  <match key="system.hardware.version" contains_not="F.05">
+    	    <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+ 	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+            <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+          </match>
+        </match>
+        <match key="system.hardware.product" contains="D510 USDT">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+   
+      <match key="system.hardware.product" prefix="N620c ">
+    	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+ 	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+
     <match key="system.hardware.vendor" string="Hewlett Packard">
       <match key="system.hardware.version" prefix="HP OmniBook XE3 GF">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
     </match>
-  </device>
-  <device>
+
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
 
       <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV)">
