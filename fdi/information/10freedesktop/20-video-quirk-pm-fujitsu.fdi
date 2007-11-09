@@ -11,7 +11,7 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V8010">
+        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V8010;Pi 1536">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -51,6 +51,10 @@
         <match key="system.hardware.product" contains="E4010">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains="E8020">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="T4210">
           <!-- this need a key we currently not have in HAL:
 	  <merge key="power_management.quirk.pci_restore" type="bool">true</merge>
@@ -64,7 +68,7 @@
       </match>
 
       <match key="system.hardware.product" prefix="SCENIC">
-        <match key="system.hardware.product" contains_outof="N300/N600;W300/W600">
+        <match key="system.hardware.product" contains_outof="N300/N600;W300/W600;P / SCENICO P">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -72,6 +76,10 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
+      </match>
+
+      <match key="system.hardware.product" prefix="ESPRIMO P">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
       <match key="system.hardware.product" string="Stylistic ST5000">
