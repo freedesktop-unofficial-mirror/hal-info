@@ -78,6 +78,18 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
 
+
+      <match key="system.hardware.product" contains="HP Compaq nc6400 ">
+        <match key="system.hardware.version" prefix="68YCU">
+          <match key="system.hardware.product" contains="(EH522AV)">
+            <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+	  </match>
+          <match key="system.hardware.product" contains="(EY582ES">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
+	  </match>
+        </match>
+      </match>
       <match key="system.hardware.product" contains="nc4400">
         <match key="system.firmware.version" prefix="68YHV">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
@@ -136,8 +148,21 @@
             <merge key="power_management.quirk.none" type="bool">true</merge>
           </match>
         </match>
+        <match key="system.hardware.product" contains=" dv6000 ">
+          <match key="system.hardware.version" contains="(GA378UA#">
+	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
+	  <!-- note: (RP153UA#: suspend maybe only with binary nvidia module -->
+          <match key="system.hardware.version" contains_outof="(EW434AV#;(RP153UA#">
+    	    <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
+          <match key="system.hardware.version" contains_outof="(EY798AV#;(GF688EA;(RM469EA;(RP980EA#">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
+          </match>
+        </match>
         
-        <match key="system.hardware.product" contains_outof="dv2000;dv2500;dv6000;tx1000">
+        <match key="system.hardware.product" contains_outof="dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP Pavilion dv6500 Notebook PC ">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
