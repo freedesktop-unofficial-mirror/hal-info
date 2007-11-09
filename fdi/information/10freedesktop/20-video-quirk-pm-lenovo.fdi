@@ -5,12 +5,12 @@
     <!-- ThinkPads -->
 
       <!-- X60 / X60s / T61 / R61 / X61 Tablet -->
-      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;7658;8919;7767C3U">
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;7658;8919;7767C3U;7768">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- X61* Tablet -->
-      <match key="system.hardware.product" prefix_outof="7669;7764;7675">
+      <!-- X61* Tablet, R61i (7732) -->
+      <match key="system.hardware.product" prefix_outof="7669;7764;7675,7732">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix="63664DU">
@@ -45,6 +45,11 @@
       <match key="system.hardware.product" prefix="7663">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <!-- T61p, does not work with the NVidia driver -->
+      <match key="system.hardware.product" prefix="6460">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
       <!-- T61, intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE -->
       <match key="system.hardware.product" prefix="8895">
 	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -53,7 +58,7 @@
 
     <!-- Lenovos non-ThinkPads -->
       <match key="system.hardware.version" prefix_ncase="3000 N100">
-        <match key="system.hardware.product" prefix_outof="07686VG;076831G;076835U">
+        <match key="system.hardware.product" prefix_outof="068928U;07686VG;076831G;076835U">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" prefix="07687MM">
