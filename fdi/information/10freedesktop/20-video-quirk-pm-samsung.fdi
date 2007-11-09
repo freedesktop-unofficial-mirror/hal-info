@@ -15,7 +15,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" string_outof="SX20S;SENS V25">
+      <match key="system.hardware.product" string_outof="SX20S;SENS V25;NX05S">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
