@@ -6,7 +6,7 @@
     <match key="system.hardware.vendor" prefix="Compaq">
       <!-- Compaq Amada -->
       <match key="system.hardware.product" prefix="Armada">
-        <match key="system.hardware.product" contains="    E500  ">
+        <match key="system.hardware.product" contains="    E500  ;     M70  ;    M700 ">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
         <!-- This Armada m300 seems not to have a useful model description, so to make sure also check the bios_version-->
