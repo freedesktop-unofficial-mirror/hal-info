@@ -7,7 +7,7 @@
         <match key="system.hardware.product" contains=" M30X">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="M35X;P200; A100">
+        <match key="system.hardware.product" contains_outof="M35X;P200; A100; L30">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -18,7 +18,7 @@
         <match key="system.hardware.product" contains="P105">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="L10">
+        <match key="system.hardware.product" contains_outof="L10;U305">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -47,6 +47,10 @@
 
       <!-- Portege Laptops -->
       <match key="system.hardware.product" prefix="PORTEGE">
+        <match key="system.hardware.product" contains="R500">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="M300">
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -60,6 +64,18 @@
         </match> 
       </match>
 
+      <!-- EQUIUM -->
+      <match key="system.hardware.product" prefix="EQUIUM">
+        <match key="system.hardware.product" suffix=" A100">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+      </match> 
+
+      <!-- Toshiba Portege 3490CT -->
+      <match key="system.hardware.product" string="P3490">
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
       <!-- Toshiba Satellite S1110 -->
       <match key="system.hardware.product" string="S1110">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
