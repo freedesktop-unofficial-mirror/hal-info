@@ -2,10 +2,13 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="ASUS">
+      <match key="system.hardware.product" prefix="U5F ">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne;V6V">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
