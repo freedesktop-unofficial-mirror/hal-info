@@ -14,7 +14,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2300;3010;3260">
+        <match key="system.hardware.product" contains_outof="2300;3010;3020;3260">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -38,7 +38,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-       <match key="system.hardware.product" prefix="TravelMate 630"> <!-- TravelMate 630Lci -->
+       <match key="system.hardware.product" prefix="TravelMate 630;TravelMate 230 "> <!-- TravelMate 630Lci -->
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -65,24 +65,35 @@
         <match key="system.hardware.product" contains_outof="5610;5020">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="1520;3000;5570">
+        <match key="system.hardware.product" contains_outof="1520;3000;5110;5570;5920">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="5500Z ">
+        <match key="system.hardware.product" contains_outof="1640;3100;5500Z ">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
 
-      <match key="system.hardware.product" string="Extensa 4150">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      <match key="system.hardware.product" prefix="Extensa">
+        <match key="system.hardware.product" contains="6220">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="4150">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
       </match>
 
-      <match key="system.hardware.product" string="Ferrari 4000">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+      <match key="system.hardware.product" prefix="Ferrari">
+        <match key="system.hardware.product" contains="4000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+	<!-- does not work with fglrx -->
+        <match key="system.hardware.product" contains="5000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
       </match>
     </match>
   </device>
