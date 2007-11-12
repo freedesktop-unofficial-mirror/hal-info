@@ -316,8 +316,8 @@
 
 	<!-- SanDisk -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x781">
-	  <!-- Sansa e130 -->
-	  <match key="@storage.originating_device:usb.product_id" int="0x7301">
+	  <!-- Sansa e130, e140 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x7301;0x7302">
 	    <merge key="portable_audio_player.type" type="string">generic</merge>
 	    <merge key="portable_audio_player.access_method" type="string">storage</merge>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
