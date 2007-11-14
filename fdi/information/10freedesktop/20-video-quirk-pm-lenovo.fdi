@@ -51,7 +51,7 @@
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <!-- T61, intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE -->
-      <match key="system.hardware.product" prefix="8895">
+      <match key="system.hardware.product" prefix="8895;6464">
 	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
