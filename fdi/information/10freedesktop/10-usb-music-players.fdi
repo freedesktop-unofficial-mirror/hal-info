@@ -87,6 +87,19 @@
           </match>
         </match>
 
+        <!-- MPIO HD300 Player -->
+        <match key="@storage.originating_device:usb.vendor_id" int="0x05e3">
+          <match key="@storage.originating_device:usb.product_id" int="0x0702">
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">video/x-ms-asf</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+          </match>
+        </match>
+
 	<!-- SONICblue -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x045a">
 	  <!-- Rio Forge -->
