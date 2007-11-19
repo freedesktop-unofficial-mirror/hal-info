@@ -9,7 +9,7 @@
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Acer">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Aspire">
           <!-- Laptops without extra Euro and Dollar keys, pre mid-2004 & pre 'folio' design -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1510">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="1510">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
@@ -92,7 +92,7 @@
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Extensa">
           <!-- Laptops with extra Euro and Dollar keys -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4010">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="4010">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
@@ -110,7 +110,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4100">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="4100">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
