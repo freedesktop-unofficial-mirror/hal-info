@@ -42,7 +42,7 @@
       </match>
 
       <!-- T61 -->
-      <match key="system.hardware.product" prefix="7663">
+      <match key="system.hardware.product" prefix_outof="6466;7663">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!-- T61 (8895), intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE 
