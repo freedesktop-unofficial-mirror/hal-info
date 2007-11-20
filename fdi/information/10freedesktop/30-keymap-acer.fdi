@@ -72,7 +72,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 2) -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="3100;5100;5650;9110">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="3100;3690;5100;5610;5630;5650;5680;9110">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
@@ -124,6 +124,7 @@
             <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
             <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
             <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
             <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
             <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
             <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
