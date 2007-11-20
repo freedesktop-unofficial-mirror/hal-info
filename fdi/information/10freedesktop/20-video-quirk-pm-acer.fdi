@@ -38,7 +38,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-       <match key="system.hardware.product" prefix="TravelMate 630;TravelMate 230 "> <!-- TravelMate 630Lci -->
+       <match key="system.hardware.product" prefix_outof="TravelMate 630;TravelMate 230 "> <!-- TravelMate 630Lci -->
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>

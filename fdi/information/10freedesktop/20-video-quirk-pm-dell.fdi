@@ -79,7 +79,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <!-- these need no quirks -->
-        <match key="system.hardware.product" contains=" 1150; 1720">
+        <match key="system.hardware.product" contains_outof=" 1150; 1720">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>

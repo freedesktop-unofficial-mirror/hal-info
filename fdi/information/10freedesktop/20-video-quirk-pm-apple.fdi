@@ -2,7 +2,7 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="Apple">
-      <match key="system.hardware.product" string_outof="MacBook2,1">
+      <match key="system.hardware.product" string="MacBook2,1">
         <match key="system.hardware.vendor" prefix="Apple Inc.">
       	  <match key="system.hardware.version" string="1.0">
              <!-- needs VBE_SAVE from console, but that slows resuming -->
