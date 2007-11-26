@@ -12,7 +12,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="A6M">
+      <match key="system.hardware.product" prefix_outof="A6M;Z84F">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix_outof="L3000D;M3N ">
