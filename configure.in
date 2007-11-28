@@ -10,7 +10,10 @@ AC_PROG_LN_S
 PKG_PROG_PKG_CONFIG
 
 if ! $PKG_CONFIG --atleast-version 0.5.10 hal; then
-   AC_MSG_ERROR([hal 0.5.10 or later is required for this version of hal-info])
+   AC_MSG_WARN([hal 0.5.10 or later is required for this version of hal-info])
+   WRONG_HAL_VERSION=yes
+else 
+   WRONG_HAL_VERSION=no
 fi
 
 dnl ---------------------------------------------------------------------------
@@ -69,9 +72,16 @@ tools/Makefile
 
 dnl ==========================================================================
 echo "
-                    hal-info $VERSION
-                  ========================
-
+                        hal-info $VERSION
+                     ======================== "
+if test x$WRONG_HAL_VERSION = xyes; then
+echo "  
+	================ !!! WARNING !!! ========================
+  	     You use a too old HAL version! You need at least
+               hal >= 0.5.10 to use this hal-info version!
+        ========================================================="
+fi
+echo "
         prefix:                                 ${prefix}
         datarootdir:                            ${datarootdir:-unused}
         datadir:                                ${datadir}
