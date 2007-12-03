@@ -50,10 +50,6 @@
     </match>
 
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
-      <match key="system.hardware.product" contains="6710b (GB893EA#">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV)">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
@@ -69,7 +65,7 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440">
+      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -80,7 +76,6 @@
       <match key="system.hardware.product" contains="nc4200">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
-
 
       <match key="system.hardware.product" contains="HP Compaq nc6400 ">
         <match key="system.hardware.version" prefix="68YCU">
