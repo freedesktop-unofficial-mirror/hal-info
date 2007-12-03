@@ -99,7 +99,7 @@
             <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="XPS Gen2">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="XPS Gen2;1501">
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
