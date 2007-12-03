@@ -171,5 +171,14 @@
       </match>
 
     </match>
+
+    <!-- HP Media Center PC m7330n w/ ATI RS480 [Radeon Xpress 200G Series] -->
+    <match key="system.hardware.vendor" prefix="HP Pavilion">
+      <match key="system.hardware.product" contains="M7330N">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+    </match>
+
   </device>
 </deviceinfo>
