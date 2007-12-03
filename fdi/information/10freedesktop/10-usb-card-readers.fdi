@@ -109,6 +109,24 @@
         </match>
       </match>
 
+      <!-- Another noname multi-card Reader -->
+      <match key="@storage.originating_device:usb.vendor_id" int="0x05e3">
+	<match key="@storage.originating_device:usb.product_id" int="0x070e">
+	     <match key="storage.lun" int="0">
+		     <merge key="storage.drive_type" type="string">compact_flash</merge>
+	     </match>
+	     <match key="storage.lun" int="1">
+		     <merge key="storage.drive_type" type="string">smart_media</merge>
+	     </match>
+	     <match key="storage.lun" int="2">
+		     <merge key="storage.drive_type" type="string">sd_mmc</merge>
+	     </match>
+	     <match key="storage.lun" int="3">
+		     <merge key="storage.drive_type" type="string">memory_stick</merge>
+	     </match>
+        </match>
+      </match>
+
       <!-- Lexar CF Reader -->
       <match key="@storage.originating_device:usb.vendor_id" int="0x05dc">
         <match key="@storage.originating_device:usb.product_id" int="0x0002">
