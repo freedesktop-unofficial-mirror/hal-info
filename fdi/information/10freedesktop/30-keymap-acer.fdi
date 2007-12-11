@@ -163,6 +163,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Laptops without extra Euro and Dollar keys -->
+	  <!-- TM6292 really does identify as 6292 instead of 6290 -->
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3000;6292">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
