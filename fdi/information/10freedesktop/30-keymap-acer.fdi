@@ -131,6 +131,27 @@
             <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="5210;5220;5610;5620">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e053:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e054:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:lock</append> <!--  Windows Lock function --> 
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="input.keymap.data" type="strlist">e075:presentation</append> <!-- Minimise all Windows -->
+            <append key="input.keymap.data" type="strlist">e078:fn</append> <!-- Fn key -->
+            <append key="input.keymap.data" type="strlist">e079:sync</append> <!-- Launch NTI shadow -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Ferrari">
           <!-- Laptops with extra Euro and Dollar keys -->
