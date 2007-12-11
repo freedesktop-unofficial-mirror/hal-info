@@ -48,6 +48,11 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <!-- R52 ATI Mobility Radeon X300 -->
+      <match key="system.hardware.product" prefix_outof="1846">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
       <!-- T41 -->
       <match key="system.hardware.version" string="ThinkPad T41">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
