@@ -198,8 +198,8 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
-          <!-- Samsung YP-T7F -->
-          <match key="@storage.originating_device:usb.product_id" int="0x503d">
+          <!-- Samsung YP-J70, YP-T7F -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0x5032;0x503d">
             <merge key="portable_audio_player.type" type="string">generic</merge>
             <merge key="portable_audio_player.access_method" type="string">storage</merge>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -207,6 +207,11 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+	    <!-- Samsung YP-J70 -->
+            <match key="@storage.originating_device:usb.product_id" int_outof="0x5032">
+              <append key="portable_audio_player.audio_folders" type="strlist">RECORDED/</append>
+              <merge key="storage.requires_eject" type="bool">true</merge>
+            </match>
           </match>
           <!-- Samsung YP-Z5 -->
           <match key="@storage.originating_device:usb.product_id" int="0x5041">
@@ -258,7 +263,7 @@
           </match>
 	</match>
 	
-	<!-- Jetflash MP3 Player, AKA NAPA LCD-HD, AKA Medion, AKA Tevion -->
+	<!-- Jetflash MP3 Player, AKA NAPA LCD-HD, AKA Medion, AKA Tevion  and other -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x066f">
 	  <!-- EXATEL i-BEAD100 Player, Medion MD41512 / Tevion 41512 , Transcend (T.Sonic ??? White), 
 	       TrekStor i.Beat 115, Transcend (T.Sonic 610), TrekStor i.Beat jump MP3 Player
@@ -292,6 +297,15 @@
             <match key="storage.lun" int="1">
                 <merge key="storage.drive_type" type="string">sd_mmc</merge>
             </match>
+          </match>
+	  <!-- Digital Live250 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x80e0">
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
           <!-- Jens of Sweeden (JoS) MP-120 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x82d4">
