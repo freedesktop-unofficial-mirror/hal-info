@@ -7,7 +7,7 @@
         <match key="system.hardware.product" contains=" M30X">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="M35X;P200; A100; L30">
+        <match key="system.hardware.product" contains_outof="M35X;P200; A100; A135; L30">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
