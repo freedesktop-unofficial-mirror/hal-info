@@ -88,6 +88,8 @@
         </match>
 
         <!-- MPIO HD300 Player -->
+        <!-- The usb controller in the HD300 is the same as is used in various
+             usb ide drives. With no obvious way to determine the difference
         <match key="@storage.originating_device:usb.vendor_id" int="0x05e3">
           <match key="@storage.originating_device:usb.product_id" int="0x0702">
             <merge key="portable_audio_player.type" type="string">generic</merge>
@@ -98,6 +100,7 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
         </match>
+        -->
 
 	<!-- SONICblue -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x045a">
