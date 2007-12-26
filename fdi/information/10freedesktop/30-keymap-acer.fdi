@@ -155,7 +155,7 @@
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Ferrari">
           <!-- Laptops with extra Euro and Dollar keys -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1000;4000;5000">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1000;4000">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
