@@ -119,7 +119,7 @@
           <match key="@storage.originating_device:usb.product_id" int="0x5210">
             <merge key="portable_audio_player.type" type="string">generic</merge>
             <merge key="portable_audio_player.access_method" type="string">storage</merge>
-            <addset key="portable_audio_player.access_method.protocols" type="strlist">karma</addset>                      
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">karma</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
