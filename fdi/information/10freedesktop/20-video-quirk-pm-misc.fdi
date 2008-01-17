@@ -17,7 +17,7 @@
   </device>
   <device>
     <match key="system.hardware.vendor" prefix="LG">
-      <match key="system.hardware.product" string="M1-3DGBG">
+      <match key="system.hardware.product" string_outof="M1-3DGBG;W1-JDGBG">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
