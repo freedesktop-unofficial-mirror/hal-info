@@ -216,6 +216,9 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="M5X0JE">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
