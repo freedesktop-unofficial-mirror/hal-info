@@ -9,8 +9,8 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- X61* Tablet, R61i (7732) -->
-      <match key="system.hardware.product" prefix_outof="7669;7764;7673;7675;7732">
+      <!-- X61* Tablet, R61i (7732,8932) -->
+      <match key="system.hardware.product" prefix_outof="7669;7764;7673;7675;7732;8932">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix="63664DU">
