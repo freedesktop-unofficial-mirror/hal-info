@@ -74,6 +74,13 @@
           <append key="input.keymap.data" type="strlist">e031:help</append>	<!-- FnF1 (help) -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="zd7000">
+          <append key="input.keymap.data" type="strlist">e008:player</append>    <!-- multi-media -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append><!-- Fn+lock -->
+          <append key="input.keymap.data" type="strlist">e00b:camera</append>    <!-- camera -->
+          <append key="input.keymap.data" type="strlist">e031:help</append>      <!-- Fn+F1 (help) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
       </match>
     </match>
   </device>
