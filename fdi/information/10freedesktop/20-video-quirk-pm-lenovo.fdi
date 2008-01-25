@@ -5,7 +5,7 @@
     <!-- ThinkPads -->
 
       <!-- X60 / X60s / T61 / R61 / X61 Tablet -->
-      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;7658;8919;7767C3U;7768;7661W1P">
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;7658;8919;7767;7768;7661W1P">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
