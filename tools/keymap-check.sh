@@ -17,7 +17,7 @@ isin ()
 # processes each line of the fdi file
 get_line ()
 {
-	cat "$1" | grep "input.keymap.data" | while read line
+	cat "$1" | sed -ne '/<!--/ { :c; /-->/! { N; b c; }; /-->/s/<!--.*-->//g }; /^  *$/!p;' | grep "input.keymap.data" | while read line
 	do
 		data=`echo "${line}" | cut -d":" -f2 | cut -d"<" -f1`
 		found=`isin $data`
