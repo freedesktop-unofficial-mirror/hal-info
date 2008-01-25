@@ -58,6 +58,9 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains="5630">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains_outof="3610;3620;3690">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
