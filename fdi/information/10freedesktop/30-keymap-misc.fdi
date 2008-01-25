@@ -6,6 +6,15 @@
     <!-- These are raw scancodes produced by the atkbd driver -->
     <match key="@input.originating_device:info.linux.driver" string="atkbd">
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains="BenQ">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="Joybook R22">
+          <append key="input.keymap.data" type="strlist">6e:wlan</append> <!-- Fn + F1 wireless network radio on and off. -->
+          <!-- <append key="input.keymap.data" type="strlist">6d:brightnessdown</append> (Fn + F6 brightness down.) -->
+          <!-- <append key="input.keymap.data" type="strlist">6d:brightnessup</append> (Fn + F7 brightness. up) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MEDION">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="FID2060">
           <append key="input.keymap.data" type="strlist">6b:channeldown</append> <!-- Thottle Down -->
