@@ -18,6 +18,10 @@ if BUILD_KILLSWITCH_DELL_BLUETOOTH
 dist_fdi_DATA += 10-dell-rfkill-switch-bluetooth.fdi 
 endif
 
+if BUILD_KILLSWITCH_DELL_WWAN
+dist_fdi_DATA += 10-dell-rfkill-switch-wwan.fdi 
+endif
+
 if BUILD_KILLSWITCH_SONY_BLUETOOTH
 dist_fdi_DATA += 10-sony-bluetooth-switch.fdi
 endif
