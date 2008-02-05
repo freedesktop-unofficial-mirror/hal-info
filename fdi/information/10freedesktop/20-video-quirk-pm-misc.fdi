@@ -188,14 +188,21 @@
   </device>
 
   <device>
-    <match key="system.hardware.vendor" string="Packard Bell NEC">
-      <match key="system.hardware.product" string="00000000000000000000000">
-        <match key="system.hardware.version" string="P820008416">
-          <merge key="power_management.quirk.none" type="bool">true</merge>
+    <match key="system.hardware.vendor" prefix_ncase="packard bell">
+      <!-- this machines are strange, check also for rest of the vendor string -->
+      <match key="system.hardware.vendor" contains=" NEC">
+        <match key="system.hardware.product" string="00000000000000000000000">
+          <match key="system.hardware.version" string="P820008416">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
+          </match>
+          <match key="system.firmware.version" string="A03 ">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
+          </match>
         </match>
-        <match key="system.firmware.version" string="A03 ">
-          <merge key="power_management.quirk.none" type="bool">true</merge>
-        </match>
+      </match>
+      <match key="system.hardware.product" string="EasyNote_SJ51">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
   </device>
