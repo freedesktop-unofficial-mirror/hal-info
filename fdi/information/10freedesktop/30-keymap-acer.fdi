@@ -275,6 +275,7 @@
             <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
             <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
             <append key="input.keymap.data" type="strlist">e059:brightnessdown</append> <!-- Fn+Left Brightness down -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessup</append> <!-- Fn+Left Brightness Up -->
             <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
             <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
             <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
