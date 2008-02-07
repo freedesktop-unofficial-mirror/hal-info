@@ -23,6 +23,11 @@
           <append key="input.keymap.data" type="strlist">e059:f22</append>	<!-- FIXME: touchpad on -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+	<!-- HP 530 Notebook PC(GN797AA#AKB) -->
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="HP 530 Notebook">
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="nc2400">
           <append key="input.keymap.data" type="strlist">e001:fn_esc</append>	<!-- FnEsc -->
           <append key="input.keymap.data" type="strlist">e008:presentation</append>	<!-- Presentation -->
