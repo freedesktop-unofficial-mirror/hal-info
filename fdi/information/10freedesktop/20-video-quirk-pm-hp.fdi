@@ -67,7 +67,7 @@
           <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx7000;nc6120;nx6325;6510b;2510p">
+      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx6110;nx7000;nc6120;nx6325;6510b;2510p">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
