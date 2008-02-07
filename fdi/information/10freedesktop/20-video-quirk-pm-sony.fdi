@@ -16,6 +16,9 @@
       <match key="system.hardware.product" contains_outof="VGN-FS730;PCG-FX405;VGN-C2S_G">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="VGN-NR120E">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" string_outof="VGN-TX5MN_W;PCG-TR2A(UC);VGN-UX50">
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
