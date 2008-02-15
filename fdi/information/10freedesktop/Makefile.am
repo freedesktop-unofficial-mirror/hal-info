@@ -8,7 +8,8 @@ dist_fdi_DATA = 10-usb-card-readers.fdi		\
 		10-usb-pda.fdi			\
 		10-usbcsr-mice.fdi		\
 		10-laptop-panel-hardware.fdi	\
-		10-cd-dvd-burner.fdi
+		10-cd-dvd-burner.fdi	\
+		10-modem.fdi
 
 if BUILD_KILLSWITCH_DELL_WLAN
 dist_fdi_DATA += 10-dell-rfkill-switch-wlan.fdi 
