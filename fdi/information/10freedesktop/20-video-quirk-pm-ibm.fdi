@@ -44,7 +44,7 @@
         </match>
       </match>
       <!-- R52, X41t, X40, T30, T41p, T41p, T42, X40, Z60t, X41, Z60m -->
-      <match key="system.hardware.product" prefix_outof="1860;1869;2371;2373;2374;2376;2386;2513;2525;2529">
+      <match key="system.hardware.product" prefix_outof="1860;1869;2371;2373;2374;2376;2382;2386;2513;2525;2529">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
