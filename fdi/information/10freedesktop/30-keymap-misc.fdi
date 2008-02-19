@@ -77,6 +77,21 @@
 	  <append key="info.capabilities" type="strlist">input.keymap</append>
 	</match>
       </match>
+      
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MAXDATA">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Pro 7000">
+	  <append key="input.keymap.data" type="strlist">97:prog2</append> <!-- "P2" programmable button -->
+	  <append key="input.keymap.data" type="strlist">9f:prog1</append> <!-- "P1" programmable button -->
+	  <append key="input.keymap.data" type="strlist">a0:mute</append> <!-- Fn-F5   Sound On/Off -->
+	  <append key="input.keymap.data" type="strlist">82:www</append> <!-- www button -->
+	  <append key="input.keymap.data" type="strlist">ec:email</append> <!-- envelope button -->
+            <append key="input.keymap.data" type="strlist">ae:volumedown</append> <!-- Fn-Down   Volume down -->
+            <append key="input.keymap.data" type="strlist">b0:volumeup</append> <!-- Fn-Up   Volume up -->
+	  <append key="input.keymap.data" type="strlist">df:suspend</append> <!-- Fn+F2 hibernate -->
+            <append key="input.keymap.data" type="strlist">f5:help</append> <!-- Help button -->
+	  <append key="info.capabilities" type="strlist">input.keymap</append>
+	</match>
+      </match>
 
     </match>
 
