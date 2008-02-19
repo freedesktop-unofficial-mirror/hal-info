@@ -14,6 +14,11 @@
           <append key="input.keymap.data" type="strlist">e058:f22</append>	<!-- touchpad off -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="dv5000">
+          <append key="input.keymap.data" type="strlist">e031:help</append>     <!-- FnF1 (help) -->
+          <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="dv6500">
           <append key="input.keymap.data" type="strlist">e008:f20</append>	<!-- FIXME: quick play -->
           <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
