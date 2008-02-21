@@ -4,29 +4,25 @@
   <device>
     <match key="info.category" string="serial">
 
-      <!-- Sierra Wireless EM5625 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0017">
+      <!-- Option -->
+      <match key="@info.parent:usb.vendor_id" int="0x0af0">
+        <!-- Colt,Ricola,Ricola Light,Ricola Quad,Ricola Quad Light,Ricola Ndis,Ricola Ndis Light;Ricola Ndis Quad,Ricola Ndis Quad Light, 
+	     Cobra,Cobra Bus,Viper,Viper Bus,Gt Max Ready,Gt Max,Fuji Modem Light,Fuji Modem Gt,Fuji Modem Ex,Fuji Network Light,Fuji Network Gt, 
+	     Fuji Network Ex,Koi Modem,Koi Network,Scorpion Modem,Scorpion Network,Etna Modem,Etna Network,Etna Modem Lite;Etna Modem Gt, 
+             Etna Modem Ex,Etna Network Lite,Etna Network Gt,Etna Network Ex,Etna Koi Modem,Etna Koi Network --> 
+        <match key="@info.parent:usb.product_id" int_outof="0x5000;0x6000;0x6100;0x6200;0x6300;0x6050;0x6150;0x6250;0x6350;0x6500;0x6501;0x6600;0x6601;0x6701;0x6711;0x6721;0x6741;0x6761;0x6731;0x6751;0x6771;0x6800;0x6811;0x6901;0x6911;0x7001;0x7011;0x7021;0x7041;0x7061;0x7031;0x7051;0x7071;0x7100;0x7111">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
       </match>
 
-      <!-- Sierra Wireless MC5720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0018">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC5720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0218">
+      <!-- Kyocera -->
+      <match key="@info.parent:usb.vendor_id" int="0x0c88">
+        <!-- KPC680,KPC650/Passport, -->
+        <match key="@info.parent:usb.product_id" int_outof="0x180a;0x17da">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
@@ -44,208 +40,6 @@
         </match>
       </match>
 
-      <!-- Sierra Wireless MC5725 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0020">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC5725 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0220">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 595 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0019">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 597E -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0021">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless USB Dongle 595U -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0120">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8755 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6802">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8755 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6804">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8765 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6803">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8775 & AC 875U -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6812">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8775 (Thinkpad internal) -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6813">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 875 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6820">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8780 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6832">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC8781 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6833">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 880 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6850">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 881 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6851">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 880 E -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6852">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 881 E -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x6853">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Kyocera KPC680 -->
-      <match key="@info.parent:usb.vendor_id" int="0x0c88">
-        <match key="@info.parent:usb.product_id" int="0x180a">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless AirCard 580 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1199">
-        <match key="@info.parent:usb.product_id" int="0x0112">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
       <!-- Airprime/Sierra PC 5220 -->
       <match key="@info.parent:usb.vendor_id" int="0x0f3d">
         <match key="@info.parent:usb.product_id" int="0x0112">
@@ -256,19 +50,18 @@
         </match>
       </match>
 
-      <!-- Kyocera Wireless KPC650/Passport -->
-      <match key="@info.parent:usb.vendor_id" int="0x0c88">
-        <match key="@info.parent:usb.product_id" int="0x17da">
+      <!-- Sierra Wireless -->
+      <match key="@info.parent:usb.vendor_id" int="0x1199">
+        <!-- EM5625,2x MC5720,2x MC5725,AirCard 595,AirCard 597E,USB Dongle 595U,AirCard 580 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x0017;0x0018;0x0218;0x0020;0x0220;0x0019;0x0021;0x0120;0x0112">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
-      </match>
-
-      <!-- Option Colt -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x5000">
+	<!-- 2x MC8755,MC8765,MC8775 & AC 875U,MC8775,AirCard 875,MC8780,MC8781,AirCard 880,AirCard 881,AirCard 880 E,AirCard 881 E, -->
+	<!-- -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6802;0x6804;0x6803;0x6812;0x6813;0x6820;0x6832;0x6833;0x6850;0x6851;0x6852;0x6853">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
@@ -277,382 +70,9 @@
         </match>
       </match>
 
-      <!-- Option Ricola -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6000">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6100">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Quad -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6200">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Quad Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6300">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Ndis -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6050">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Ndis Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6150">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Ndis Quad -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6250">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Ricola Ndis Quad Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6350">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Cobra -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6500">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Cobra Bus -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6501">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Viper -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6600">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Viper Bus -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6601">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Gt Max Ready -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6701">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Gt Max -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6711">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Modem Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6721">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Modem Gt -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6741">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Modem Ex -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6761">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Network Light -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6731">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Network Gt -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6751">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Fuji Network Ex -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6771">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Koi Modem -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6800">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Koi Network -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6811">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Scorpion Modem -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6901">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Scorpion Network -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x6911">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Modem -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7001">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Network -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7011">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Modem Lite -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7021">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Modem Gt -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7041">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Modem Ex -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7061">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Network Lite -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7031">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Network Gt -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7051">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Network Ex -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7071">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Koi Modem -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7100">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Option Etna Koi Network -->
-      <match key="@info.parent:usb.vendor_id" int="0x0af0">
-        <match key="@info.parent:usb.product_id" int="0x7111">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Huawei E600 -->
+      <!-- Huawei -->
       <match key="@info.parent:usb.vendor_id" int="0x12d1">
+        <!-- E600 -->
         <match key="@info.parent:usb.product_id" int="0x1001">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
@@ -660,11 +80,8 @@
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
-      </match>
-
-      <!-- Huawei E220 -->
-      <match key="@info.parent:usb.vendor_id" int="0x12d1">
-        <match key="@info.parent:usb.product_id" int="0x1003">
+        <!-- E220,E220bis -->
+        <match key="@info.parent:usb.product_id" int_outof="0x1003;0x1004">
           <match key="@info.parent:usb.interface.number" int="0">
             <match key="@info.parent:usb.interface.class" int="0xff">
               <match key="@info.parent:usb.interface.subclass" int="0xff">
@@ -679,66 +96,17 @@
         </match>
       </match>
 
-      <!-- Huawei E220bis -->
-      <match key="@info.parent:usb.vendor_id" int="0x12d1">
-        <match key="@info.parent:usb.product_id" int="0x1004">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <match key="@info.parent:usb.interface.class" int="0xff">
-              <match key="@info.parent:usb.interface.subclass" int="0xff">
-                <match key="@info.parent:usb.interface.protocol" int="0xff">
-                  <append key="info.capabilities" type="strlist">modem</append>
-                    <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-                    <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-                </match>
-              </match>
-            </match>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin XS620/S640 -->
+      <!-- Novatel -->
       <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1100">
+        <!-- Merlin XS620/S640,S620,EX720,S720,EV620 CDMA/EV-DO,ES620/Merlin ES720/Ovation U720,ES620 SM Bus,U727 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x1100;0x1410;0x1120;0x1130;0x2100;0x2110;0x2130;0x4100">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
-      </match>
-
-      <!-- Novatel Merlin S620 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1110">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin EX720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1120">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin S720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1130">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel U730 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1400">
+        <!-- U730,U740,EU870,XU870 HSDPA/3G,EU740,MC950 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x1400;0x1410;0x1420;0x1430;0x2410;0x4400">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
@@ -747,178 +115,10 @@
         </match>
       </match>
 
-      <!-- Novatel U740 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1410">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel EU870 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1420">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin XU870 HSDPA/3G -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x1430">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel EV620 CDMA/EV-DO -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x2100">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin ES620 / Merlin ES720 / Ovation U720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x2110">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel Merlin ES620 SM Bus -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x2130">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel EU740 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x2410">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel U727 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x4100">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Novatel MC950 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1410">
-        <match key="@info.parent:usb.product_id" int="0x4400">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite EV620 CDMA/EV-DO -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8114">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5500 Mobile Broadband HSDPA Mini-Card == Novatel Expedite EU740 HSDPA/3G -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8115">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5505 Mobile Broadband HSDPA Mini-Card == Novatel Expedite EU740 HSDPA/3G -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8116">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5700 Mobile Broadband CDMA/EVDO ExpressCard == Novatel Merlin XV620 CDMA/EV-DO -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8117">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5510 Mobile Broadband HSDPA ExpressCard == Novatel Merlin XU870 HSDPA/3G -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8118">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless 5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite E720 CDMA/EV-DO -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8128">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Dell Wireless HSDPA 5520 -->
-      <match key="@info.parent:usb.vendor_id" int="0x413c">
-        <match key="@info.parent:usb.product_id" int="0x8137">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Anydata Adu E100a -->
+      <!-- Anydata -->
       <match key="@info.parent:usb.vendor_id" int="0x16d5">
-        <match key="@info.parent:usb.product_id" int="0x6501">
+        <!-- Adu E100a,500a -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6501;0x6502">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
@@ -926,47 +126,65 @@
         </match>
       </match>
 
-      <!-- Anydata Adu 500a -->
-      <match key="@info.parent:usb.vendor_id" int="0x16d5">
-        <match key="@info.parent:usb.product_id" int="0x6502">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Bandrich C100 1 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1a8d">
-        <match key="@info.parent:usb.product_id" int="0x1002">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-      <!-- Bandrich C100 2 -->
-      <match key="@info.parent:usb.vendor_id" int="0x1a8d">
-        <match key="@info.parent:usb.product_id" int="0x1003">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-          </match>
-        </match>
-      </match>
-
-	  <!-- Pantech PC5740 -->
+      <!-- Pantech -->
       <match key="@info.parent:usb.vendor_id" int="0x106c">
-        <match key="@info.parent:usb.product_id" int="0x3701">
+        <!-- PC5740;PC5750 EVDO rev A card -->
+        <match key="@info.parent:usb.product_id" int_outof="0x3701;0x3702">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
       </match>
+
+      <!-- Bandrich C100 1/2 -->
+      <match key="@info.parent:usb.vendor_id" int="0x1a8d">
+        <match key="@info.parent:usb.product_id" int_outof="0x1002;0x1003">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+      </match>
+
+      <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u) -->
+      <match key="@info.parent:usb.vendor_id" int="0x22b8">
+        <match key="@info.parent:usb.product_id" int="0x3802">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+          </match>
+        </match>
+      </match>
+
+      <!-- Dell Wireless -->
+      <match key="@info.parent:usb.vendor_id" int="0x413c">
+        <!-- 5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite EV620 CDMA/EV-DO, 
+	     5700 Mobile Broadband CDMA/EVDO ExpressCard == Novatel Merlin XV620 CDMA/EV-DO,
+	     5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite E720 CDMA/EV-DO,
+	  -->
+        <match key="@info.parent:usb.product_id" int_outof="0x8114;0x8117;0x8128">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+          </match>
+        </match>
+	<!-- 5500 Mobile Broadband HSDPA Mini-Card == Novatel Expedite EU740 HSDPA/3G,
+	     505 Mobile Broadband HSDPA Mini-Card == Novatel Expedite EU740 HSDPA/3G,
+	     5510 Mobile Broadband HSDPA ExpressCard == Novatel Merlin XU870 HSDPA/3G,
+	     HSDPA 5520,
+	  -->
+        <match key="@info.parent:usb.product_id" int_outof="0x8115;0x8116;0x8118;0x8137">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+      </match>
+
+      <!-- PCMCIA CARDS -->
 
       <!-- Sierra Wireless 850/860 -->
       <match key="@info.parent:pcmcia.card_id" int="1808">
@@ -978,27 +196,6 @@
           </match>
         </match>
       </match>
-
-	  <!-- Pantech PC5750 EVDO rev A card -->
-      <match key="@info.parent:usb.vendor_id" int="0x106c">
-        <match key="@info.parent:usb.product_id" int="0x3702">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
-	  <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u) -->
-      <match key="@info.parent:usb.vendor_id" int="0x22b8">
-        <match key="@info.parent:usb.product_id" int="0x3802">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-      </match>
-
       <!-- Hayes Accura V.92 Modem PC Card -->
       <match key="@info.parent:pcmcia.card_id" int="0">
         <match key="@info.parent:pcmcia.manf_id" int="19">
