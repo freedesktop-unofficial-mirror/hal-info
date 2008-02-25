@@ -163,8 +163,9 @@
         <!-- 5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite EV620 CDMA/EV-DO, 
 	     5700 Mobile Broadband CDMA/EVDO ExpressCard == Novatel Merlin XV620 CDMA/EV-DO,
 	     5700 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite E720 CDMA/EV-DO,
+	     5720 Mobile Broadband CDMA/EVDO Mini-Card == Novatel Expedite E725 CDMA/EV-DO,
 	  -->
-        <match key="@info.parent:usb.product_id" int_outof="0x8114;0x8117;0x8128">
+        <match key="@info.parent:usb.product_id" int_outof="0x8114;0x8117;0x8128;0x8133">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
