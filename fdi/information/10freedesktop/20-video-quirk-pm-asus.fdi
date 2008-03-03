@@ -37,17 +37,17 @@
     </match>
 
     <!-- ASUS a7v600 motherboard, has no usable sys_* entries besides bios_version -->
-    <match key="smbios.bios.version" prefix="ASUS A7V600">
+    <match key="system.firmware.version" prefix="ASUS A7V600">
       <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
     </match>
     <!-- another ASUS Mainboard -->
-    <match key="smbios.bios.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101">
+    <match key="system.firmware.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101">
       <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
     </match>
     <!-- another ASUS Mainboard, this need no quirk -->
-    <match key="smbios.bios.version" prefix="ASUS M2N-E ACPI BIOS Revision">
+    <match key="system.firmware.version" prefix="ASUS M2N-E ACPI BIOS Revision">
       <merge key="power_management.quirk.none" type="bool">true</merge>
     </match>
 

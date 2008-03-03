@@ -60,8 +60,8 @@
         </match>
       </match>
 
-      <match key="/org/freedesktop/Hal/devices/computer:system.vendor" string="MEDIONNB">
-        <match key="/org/freedesktop/Hal/devices/computer:system.product" prefix="A555">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MEDIONNB">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="A555">
           <append key="input.keymap.data" type="strlist">63:www</append> <!-- N button -->
           <append key="input.keymap.data" type="strlist">66:prog1</append> <!-- link 1 button -->
           <append key="input.keymap.data" type="strlist">67:email</append> <!-- envelope button -->
