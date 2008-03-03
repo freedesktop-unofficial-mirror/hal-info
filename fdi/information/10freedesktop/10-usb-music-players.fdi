@@ -647,6 +647,16 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
 	</match>
+        
+	<!-- Mobile Media Tech. -->
+        <match key="@storage.originating_device:usb.vendor_id" int="0x1011">
+          <!-- No-name device, sold as "Lavod" -->
+          <match key="@storage.originating_device:usb.product_id" int="0x0001">
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+          </match>
+        </match>
 
 	<!-- TouchStone/WaveX -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x10c7">
