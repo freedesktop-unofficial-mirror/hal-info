@@ -553,7 +553,7 @@
              <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
              <append key="portable_audio_player.output_formats" type="strlist">audio/AMR</append>
              <append key="portable_audio_player.input_formats" type="strlist">audio/AMR</append>
-           </match>
+          </match>
 
 	  <!-- W810i, K610i, W300i -->
 	  <match key="@storage.originating_device:usb.product_id" int_outof="0xe042;0xe046;0xe053">
@@ -603,6 +603,24 @@
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_path" type="strlist">Music/playlists</append>
 	  </match>
+
+	  <!-- Sony Ericsson K850i -->
+          <match key="@storage.originating_device:usb.product_id" int="0xe075">
+             <merge key="portable_audio_player.type" type="string">generic</merge>
+             <merge key="portable_audio_player.access_method" type="string">storage</merge>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/AMR</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/AMR-WB</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.m-realaudio</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/x-m4b</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/midi</append>
+	     <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+             <append key="portable_audio_player.input_formats" type="strlist">audio/AMR</append>
+             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+          </match>
 
 	</match>
 
