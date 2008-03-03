@@ -3,7 +3,7 @@
 <deviceinfo version="0.2">
 
   <device>
-    <match key="info.bus" string="platform">
+    <match key="info.subsystem" string="platform">
       <match key="platform.id" string="dcdbas">
         <match key="/org/freedesktop/Hal/devices/computer:system.kernel.name" string="Linux"> 
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell ">

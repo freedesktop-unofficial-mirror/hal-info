@@ -86,7 +86,7 @@
     </match>
 
     <!-- PalmOS PDAs via libusb -->
-    <match key="info.bus" string="usb_device">
+    <match key="info.subsystem" string="usb_device">
 
       <!-- Sony -->
       <match key="usb_device.vendor_id" int="0x054c">
