@@ -92,6 +92,15 @@
             <merge key="portable_audio_player.access_method" type="string">storage</merge>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
+  	  <!-- Nokia 6300 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x4fa">
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <merge key="portable_audio_player.type" type="string">generic</merge>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
+          </match>
         </match>
 
         <!-- MPIO HD300 Player -->
