@@ -71,6 +71,11 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
+      <!-- yes, system.hardware.version is correct for this machine -->
+      <match key="system.hardware.version" string="HP OmniBook 6100 EB">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
