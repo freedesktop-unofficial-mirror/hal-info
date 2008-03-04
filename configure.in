@@ -59,6 +59,12 @@ AC_ARG_ENABLE(killswitch_sony_bluetooth, [  --enable-killswitch-sony-bluetooth  
 AM_CONDITIONAL(BUILD_KILLSWITCH_SONY_BLUETOOTH, test x$enable_killswitch_sony_bluetooth == xyes)
 
 dnl ---------------------------------------------------------------------------
+dnl - Should we enable Bluetooth killswitch support for ThinkPad laptops?
+dnl ---------------------------------------------------------------------------
+AC_ARG_ENABLE(killswitch_thinkpad_bluetooth, [  --enable-killswitch-thinkpad-bluetooth   Include support for Bluetooth killswitch],enable_killswitch_thinkpad_bluetooth=$enableval,enable_killswitch_thinkpad_bluetooth=yes)
+AM_CONDITIONAL(BUILD_KILLSWITCH_THINKPAD_BLUETOOTH, test x$enable_killswitch_thinkpad_bluetooth == xyes)
+
+dnl ---------------------------------------------------------------------------
 dnl - Should we enable WLAN killswitch support for ipw chipsets?
 dnl ---------------------------------------------------------------------------
 AC_ARG_ENABLE(killswitch_ipw_wlan, [  --enable-killswitch-ipw-wlan   Include support for WLAN killswitch (requires hal >= 0.5.10)],enable_killswitch_ipw_wlan=$enableval,enable_killswitch_ipw_wlan=yes)
@@ -88,15 +94,16 @@ echo "
         ========================================================="
 fi
 echo "
-        prefix:                                 ${prefix}
-        datarootdir:                            ${datarootdir:-unused}
-        datadir:                                ${datadir}
-        sysconfdir:                             ${sysconfdir}
-        hardware recall data:                   ${enable_recall}
-        video suspend data:                     ${enable_video}
-        killswitch support for Dell wlan:       ${enable_killswitch_dell_wlan}
-        killswitch support for Dell Bluetooth:  ${enable_killswitch_dell_bluetooth}
-        killswitch support for Dell wwan:       ${enable_killswitch_dell_wwan} (requires hal >= 0.5.11)
-        killswitch support for Sony Bluetooth:  ${enable_killswitch_sony_bluetooth}
-        killswitch support for IPW wlan:        ${enable_killswitch_ipw_wlan} (requires hal >= 0.5.10)
+        prefix:                                     ${prefix}
+        datarootdir:                                ${datarootdir:-unused}
+        datadir:                                    ${datadir}
+        sysconfdir:                                 ${sysconfdir}
+        hardware recall data:                       ${enable_recall}
+        video suspend data:                         ${enable_video}
+        killswitch support for Dell wlan:           ${enable_killswitch_dell_wlan}
+        killswitch support for Dell Bluetooth:      ${enable_killswitch_dell_bluetooth}
+        killswitch support for Dell wwan:           ${enable_killswitch_dell_wwan} (requires hal >= 0.5.11)
+        killswitch support for Sony Bluetooth:      ${enable_killswitch_sony_bluetooth}
+	killswitch support for ThinkPad Bluetooth:  ${enable_killswitch_thinkpad_bluetooth}
+        killswitch support for IPW wlan:            ${enable_killswitch_ipw_wlan} (requires hal >= 0.5.10)
 "

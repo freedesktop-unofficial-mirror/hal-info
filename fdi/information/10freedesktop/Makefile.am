@@ -27,6 +27,10 @@ if BUILD_KILLSWITCH_SONY_BLUETOOTH
 dist_fdi_DATA += 10-sony-bluetooth-switch.fdi
 endif
 
+if BUILD_KILLSWITCH_THINKPAD_BLUETOOTH
+dist_fdi_DATA += 10-thinkpad-rfkill-switch-bluetooth.fdi
+endif
+
 if BUILD_KILLSWITCH_IPW_WLAN
 dist_fdi_DATA += 10-ipw-rfkill-switch.fdi
 endif
