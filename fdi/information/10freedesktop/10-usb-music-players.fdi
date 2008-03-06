@@ -500,8 +500,8 @@
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	  </match>
-          <!-- iAudio F2 -->
-          <match key="@storage.originating_device:usb.product_id" int_outof="0x710;0x730">
+          <!-- iAudio F2, iAudio 7 -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0x710;0x730;0x750">
             <merge key="portable_audio_player.type" type="string">generic</merge>
             <merge key="portable_audio_player.access_method" type="string">storage</merge>
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
@@ -509,11 +509,11 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.playlist_formats" type="strlist">audio/x-mpegurl</append>
+            <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
             <append key="portable_audio_player.audio_folders" type="strlist">MUSIC</append>
             <append key="portable_audio_player.audio_folders" type="strlist">VOICE</append>
             <append key="portable_audio_player.audio_folders" type="strlist">RECORD</append>
-            <append key="portable_audio_player.playlist_formats" type="strlist">audio/x-mpegurl</append>
-            <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
           </match>
 	</match>
 
