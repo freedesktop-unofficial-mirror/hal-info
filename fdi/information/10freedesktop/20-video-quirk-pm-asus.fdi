@@ -23,6 +23,7 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+      <!-- Asus Eee PC -->
       <match key="system.hardware.product" string="701">
          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
