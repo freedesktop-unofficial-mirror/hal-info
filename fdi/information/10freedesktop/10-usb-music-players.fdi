@@ -863,8 +863,11 @@
       <match key="storage.vendor" string="Sony">
         <match key="storage.model" string="PSP">
           <append key="info.capabilities" type="strlist">portable_audio_player</append>
+          <!-- NOTE: for backward compatibility until key get removed finally -->
+	  <merge key="portable_audio_player.access_method" type="string">storage</merge>
           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
-          <merge key="portable_audio_player.type" type="string">psp</merge>
+          <!-- NOTE: for backward compatibility until key get removed finally -->
+	  <merge key="portable_audio_player.type" type="string">psp</merge>
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
