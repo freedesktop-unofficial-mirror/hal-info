@@ -3,7 +3,7 @@
 <deviceinfo version="0.2">
   <device>
     <!-- These are buttons synthesized in the sony-laptop kernel module
-         You can find the scancodes in /usr/include/linux/sonypi.h -->
+         You can find the scancodes in the kernel source of the module (drivers/misc/sony-laptop.c) -->
     <match key="input.product" string="Sony Vaio Keys">
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Sony">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string_outof="VGN-S1XP(GB);VGN-SZ3XWP_C">
