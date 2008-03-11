@@ -829,8 +829,8 @@
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
           <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
         </match>
-        <!-- iFP 700/800/900/1000/N10 IMM, H10 20/5GB/5,6 MTP -->
-	<match key="usb.product_id" int_outof="0x1007;0x1008;0x1009;0x1010;0x1011;0x2101;0x2102;0x2105">
+        <!-- iFP 700/800/1000/N10 IMM, H10 5,6 MTP -->
+	<match key="usb.product_id" int_outof="0x1007;0x1009;0x1010;0x1011;0x2105">
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
