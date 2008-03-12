@@ -111,6 +111,14 @@
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="TOSHIBA">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SATELLITE A100">
+          <append key="input.keymap.data" type="strlist">e024:stop</append> 
+          <append key="input.keymap.data" type="strlist">e032:www</append> 
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
     </match>
 
   </device>
