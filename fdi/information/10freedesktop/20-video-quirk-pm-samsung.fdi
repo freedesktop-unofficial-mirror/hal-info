@@ -6,14 +6,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="R40/R41">
-        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-      </match>
       <!-- Samsung UMPC -->
       <match key="system.hardware.product" string="R40/R41">
-        <match key="system.hardware.version" string="01ME">
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string_outof="SX20S;SENS V25;NX05S">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
