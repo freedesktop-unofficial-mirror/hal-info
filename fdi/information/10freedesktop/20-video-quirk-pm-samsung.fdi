@@ -6,8 +6,8 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- Samsung UMPC -->
-      <match key="system.hardware.product" string="R40/R41">
+      <!-- Samsung UMPC, P35 -->
+      <match key="system.hardware.product" string_outof="R40/R41;CoronaR">
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string_outof="SX20S;SENS V25;NX05S">
