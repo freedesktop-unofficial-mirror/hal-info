@@ -19,7 +19,8 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix="A6U ">
+      <!-- Z91E is identified as A3E -->
+      <match key="system.hardware.product" prefix_outof="A6U;A3E">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
