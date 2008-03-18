@@ -7,7 +7,7 @@
         <match key="system.hardware.product" contains=" M30X">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="M35X;P200; P205D; A100; A105; A135; A200; L30;M70">
+        <match key="system.hardware.product" contains_outof="M35X;P200; P205D; A100; A105; A135; A200; A210; L30;M70">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -44,7 +44,7 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
 	<!-- these need no quirks-->
-        <match key="system.hardware.product" contains=" S3; S1">
+        <match key="system.hardware.product" contains=" A9; S3; S1">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>      
       </match> 

@@ -172,7 +172,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="MS-7012">
+      <match key="system.hardware.product" string="MS-7012;M295M">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>

@@ -72,7 +72,7 @@
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
 	  -->
         </match>
-        <match key="system.hardware.product" contains_outof="B Series;S7010">
+        <match key="system.hardware.product" contains_outof="B Series;T Series;S7010">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
