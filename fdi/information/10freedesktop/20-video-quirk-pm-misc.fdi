@@ -378,4 +378,14 @@
     </match>
   </device>
 
+  <device>
+    <match key="system.hardware.vendor" string="ZEPTO">
+      <match key="system.hardware.product" prefix="ZNOTE">
+        <match key="system.hardware.version" prefix="3215W">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+    </match>
+  </device>
+
 </deviceinfo>
