@@ -95,7 +95,7 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <!-- Note: PY507ET# is a nc6120 -->
-      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b;6910p;8510p;PY507ET#">
+      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b;6720s;6910p;8510p;PY507ET#">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -109,7 +109,7 @@
 
       <match key="system.hardware.product" contains="HP Compaq nc6400 ">
         <match key="system.hardware.version" prefix="68YCU">
-          <match key="system.hardware.product" contains_outof="(EH522AV);(EY582ES">
+          <match key="system.hardware.product" contains_outof="(EH522AV);(EY582ES;(RH560EA">
             <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
 	  </match>
@@ -156,6 +156,9 @@
         <match key="system.hardware.product" contains="dv4000 (EB911EA#">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	</match>
+        <match key="system.hardware.product" contains="zd8000 (EL030EA#">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
 	<match key="system.hardware.product" contains="ze2000">
 	  <match key="system.hardware.product" contains="(EK791EA#">
 	    <merge key="power_management.quirk.none" type="bool">true</merge>
@@ -174,7 +177,7 @@
           </match>
         </match>
         <match key="system.hardware.product" contains=" dv6000 ">
-          <match key="system.hardware.version" contains="(GA378UA#">
+          <match key="system.hardware.version" contains="(GA378UA#;(GH907EA#">
 	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
           </match>
 	  <!-- note: (RP153UA#: suspend maybe only with binary nvidia module -->
@@ -187,7 +190,7 @@
           </match>
         </match>
         
-        <match key="system.hardware.product" contains_outof="dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP Pavilion dv6500 Notebook PC ">
+        <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP Pavilion dv6500 Notebook PC">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
