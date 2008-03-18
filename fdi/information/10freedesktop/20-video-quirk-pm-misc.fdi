@@ -2,7 +2,7 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="COMPAL">
-      <match key="system.hardware.product" contains_outof="HEL80I;HEL81I">
+      <match key="system.hardware.product" contains_outof="HEL80C;HEL80I;HEL81I">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
@@ -42,7 +42,7 @@
       <match key="system.hardware.product" prefix="CF-Y">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="CF-51E;CF-R3E;CF-R2C;CF-R6M">
+      <match key="system.hardware.product" contains_outof="CF-51E;CF-R3E;CF-R2C;CF-R6A;CF-R6M">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -67,6 +67,9 @@
     <match key="system.hardware.vendor" string="AVERATEC">
       <match key="system.hardware.product" string_outof="3700 Series;1000 Series">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="5500 Series">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
@@ -168,6 +171,9 @@
       <match key="system.hardware.product" contains="MS-6714">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="MS-7012">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -362,8 +368,12 @@
 
   <device>
     <match key="system.hardware.vendor" string="Shuttle Inc">
-      <match key="system.hardware.product" prefix="SN85V10">
+      <match key="system.hardware.product" string="SN85V10">
         <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="SN41UV10">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
