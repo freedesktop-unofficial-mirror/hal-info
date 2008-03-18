@@ -75,7 +75,7 @@
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.version" string_ncase="LENOVO3000 V100">
+      <match key="system.hardware.version" string="LENOVO3000 V100">
         <match key="system.hardware.product" prefix="0763">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
