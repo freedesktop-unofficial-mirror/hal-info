@@ -5,12 +5,12 @@
     <!-- ThinkPads -->
 
       <!-- X60 / X60s / T61 / R61 / X61 Tablet -->
-      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;6365;7658;8919;7767;7768;7661;7733;9452">
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;6365;7658;7661;7733;7738;7767;7768;8919;9452">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- X61* Tablet, R61i (7732,8932) -->
-      <match key="system.hardware.product" prefix_outof="7669;7764;7673;7674;7675;7732;8932">
+      <!-- X61* Tablet, R61i (7732,8932), X60s (7666) -->
+      <match key="system.hardware.product" prefix_outof="7669;7764;7666;7673;7674;7675;7732;8932">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix="63664DU">
@@ -51,15 +51,29 @@
 	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+ 
+      <!-- These Thinpads don't need a quirk: 6459 (T61p), 7664 (T60) see s2ram -->  
+      <match key="system.hardware.product" prefix_outof="6459;7664">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
 
-    <!-- Lenovos non-ThinkPads -->
+      <!-- Lenovos non-ThinkPads -->
       <match key="system.hardware.version" prefix_ncase="3000 N100">
-        <match key="system.hardware.product" prefix_outof="068928U;07686VG;076831G;076835U">
+        <match key="system.hardware.product" prefix_outof="068928U;07686VG;076831G;076835U;0768BYG">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" prefix="07687MM">
 	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+      </match>
+      <match key="system.hardware.version" string_ncase="LENOVO3000 V100">
+        <match key="system.hardware.product" prefix="0763">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+
+      <match key="system.hardware.product" prefix="Soleil E660P">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
     </match>
