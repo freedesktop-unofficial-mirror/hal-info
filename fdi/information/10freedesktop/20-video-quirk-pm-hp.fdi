@@ -35,6 +35,21 @@
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
+
+      <match key="system.hardware.product" prefix="Presario">
+	 <match key="system.hardware.product" contains="2701EA">
+	   <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+	   <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+	   <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+         </match>
+        <match key="system.hardware.product" contains="V3000 (EZ674UA#">
+    	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+ 	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#">
+	  <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
    
       <match key="system.hardware.product" prefix="N620c ">
     	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -52,6 +67,9 @@
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
       <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV)">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" contains="HP OmniBook XT1000">
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" contains_outof="V3000 (RL377PA#;EW434AVABA;R3000;R4100;nc6000">
     	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -76,7 +94,8 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b">
+      <!-- Note: PY507ET# is a nc6120 -->
+      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b;6910p;8510p;PY507ET#">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -90,12 +109,9 @@
 
       <match key="system.hardware.product" contains="HP Compaq nc6400 ">
         <match key="system.hardware.version" prefix="68YCU">
-          <match key="system.hardware.product" contains="(EH522AV)">
+          <match key="system.hardware.product" contains_outof="(EH522AV);(EY582ES">
             <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-	  </match>
-          <match key="system.hardware.product" contains="(EY582ES">
-            <merge key="power_management.quirk.none" type="bool">true</merge>
 	  </match>
         </match>
       </match>
@@ -183,6 +199,9 @@
       <match key="system.hardware.product" contains="M7330N">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string_outof="D7223K-ABA A650E;EJ192AA-ABS t3250.se;EP198AA-UUZ t3335.ch">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
 

@@ -7,18 +7,19 @@
         <match key="system.hardware.product" contains=" M30X">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="M35X;P200; A100; A135; L30">
+        <match key="system.hardware.product" contains_outof="M35X;P200; A100; A135; L30;M70">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" suffix=" P10">
+	<!-- need exact match for this machine to prevent mixup with P105-->
+        <match key="system.hardware.product" string="Satellite P10">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="P105">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="L10;U305">
+        <match key="system.hardware.product" contains_outof="L10;U305;M55">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -36,11 +37,11 @@
 
       <!-- Tecra Laptops -->
       <match key="system.hardware.product" prefix="TECRA">
-        <match key="system.hardware.product" contains_outof="8100;8200">
+        <match key="system.hardware.product" contains_outof="8100;8200; M9">
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
 	<!-- these need no quirks-->
-        <match key="system.hardware.product" contains=" S3">
+        <match key="system.hardware.product" contains=" S3; S1">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>      
       </match> 
@@ -80,11 +81,16 @@
       <match key="system.hardware.product" string="S1110">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <!-- Toshiba Satellite 4080XCDT -->
+
       <match key="system.hardware.product" string="Portable PC">
         <match key="system.hardware.version" string="Version 1.0">
+          <!-- Toshiba Satellite 4080XCDT -->
           <match key="system.firmware.version" string="Version 7.80">
             <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
+	  <!-- Tecra A2 PTA20E-4M301VGR -->
+          <match key="system.firmware.version" string="Version 1.20">
+            <merge key="power_management.quirk.none" type="bool">true</merge>
           </match>
         </match>
       </match>

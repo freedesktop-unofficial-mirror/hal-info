@@ -266,8 +266,21 @@
 
   <device>
     <match key="system.hardware.vendor" prefix="Gateway">
+      <match key="system.hardware.product" contains="MT6707">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" contains="MX6922B ">
         <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
+  <device>
+    <match key="system.hardware.vendor" string="MaxSelect">
+      <match key="system.hardware.product" string="Mission_A330">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -313,6 +326,29 @@
           </match>
         </match>
       </match>
+      <match key="system.hardware.product" string="MS-7210">
+        <match key="system.hardware.version" string="100">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+    </match>
+  </device>
+
+  <device>
+    <match key="system.hardware.vendor" string="OEM">
+      <!-- rebranded Uniwill P53IN -->	
+      <match key="system.hardware.product" string="P53IN4">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
+  <device>
+    <match key="system.hardware.vendor" string="OQO">
+      <match key="system.hardware.product" string="ZEPTO">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
@@ -323,4 +359,13 @@
       </match>
     </match>
   </device>
+
+  <device>
+    <match key="system.hardware.vendor" string="Shuttle Inc">
+      <match key="system.hardware.product" prefix="SN85V10">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+
 </deviceinfo>

@@ -7,11 +7,14 @@
         <match key="system.hardware.product" contains_outof="A1667G Serie;Pa 1510;Li 1718">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Xi 1546;Si 1520">
+        <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Pro Edition V3505;Xi 1546;Si 1520;A7640;Pi 1505">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V8010;Pi 1536">
+        <match key="system.hardware.product" string="M Series">
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V2035;PRO V8010;Pi 1536">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -20,11 +23,6 @@
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
             <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           </match>
-        </match>
-        <match key="system.hardware.product" contains="A7640">
-          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="A7645">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -37,10 +35,10 @@
       </match>
 
       <match key="system.hardware.product" contains_ncase="lifebook">
-        <match key="system.hardware.product" contains="S2110">
+        <match key="system.hardware.product" contains_outof="P7010D;S2110">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="T4010">
+        <match key="system.hardware.product" contains_outof="E8410;T4010">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
