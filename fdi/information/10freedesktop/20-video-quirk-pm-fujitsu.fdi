@@ -7,7 +7,7 @@
         <match key="system.hardware.product" contains_outof="A1667G Serie;Pa 1510;Li 1718">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Pro Edition V3505;Xi 1546;Si 1520;A7640;Pi 1505">
+        <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Pro Edition V3505;Xi 1546;Si 1520;A7640;Pi 1505;A1645">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -53,6 +53,13 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
+	<!-- This machine need a special new quirk: power_management.quirk.pci_save
+        <match key="system.hardware.product" contains="T2010">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.pci_save" type="bool">true</merge>
+        </match>
+         -->
         <match key="system.hardware.product" contains="T4210">
           <!-- this need a key we currently not have in HAL:
 	  <merge key="power_management.quirk.pci_restore" type="bool">true</merge>
@@ -76,7 +83,7 @@
         </match>
       </match>
 
-      <match key="system.hardware.product" prefix="ESPRIMO P">
+      <match key="system.hardware.product" prefix_outof="ESPRIMO P;ESPRIMO Mobile M9400">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
