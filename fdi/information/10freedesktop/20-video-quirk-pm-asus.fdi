@@ -2,14 +2,14 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="ASUS">
-      <match key="system.hardware.product" prefix="U5F ">
+      <match key="system.hardware.product" prefix_outof="U5F ;M2000E">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!--NOTE: s2ram list the F3F with power_management.quirk.none=true -->
-      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;P5LD2">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;P5LD2;A8He">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
@@ -19,6 +19,9 @@
       <match key="system.hardware.product" prefix_outof="L3000D;M3N ">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" prefix="W7J">
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <!-- Z91E is identified as A3E -->
       <match key="system.hardware.product" prefix_outof="A6U;A3E">
@@ -31,15 +34,24 @@
          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
       </match>
       <!-- these need no quirks, whitelist them -->
-      <match key="system.hardware.product" prefix_outof="A2H/L ;A6Km ;A6T;A6G">
+      <match key="system.hardware.product" prefix_outof="A2H/L ;A6Km ;A6T;A6G;A6VA;F3T">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
+
     <!-- ASUS Laptop with different vendor string (M2400N) -->
     <match key="system.hardware.vendor" prefix="ERGOUK">
       <match key="system.hardware.product" prefix="M2N ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+    <!-- ASUS Mainboard with different vendor string -->
+    <match key="system.hardware.vendor" string="System manufacturer">
+      <match key="system.hardware.version" prefix="P5KR">
+        <match key="system.hardware.product" prefix="System Version">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
       </match>
     </match>
 
@@ -49,7 +61,7 @@
       <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
     </match>
     <!-- another ASUS Mainboard -->
-    <match key="system.firmware.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101">
+    <match key="system.firmware.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101;ASUS M2A-VM ACPI BIOS Revision 1101;ASUS M2A-VM HDMI ACPI BIOS Revision 1603">
       <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
     </match>
