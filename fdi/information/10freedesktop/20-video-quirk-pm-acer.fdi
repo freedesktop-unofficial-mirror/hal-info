@@ -6,7 +6,7 @@
         <match key="system.hardware.product" contains="C300">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2350;2410;2420;3220;4650">
+        <match key="system.hardware.product" contains_outof="2350;2410;2420;2490;3220;4000;4650">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -109,6 +109,10 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="1000">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
 	<!-- does not work with fglrx -->
         <match key="system.hardware.product" contains="5000">
