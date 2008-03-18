@@ -56,6 +56,8 @@
         <match key="system.hardware.product" contains=" 5100 ">
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
+        <!-- The 1420 match is from a 1420n, there is a report for a 1420 in 
+             the s2ram whitelist to work with vbe_post + vbemode_restore -->
         <match key="system.hardware.product" contains_outof="1420;5150;8000;8500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
@@ -89,7 +91,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <!-- these need no quirks -->
-        <match key="system.hardware.product" contains_outof=" M90 ;WorkStation 360">
+        <match key="system.hardware.product" contains_outof=" M90 ;WorkStation 360; M4300">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -110,19 +112,19 @@
         </match>
       </match>
       
-      <!-- Dell Inspiron 640m, XPS M1210,
-           Dell Inspiron E1505 (MM061), note: there are reports for s2ram that no quirks needed-->
-      <match key="system.hardware.product" contains_outof="MXC061;MXC062;MM061">
+      <!-- Dell Inspiron 640m, XPS M1210 -->
+      <match key="system.hardware.product" contains_outof="MXC061;MXC062">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
-      <!-- Dell XPS M1330, OptiPlex GX520 (desktop with intel) -->
-      <match key="system.hardware.product" contains_outof="XPS M1330;OptiPlex GX520">
+      <!-- Dell XPS M1330, OptiPlex GX520 (desktop with intel) 
+           MM061 = Inspiron E1505 or/and 6400 -->
+      <match key="system.hardware.product" contains_outof="XPS M1330;OptiPlex GX520;MM061">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       
       <!-- these need no quirks : DXP051, Inspiron: 1300, E1702/E1705, 630m; M1710 (only resumes with vesafb) -->
-      <match key="system.hardware.product" contains_outof="DXP051;ME051;MP061;MXC051;MXG061">
+      <match key="system.hardware.product" contains_outof="DXP051;ME051;MP061;MXC051;MXG061;XPS M1530">
           <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
