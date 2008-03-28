@@ -57,8 +57,10 @@
         <!-- EM5625,2x MC5720,2x MC5725,AirCard 595,AirCard 597E,USB Dongle 595U,AirCard 580 -->
         <match key="@info.parent:usb.product_id" int_outof="0x0017;0x0018;0x0218;0x0020;0x0220;0x0019;0x0021;0x0120;0x0112">
           <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+            <match key="serial.port" int="0">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">IS-707-A</append>
+            </match>
           </match>
         </match>
 	<!-- 2x MC8755,MC8765,MC8775 & AC 875U,MC8775,AirCard 875,MC8780,MC8781,AirCard 880,AirCard 881,AirCard 880 E,AirCard 881 E, -->
