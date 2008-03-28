@@ -794,6 +794,7 @@
       <match key="usb.vendor_id" int="0xe79">
         <!-- GMini 120 -->
         <match key="usb.product_id" int="0x1201">
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">user</addset>
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -803,6 +804,7 @@
 	</match>
         <!-- GMini XS202 -->
         <match key="usb.product_id" int="0x1206">
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">user</addset>
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -817,6 +819,7 @@
       <match key="usb.vendor_id" int="0x1006">
 	<!-- iDP 100 UMS-->
 	<match key="usb.product_id" int="0x0001">
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">user</addset>
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
         </match>
@@ -824,6 +827,7 @@
       <match key="usb.vendor_id" int="0x4102">
 	<!-- iFP 100/300/500 IMM (supports application/ogg only after firmware upgrade)-->
 	<match key="usb.product_id" int_outof="0x1001;0x1003;0x1005">
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">user</addset>
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -831,6 +835,7 @@
         </match>
         <!-- iFP 700/800/1000/N10 IMM, H10 5,6 MTP -->
 	<match key="usb.product_id" int_outof="0x1007;0x1009;0x1010;0x1011;0x2105">
+          <addset key="portable_audio_player.access_method.protocols" type="strlist">user</addset>
           <merge key="portable_audio_player.type" type="string">generic</merge>
           <merge key="portable_audio_player.access_method" type="string">user</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -842,7 +847,7 @@
     </match>
       
     <!-- Set common keys for detected audio player if you have special cases add the player below this match -->
-    <match key="portable_audio_player.type" exists="true">
+    <match key="portable_audio_player.access_method.protocols" exists="true">
       <match key="portable_audio_player.access_method.protocols" contains="storage">
         <!-- NOTE: for backward compatibility until key get removed finally -->
         <merge key="portable_audio_player.access_method" type="string">storage</merge>
