@@ -227,6 +227,19 @@
         </match>
       </match>
 
+      <!-- Option Fusion+ UMTS HSDPA card -->
+      <match key="info.category" string="serial">
+        <match key="@info.parent:pci.vendor_id" int="0x1931">
+          <match key="@info.parent:pci.product_id" int="0x000c">
+            <match key="serial.port" int="0">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+            </match>
+          </match>
+        </match>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
