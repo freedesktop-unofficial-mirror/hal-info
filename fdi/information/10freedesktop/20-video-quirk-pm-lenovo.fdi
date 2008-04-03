@@ -4,8 +4,8 @@
     <match key="system.hardware.vendor" string="LENOVO">
     <!-- ThinkPads -->
 
-      <!-- X60 / X60s / T61 / T61p / R61 / X61 Tablet -->
-      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;6365;6458;7658;7661;7666;7733;7738;7767;7768;8919;9452">
+      <!-- X60 / X60s / T61 / T61p / R61 / R61s / X61 Tablet -->
+      <match key="system.hardware.product" prefix_outof="1702;1704;1706;1709;6363;6364;6365;6458;7658;7661;7666;7668;7733;7738;7767;7768;8919;9452">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
