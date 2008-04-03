@@ -232,6 +232,11 @@
       <match key="system.hardware.product" string="M5X0JE">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="M720SR">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
