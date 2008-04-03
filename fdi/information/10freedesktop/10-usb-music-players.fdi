@@ -588,6 +588,16 @@
              <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
 
+          <!-- Sony Ericsson K320i -->
+          <match key="@storage.originating_device:usb.product_id" int="0xe072">
+            <merge key="portable_audio_player.access_method" type="string">storage</merge>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/AMR</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/midi</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/AMR</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">AUDIO/</append>
+          </match>
+
 	</match>
 
  	<!-- LG Fusic Phone -->
