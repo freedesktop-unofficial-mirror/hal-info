@@ -28,6 +28,16 @@
           <append key="input.keymap.data" type="strlist">0x10:suspend</append> <!-- Fn+F12 hibernate -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="VGN-FZ140E">
+          <append key="input.keymap.data" type="strlist">0x06:mute</append> <!-- Fn+F2 mute -->
+          <append key="input.keymap.data" type="strlist">0x09:brightnessdown</append> <!-- Fn+F5 brightness up -->
+          <append key="input.keymap.data" type="strlist">0x0a:brightnessup</append> <!-- Fn+F6 brightness down -->
+          <append key="input.keymap.data" type="strlist">0x0b:switchvideomode</append> <!-- Fn+F7 switch crt/lcd -->
+          <append key="input.keymap.data" type="strlist">0x0e:zoom</append> <!-- Fn+F10 zoom -->
+          <append key="input.keymap.data" type="strlist">0x10:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
       </match>
     </match>
   </device>
