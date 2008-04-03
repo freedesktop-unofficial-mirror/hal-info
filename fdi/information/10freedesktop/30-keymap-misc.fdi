@@ -17,6 +17,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="FUJITSU">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro V3205">
+	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
           <append key="input.keymap.data" type="strlist">e077:switchvideomode</append> <!-- Fn+F3 switch screen -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
