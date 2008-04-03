@@ -112,6 +112,16 @@
         </match>
 
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Precision">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="M20">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="M65">
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
