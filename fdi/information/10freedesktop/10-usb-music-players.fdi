@@ -571,6 +571,16 @@
 	    <append key="portable_audio_player.playlist_path" type="strlist">Music/playlists</append>
 	  </match>
 
+          <!-- Sony Ericsson K320i -->
+          <match key="@storage.originating_device:usb.product_id" int="0xe072">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/AMR</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/midi</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/AMR</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">AUDIO/</append>
+          </match>
+
 	  <!-- Sony Ericsson K850i -->
           <match key="@storage.originating_device:usb.product_id" int="0xe075">
              <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
@@ -586,16 +596,6 @@
 	     <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
              <append key="portable_audio_player.input_formats" type="strlist">audio/amr</append>
              <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
-          </match>
-
-          <!-- Sony Ericsson K320i -->
-          <match key="@storage.originating_device:usb.product_id" int="0xe072">
-            <merge key="portable_audio_player.access_method" type="string">storage</merge>
-            <append key="portable_audio_player.input_formats" type="strlist">audio/AMR</append>
-            <append key="portable_audio_player.input_formats" type="strlist">audio/midi</append>
-            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-            <append key="portable_audio_player.output_formats" type="strlist">audio/AMR</append>
-            <append key="portable_audio_player.audio_folders" type="strlist">AUDIO/</append>
           </match>
 
 	</match>
