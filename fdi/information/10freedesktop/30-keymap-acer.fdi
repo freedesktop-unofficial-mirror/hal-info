@@ -34,7 +34,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Laptops with extra Euro and Dollar keys -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3020;3030;3040;3610;3620;4720;5020;5030;5040;7110;9410;9420">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3020;3030;3040;3610;3620;4720;5020;5030;5040;7110;9410;9300;9420">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
