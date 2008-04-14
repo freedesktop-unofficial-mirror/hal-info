@@ -24,7 +24,7 @@
         <match key="system.hardware.product" contains="6460">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="C200;2450;4400">
+        <match key="system.hardware.product" contains_outof="C200;2450;4400">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
 
@@ -98,7 +98,7 @@
         <match key="system.hardware.product" contains="6220">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="2900;4150">
+        <match key="system.hardware.product" contains_outof="2900;4150">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>

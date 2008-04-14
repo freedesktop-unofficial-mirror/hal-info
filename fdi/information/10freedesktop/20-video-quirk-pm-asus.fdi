@@ -66,7 +66,7 @@
       <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
     </match>
     <!-- another ASUS Mainboard, this need no quirk -->
-    <match key="system.firmware.version" prefix="ASUS M2N-E ACPI BIOS Revision;ASUS Striker ACPI BIOS Revision">
+    <match key="system.firmware.version" prefix_outof="ASUS M2N-E ACPI BIOS Revision;ASUS Striker ACPI BIOS Revision">
       <merge key="power_management.quirk.none" type="bool">true</merge>
     </match>
 

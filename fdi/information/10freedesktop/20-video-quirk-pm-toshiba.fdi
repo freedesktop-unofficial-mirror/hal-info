@@ -44,7 +44,7 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
 	<!-- these need no quirks-->
-        <match key="system.hardware.product" contains=" A9; S3; S1">
+        <match key="system.hardware.product" contains_outof=" A9; S3; S1">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>      
       </match> 

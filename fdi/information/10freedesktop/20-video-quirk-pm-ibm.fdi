@@ -33,7 +33,7 @@
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!-- X31 -->
-      <match key="system.hardware.product" prefix="2672;2673">
+      <match key="system.hardware.product" prefix_outof="2672;2673">
         <match key="system.hardware.version" contains="X31">
           <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
           <!-- already added above

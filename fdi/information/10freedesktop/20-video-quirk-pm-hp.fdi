@@ -177,7 +177,7 @@
           </match>
         </match>
         <match key="system.hardware.product" contains=" dv6000 ">
-          <match key="system.hardware.version" contains="(GA378UA#;(GH907EA#">
+          <match key="system.hardware.version" contains_outof="(GA378UA#;(GH907EA#">
 	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
           </match>
 	  <!-- note: (RP153UA#: suspend maybe only with binary nvidia module -->
