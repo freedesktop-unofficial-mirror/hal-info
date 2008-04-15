@@ -2,7 +2,7 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix_ncase="Samsung">
-      <match key="system.hardware.product" string_outof="Q35/Q36;SM40S">
+      <match key="system.hardware.product" string_outof="Q35/Q36;SM40S;SQ45S70">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
