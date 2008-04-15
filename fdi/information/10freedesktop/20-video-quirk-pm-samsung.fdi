@@ -6,6 +6,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="SQ30">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <!-- Samsung UMPC, P35 (NOTE: there is a s2ram report for CoronaR to need no quirks)-->
       <match key="system.hardware.product" string_outof="R40/R41;CoronaR;SX22S">
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
