@@ -91,6 +91,20 @@
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>
 
+      <!-- Hama card reader -->
+      <match key="storage.model" contains="Card Reader   CF">
+	<merge key="storage.drive_type" type="string">compact_flash</merge>
+      </match>
+      <match key="storage.model" contains="Card Reader   MS">
+	<merge key="storage.drive_type" type="string">memory_stick</merge>
+      </match>
+      <match key="storage.model" contains="Card Reader   SM">
+	<merge key="storage.drive_type" type="string">smart_media</merge>
+      </match>
+      <match key="storage.model" contains="CardReaderMMC/SD">
+	<merge key="storage.drive_type" type="string">sd_mmc</merge>
+      </match>
+
       <!-- Noname multi-card Readers (vendor: Genesys Logic) -->
       <match key="@storage.originating_device:usb.vendor_id" int="0x05e3">
 	  <match key="@storage.originating_device:usb.product_id" int_outof="0x070e;0x0760;0x927">
