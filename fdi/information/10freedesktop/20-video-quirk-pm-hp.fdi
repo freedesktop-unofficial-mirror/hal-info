@@ -153,7 +153,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="dv4000 (EB911EA#">
+        <match key="system.hardware.product" contains_outof="dv4000 (EB911EA#; dv2600">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	</match>
         <match key="system.hardware.product" contains="zd8000 (EL030EA#">
