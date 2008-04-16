@@ -19,7 +19,7 @@
         <match key="system.hardware.product" contains="D400">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="CPx J800GT;D410;D420;D520;C610;D620;D830">
+        <match key="system.hardware.product" contains_outof="CPx J800GT;D410;D420;D430;D520;C610;D620;D830">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -59,7 +59,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="500m;600m;1100">
+        <match key="system.hardware.product" contains_outof="500m;600m;1100;5160">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -125,7 +125,7 @@
       </match>
       
       <!-- these need no quirks : DXP051, Inspiron: 1300, E1702/E1705, 630m; M1710 (only resumes with vesafb) -->
-      <match key="system.hardware.product" contains_outof="DXP051;ME051;MP061;MXC051;MXG061;XPS M1530">
+      <match key="system.hardware.product" contains_outof="DXP051;ME051;MP061;MXC051;MXG061;XPS M1530;OptiPlex GX260">
           <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
