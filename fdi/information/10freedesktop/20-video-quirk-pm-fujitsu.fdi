@@ -14,7 +14,7 @@
         <match key="system.hardware.product" string="M Series">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="PRO V2030;PRO V2035;PRO V8010;Pi 1536">
+        <match key="system.hardware.product" contains_outof="Amilo D Series;PRO V2030;PRO V2035;PRO V8010;Pi 1536;Pi 2515">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -54,7 +54,7 @@
         <match key="system.hardware.product" contains_outof="E4010;P7120">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="E8020">
+        <match key="system.hardware.product" contains_outof="E8020;S6410">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -65,14 +65,14 @@
           <merge key="power_management.quirk.pci_save" type="bool">true</merge>
         </match>
          -->
-        <match key="system.hardware.product" contains="T4210">
+        <match key="system.hardware.product" contains_outof="T4210;P7230">
           <!-- this need a key we currently not have in HAL:
 	  <merge key="power_management.quirk.pci_restore" type="bool">true</merge>
 	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
 	  -->
         </match>
-        <match key="system.hardware.product" contains_outof="B Series;T Series;S7010">
+        <match key="system.hardware.product" contains_outof="B Series;T Series;S7010;S7110">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
