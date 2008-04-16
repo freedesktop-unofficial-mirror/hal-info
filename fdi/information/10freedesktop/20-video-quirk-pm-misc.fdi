@@ -81,6 +81,10 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="Joybook S52">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
@@ -123,7 +127,7 @@
 
   <device>
     <match key="system.hardware.vendor" prefix_ncase="micro-star">
-      <match key="system.hardware.product" string="MS-1013">
+      <match key="system.hardware.product" string="MS-1012;MS-1013">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="PR210">
@@ -263,6 +267,10 @@
       <match key="system.hardware.product" string="945GZM-S2">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string_outof="945GCMX-S2;P35-DS4">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
@@ -373,12 +381,15 @@
 
   <device>
     <match key="system.hardware.vendor" string="Shuttle Inc">
-      <match key="system.hardware.product" string="SN85V10">
-        <merge key="power_management.quirk.none" type="bool">true</merge>
+      <match key="system.hardware.product" string="SD11V10">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="SN41UV10">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="SN85V10">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
   </device>
