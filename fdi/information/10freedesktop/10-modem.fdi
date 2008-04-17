@@ -32,13 +32,24 @@
         </match>
       </match>
 
-      <!-- Sierra Wireless MC5720 -->
+      <!-- Vendor: HP -->
       <match key="@info.parent:usb.vendor_id" int="0x0f30">
+        <!-- Sierra Wireless MC5720 -->
         <match key="@info.parent:usb.product_id" int="0x1b1d">
           <match key="@info.parent:usb.interface.number" int="0">
             <match key="serial.port" int="0">
               <append key="info.capabilities" type="strlist">modem</append>
               <append key="modem.command_sets" type="strlist">IS-707-A</append>
+            </match>
+          </match>
+        </match>
+        <!-- HP HS2300 (Sierra Wireless MC8775) -->
+        <match key="@info.parent:usb.product_id" int="0x1e1d">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <match key="serial.port" int="0">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.05</append>
             </match>
           </match>
         </match>
