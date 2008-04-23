@@ -53,13 +53,11 @@
         <match key="system.hardware.product" contains=" 5100 ">
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <!-- The 1420 match is from a 1420n, there is a report for a 1420 in 
-             the s2ram whitelist to work with vbe_post + vbemode_restore -->
-        <match key="system.hardware.product" contains_outof="1420;5150;8000;8500">
+        <match key="system.hardware.product" contains_outof="5150;8000;8500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="500m;600m;1100;5160">
+        <match key="system.hardware.product" contains_outof="500m;600m;1100;1420;5160">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
