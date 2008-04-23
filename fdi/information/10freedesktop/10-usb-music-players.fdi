@@ -776,8 +776,8 @@
 
 	<!-- iRiver -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x4102">
-	  <!-- T20 UMS, T30 UMS, T10 UMS,iFP 700/800/900/1000 UMS, H10 20GB/50GB UMS -->
-          <match key="@storage.originating_device:usb.product_id" int_outof="0x1014;0x1018;0x1020;0x1107;0x1108;0x1109;0x1110;0x2001;0x2002">
+	  <!-- T10 1G, T20 UMS, T30 UMS, T10 UMS,iFP 700/800/900/1000 UMS, H10 20GB/50GB UMS -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0x1013;0x1014;0x1018;0x1020;0x1107;0x1108;0x1109;0x1110;0x2001;0x2002">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
