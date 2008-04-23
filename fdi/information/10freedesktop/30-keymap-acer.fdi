@@ -52,7 +52,7 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
           <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1410;1640;1680;1690;3050;3680;5050;5570;5580;5600">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1410;1640;1680;1690;3050;3680;5050;5570;5580;5600;8100">
             <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
             <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
             <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
