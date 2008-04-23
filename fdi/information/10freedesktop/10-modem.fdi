@@ -236,11 +236,24 @@
           </match>
         </match>
       </match>
+
       <!-- Hayes Accura V.92 Modem PC Card -->
       <match key="@info.parent:pcmcia.card_id" int="0">
         <match key="@info.parent:pcmcia.manf_id" int="19">
           <match key="@info.parent:pcmcia.prod_id1" string="Hayes">
             <match key="@info.parent:pcmcia.prod_id2" string="V92 PC Card">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">V.250</append>
+            </match>
+          </match>
+        </match>
+      </match>
+
+      <!-- Best Data 56Kbps(Cirrus) Fax Modem PC Card (56SPC) -->
+      <match key="@info.parent:pcmcia.card_id" int="0x88">
+        <match key="@info.parent:pcmcia.manf_id" int="0x14e">
+          <match key="@info.parent:pcmcia.prod_id1" string="PCMCIA V92 FAX Modem CARD">
+            <match key="@info.parent:pcmcia.prod_id2" string="FM56C-NFS">
               <append key="info.capabilities" type="strlist">modem</append>
               <append key="modem.command_sets" type="strlist">V.250</append>
             </match>
