@@ -85,7 +85,7 @@
           <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx6110;nx7000;nc6120;nx6325;6510b;2510p">
+      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx7000;nc6120;nx6325;6510b;2510p">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
@@ -95,7 +95,7 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <!-- Note: PY507ET# is a nc6120 -->
-      <match key="system.hardware.product" contains_outof="nc2400;nc6120;nc6320;nx7300;nw8440;6710b;6720s;2710p;6910p;8510p;PY507ET#;6715b">
+      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6710b;6720s;2710p;6910p;8510p;PY507ET#;6715b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
