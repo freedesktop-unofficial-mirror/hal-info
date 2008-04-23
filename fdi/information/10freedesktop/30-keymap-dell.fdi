@@ -8,7 +8,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Latitude">
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D420">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="D420;D820">
             <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
             <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
             <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
@@ -49,16 +49,6 @@
             <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
             <append key="input.keymap.data" type="strlist">e011:prog1</append> <!-- Wifi Catcher (DELL Specific) -->
             <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
-            <append key="info.capabilities" type="strlist">input.keymap</append>
-          </match>
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D820">
-            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
-            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
-            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
-            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
-            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
-            <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
-            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
         </match> <!-- prefix="Latitude" -->
