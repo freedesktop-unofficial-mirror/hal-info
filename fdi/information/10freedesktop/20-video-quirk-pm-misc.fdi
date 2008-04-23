@@ -77,6 +77,9 @@
 
   <device>
     <match key="system.hardware.vendor" prefix="BenQ">
+      <match key="system.hardware.product" string="Joybook R42">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" string_outof="Joybook R22;Joybook R23;JoyBook 7000">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
