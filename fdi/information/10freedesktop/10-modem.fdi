@@ -137,7 +137,7 @@
       <!-- Novatel -->
       <match key="@info.parent:usb.vendor_id" int="0x1410">
         <!-- Merlin XS620/S640,S620,EX720,S720,EV620 CDMA/EV-DO,ES620/Merlin ES720/Ovation U720,ES620 SM Bus,U727 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x1100;0x1410;0x1120;0x1130;0x2100;0x2110;0x2130;0x4100;0x5010">
+        <match key="@info.parent:usb.product_id" int_outof="0x1100;0x1110;0x1410;0x1120;0x1130;0x2100;0x2110;0x2130;0x4100;0x5010">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
