@@ -90,9 +90,11 @@
 	<!-- -->
         <match key="@info.parent:usb.product_id" int_outof="0x6802;0x6804;0x6803;0x6812;0x6813;0x6820;0x6832;0x6833;0x6850;0x6851;0x6852;0x6853">
           <match key="@info.parent:usb.interface.number" int="0">
-            <append key="info.capabilities" type="strlist">modem</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+            <match key="serial.port" int="0">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+            </match>
           </match>
         </match>
       </match>
