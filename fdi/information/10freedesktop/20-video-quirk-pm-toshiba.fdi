@@ -18,6 +18,10 @@
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
           -->
         </match>
+	<!-- need exact match for this machine to prevent mixup with M30x -->
+        <match key="system.hardware.product" string="Satellite Pro M30">
+          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+        </match>
 	<!-- need exact match for this machine to prevent mixup with P105 or A100-->
         <match key="system.hardware.product" string_outof="Satellite P10;Satellite A10">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
