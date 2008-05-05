@@ -276,6 +276,15 @@
         </match>
       </match>
 
+      <!-- Communication Device Class Abstract Control Model (CDC ACM) modems,
+           typically provided by GSM/CDMA phones -->
+      <match key="@info.parent:usb.interface.class" int="0x02">
+        <match key="@info.parent:usb.interface.subclass" int="0x02">
+          <append key="info.capabilities" type="strlist">modem</append>
+          <append key="modem.command_sets" type="strlist">V.250</append>
+        </match>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
