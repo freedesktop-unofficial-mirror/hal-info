@@ -506,6 +506,14 @@
           </match>
         </match>
 
+	<!-- Q-be (Hyun Won, Inc.) -->
+	<match key="@storage.originating_device:usb.vendor_id" int="0x0f9c">
+	  <match key="@storage.originating_device:usb.product_id" int="0x9111">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	  </match>
+        </match>
+
 	<!-- Sony Ericsson -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0xfce">
 	  <!-- K750i mobile phone -->
