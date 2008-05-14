@@ -86,7 +86,7 @@
           <append key="input.keymap.data" type="strlist">e059:info</append>	<!-- I key -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="6910p">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2710p;6910p">
           <append key="input.keymap.data" type="strlist">e001:fn_esc</append>		<!-- FnEsc -->
           <append key="input.keymap.data" type="strlist">e008:presentation</append>	<!-- presentation -->
           <append key="input.keymap.data" type="strlist">e009:battery</append>		<!-- FnF8 (battery) -->
