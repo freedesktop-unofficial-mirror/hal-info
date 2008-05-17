@@ -29,6 +29,12 @@
          <merge key="storage.media_check_enabled" type="bool">false</merge>
        </match>
      </match>
+     <!-- Ignore the Huawei E220 USB HSDPA modem -->
+     <match key="@storage.originating_device:usb.vendor_id" int="0x12d1">
+       <match key="@storage.originating_device:usb.product_id" int="0x1003">
+         <merge key="info.ignore" type="bool">true</merge>
+       </match>
+     </match>
    </match>
   </device>
 </deviceinfo>
