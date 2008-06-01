@@ -29,19 +29,18 @@
       <!-- X22, X40; X32 -->
       <match key="system.hardware.product" prefix_outof="2662;2672;2673">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        <match key="system.hardware.version" contains_not="X31">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
       </match>
       <!-- X31 -->
       <match key="system.hardware.product" prefix_outof="2672;2673;2884">
         <match key="system.hardware.version" contains="X31">
           <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
           <!-- already added above
-            <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-            <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
             <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
-	  -->
-        </match>
+           -->
       </match>
       <!-- R50p, R52, X41t, X40, T30, T41p, T41p, T42, X40, Z60t, X41, Z60m, T32 (2647) -->
       <match key="system.hardware.product" prefix_outof="1832;1860;1869;2371;2373;2374;2376;2382;2386;2511;2513;2525;2526;2529;2530;2647">
