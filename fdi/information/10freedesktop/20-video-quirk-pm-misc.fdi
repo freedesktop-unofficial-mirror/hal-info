@@ -292,6 +292,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="MT6920">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" contains="MX6922B ">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
