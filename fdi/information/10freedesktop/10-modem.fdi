@@ -89,9 +89,8 @@
             </match>
           </match>
         </match>
-	<!-- 2x MC8755,MC8765,MC8775 & AC 875U,MC8775,AirCard 875,MC8780,MC8781,AirCard 880,AirCard 881,AirCard 880 E,AirCard 881 E, -->
-	<!-- -->
-        <match key="@info.parent:usb.product_id" int_outof="0x6802;0x6804;0x6803;0x6812;0x6813;0x6820;0x6832;0x6833;0x6850;0x6851;0x6852;0x6853">
+        <!-- 2x MC8755,MC8765,MC8775 & AC 875U,MC8775,AirCard 875,MC8780,MC8781,AirCard 880,AirCard 881,AirCard 880 E,AirCard 881 E, AirCard 881 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6802;0x6804;0x6803;0x6812;0x6813;0x6820;0x6832;0x6833;0x6850;0x6851;0x6852;0x6853;0x6856">
           <match key="@info.parent:usb.interface.number" int="0">
             <match key="serial.port" int="0">
               <append key="info.capabilities" type="strlist">modem</append>
@@ -229,8 +228,6 @@
         </match>
       </match>
 
-      <!-- PCMCIA CARDS -->
-
       <!-- Sierra Wireless 850/860 -->
       <match key="@info.parent:pcmcia.card_id" int="1808">
         <match key="@info.parent:pcmcia.manf_id" int="402">
@@ -238,6 +235,21 @@
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+      </match>
+
+      <!-- T-Mobile IPWireless 4G (IPWireless 3G Data Modem) -->
+      <match key="@info.parent:pcmcia.card_id" int="0x200">
+        <match key="@info.parent:pcmcia.manf_id" int="0x2f2">
+          <match key="@info.parent:pcmcia.prod_id1" string="IPWireless">
+            <match key="@info.parent:pcmcia.prod_id2" string="3G Data Modem">
+              <match key="@info.parent:pcmcia.prod_id3" string="V2">
+                <append key="info.capabilities" type="strlist">modem</append>
+                <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+                <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+              </match>
+            </match>
           </match>
         </match>
       </match>
@@ -275,6 +287,17 @@
               <append key="modem.command_sets" type="strlist">GSM-07.07</append>
               <append key="modem.command_sets" type="strlist">GSM-07.05</append>
             </match>
+          </match>
+        </match>
+      </match>
+
+      <!-- CMOTECH -->
+      <match key="@info.parent:usb.vendor_id" int="0x16d8">
+        <!-- C-motech CNU-550 (USB, EV-DO) -->
+        <match key="@info.parent:usb.product_id" int_outof="0x5543">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
       </match>
