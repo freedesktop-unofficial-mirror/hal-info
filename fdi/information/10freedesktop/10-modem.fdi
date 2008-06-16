@@ -293,8 +293,8 @@
 
       <!-- CMOTECH -->
       <match key="@info.parent:usb.vendor_id" int="0x16d8">
-        <!-- C-motech CNU-550 (USB, EV-DO) -->
-        <match key="@info.parent:usb.product_id" int_outof="0x5543">
+        <!-- C-motech CNU-550, CNU-680 (USB, EV-DO) -->
+        <match key="@info.parent:usb.product_id" int_outof="0x5543;0x680a">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
