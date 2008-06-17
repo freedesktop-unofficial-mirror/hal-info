@@ -16,6 +16,11 @@
 	      <merge key="info.ignore" type="bool">true</merge>
 	    </match>
 	  </match>
+	  <match key="storage.vendor" string="Intuix">
+            <match key="storage.model" string="U3">
+              <merge key="info.ignore" type="bool">true</merge>
+            </match>
+          </match>
 	</match>
       </match>
      <!-- some usb sticks don't like polling -->
