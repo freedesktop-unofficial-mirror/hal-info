@@ -274,6 +274,16 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
+          <!-- Sony Walkman NWD-B105 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x317">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Record/Voice/</append>
+            <append key="portable_audio_player.playlist_format" type="strlist"></append>
+            <append key="portable_audio_player.playlist_path" type="string"></append>
+          </match>
 	</match>
 
 	<!-- LG Fusic Phone -->
@@ -366,6 +376,11 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
+          <!-- Lyra TH1100A -->
+          <match key="@storage.originating_device:usb.product_id" int="0x778">
+           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+           <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+          </match>         
 	</match>
 
 	<!-- SanDisk -->
