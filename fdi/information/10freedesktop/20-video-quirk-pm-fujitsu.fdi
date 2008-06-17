@@ -43,7 +43,7 @@
         <match key="system.hardware.product" contains_outof="P7010D;S2110">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="E8410;T4010">
+        <match key="system.hardware.product" contains_outof="E8410;T4010;S2210">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
