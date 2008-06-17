@@ -376,6 +376,11 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
           </match>
+          <!-- Lyra TH1100A -->
+          <match key="@storage.originating_device:usb.product_id" int="0x778">
+           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+           <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+          </match>         
 	</match>
 
 	<!-- SanDisk -->
