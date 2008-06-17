@@ -19,13 +19,7 @@
           <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
-	<!-- HP Pavilion dv6426us -->
-	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="dv6000">
-          <append key="input.keymap.data" type="strlist">e008:f20</append>	<!-- FIXME: quick play -->
-          <append key="input.keymap.data" type="strlist">e00e:f21</append>	<!-- FIXME: dvd -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
-        </match>
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="dv6500">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="dv6000;dv6500">
           <append key="input.keymap.data" type="strlist">e008:f20</append>	<!-- FIXME: quick play -->
           <append key="input.keymap.data" type="strlist">e00a:screenlock</append> <!-- FnF6 (lock) -->
           <append key="input.keymap.data" type="strlist">e00e:f21</append>	<!-- FIXME: dvd -->
