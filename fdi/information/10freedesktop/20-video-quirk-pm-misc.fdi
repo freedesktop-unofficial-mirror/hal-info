@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
   <device>
+    <match key="system.hardware.vendor" string="AIRIS">
+      <match key="system.hardware.version" string="VT6413A">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
     <match key="system.hardware.vendor" prefix="COMPAL">
       <match key="system.hardware.product" contains_outof="HEL80C;HEL80I;HEL81I">
         <merge key="power_management.quirk.none" type="bool">true</merge>
