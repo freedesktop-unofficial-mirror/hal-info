@@ -170,8 +170,8 @@
 
       <!-- Pantech -->
       <match key="@info.parent:usb.vendor_id" int="0x106c">
-        <!-- PC5740;PC5750 EVDO rev A card -->
-        <match key="@info.parent:usb.product_id" int_outof="0x3701;0x3702">
+        <!-- PC5740;PC5750;UM150 EVDO rev A card -->
+        <match key="@info.parent:usb.product_id" int_outof="0x3701;0x3702;0x3711">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
