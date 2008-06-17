@@ -59,7 +59,8 @@ dist_fdi_DATA +=				\
 		20-video-quirk-pm-misc.fdi	\
 		20-video-quirk-pm-samsung.fdi   \
 		20-video-quirk-pm-sony.fdi	\
-		20-video-quirk-pm-toshiba.fdi
+		20-video-quirk-pm-toshiba.fdi	\
+		21-video-quirk-nvidia.fdi
 endif
 
 if BUILD_KEYMAPS
