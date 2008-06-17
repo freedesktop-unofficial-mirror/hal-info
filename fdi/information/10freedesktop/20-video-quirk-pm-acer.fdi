@@ -79,7 +79,7 @@
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           </match>
         </match>
-        <match key="system.hardware.product" contains_outof="5020;5500">
+        <match key="system.hardware.product" contains_outof="5000;5020;5500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="1640">
