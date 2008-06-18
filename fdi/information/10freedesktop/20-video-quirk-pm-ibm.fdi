@@ -22,6 +22,11 @@
         </match>
       </match>
 
+      <!-- A31-->
+      <match key="system.hardware.product" prefix="2652">
+        <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
+        <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
+      </match>
       <!-- X31, T30 , A31p-->
       <match key="system.hardware.product" prefix_outof="2366;2653">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
