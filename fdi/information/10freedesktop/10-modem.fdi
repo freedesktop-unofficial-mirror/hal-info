@@ -219,7 +219,7 @@
 	     5510 Mobile Broadband HSDPA ExpressCard == Novatel Merlin XU870 HSDPA/3G,
 	     HSDPA 5520,
 	  -->
-        <match key="@info.parent:usb.product_id" int_outof="0x8115;0x8116;0x8118;0x8137">
+        <match key="@info.parent:usb.product_id" int_outof="0x8115;0x8116;0x8118;0x8136;0x8137">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
