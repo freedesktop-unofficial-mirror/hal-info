@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
 <deviceinfo version="0.2">
-  <!-- On some broken laptops, the brightness control is all done in hardware
-       but the hardware also synthesizes keypresses when the brightness is
-       changed. This gives power manager software problems as the brightness
-       can get into a feedback state so the panel flashes uncontrollably.
-       This is a hardware "feature" seen on some IBM and Lenovo laptops. -->
+  <!-- Some laptops have software controllable backlights and will provide
+       notifications on keypresses, but will also change the brightness
+       directly in firmware. If software changes the value in response to
+       a press, there's a risk that a further event will be generated and
+       a feedback loop occur. brightness_in_hardware indicates to clients
+       that they should not act in response to keypress notifications. -->
   <device>
     <match key="info.category" string="laptop_panel">
       <!-- For Asus EeePC -->
@@ -19,18 +20,11 @@
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="IBM">
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="ThinkPad">
-          <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
-        </match>
+      <match key="linux.sysfs_path" string="/sys/devices/virtual/backlight/thinkpad_screen">
+        <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="LENOVO">
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="ThinkPad">
-          <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
-        </match>
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="3000 N100">
-          <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
-        </match>
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="Dell">
+        <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
     </match>
   </device>
