@@ -23,9 +23,6 @@
       <match key="linux.sysfs_path" string="/sys/devices/virtual/backlight/thinkpad_screen">
         <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="Dell">
-        <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
-      </match>
     </match>
   </device>
 </deviceinfo>
