@@ -20,7 +20,7 @@
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>
-      <match key="linux.sysfs_path" string="/sys/devices/virtual/backlight/thinkpad_screen">
+      <match key="linux.sysfs_path" string="/sys/class/backlight/thinkpad_screen">
         <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
     </match>
