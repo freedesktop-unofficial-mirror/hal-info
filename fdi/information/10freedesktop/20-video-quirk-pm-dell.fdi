@@ -5,6 +5,10 @@
 
       <!-- Dell Latitude -->
       <match key="system.hardware.product" prefix="Latitude">
+        <match key="system.hardware.product" contains="C500">
+          <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="C600">
           <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
         </match>
