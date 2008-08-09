@@ -62,7 +62,7 @@
 
       <!-- Portege Laptops -->
       <match key="system.hardware.product" prefix="PORTEGE">
-        <match key="system.hardware.product" contains="R500">
+        <match key="system.hardware.product" contains_outof="R200;R205;R500">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
