@@ -25,13 +25,13 @@
         </match>
       </match>
 
-      <!-- T60*, Z61* -->
+      <!-- T60*, Z61*, R61e -->
       <match key="system.hardware.version" prefix="ThinkPad ">
         <match key="system.hardware.version" suffix="T60">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.version" contains_outof="T60p;Z61m;Z61t;Z60m;Z61p">
+        <match key="system.hardware.version" contains_outof="T60p;Z61m;Z61t;Z60m;Z61p;R61e">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
