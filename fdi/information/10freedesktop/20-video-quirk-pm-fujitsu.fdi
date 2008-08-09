@@ -4,7 +4,7 @@
     <match key="system.hardware.vendor" prefix="FUJITSU">
       
       <match key="system.hardware.product" contains_ncase="amilo">
-        <match key="system.hardware.product" contains_outof="A1667G Serie;Pa 1510;Li 1718">
+        <match key="system.hardware.product" contains_outof="A1667G Serie;Pa 1510;Li 1718;M1425">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="Pro V3205;Pro Edition V3405;Pro Edition V3505;Xi 1546;Si 1520;A7640;Pi 1505;A1645">
