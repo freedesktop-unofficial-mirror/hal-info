@@ -23,7 +23,7 @@
 	</match>
 
 	<!-- now the common part -->
-	<match key="input.keymap.data" exists="yes">
+	<match key="input.keymap.data" exists="true">
           <append key="input.keymap.data" type="strlist">0x0b:switchvideomode</append> <!-- Fn+F7 switch crt/lcd -->
           <append key="input.keymap.data" type="strlist">0x0e:zoom</append> <!-- Fn+F10 zoom -->
           <append key="input.keymap.data" type="strlist">0x10:suspend</append> <!-- Fn+F12 hibernate -->
