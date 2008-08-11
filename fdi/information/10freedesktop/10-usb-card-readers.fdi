@@ -28,7 +28,10 @@
       <match key="storage.model" contains="HS-SM">
         <merge key="storage.drive_type" type="string">smart_media</merge>
       </match>      
-      <match key="storage.model" contains="HS-SD/MMC">
+      <match key="storage.model" contains="HS-xD">
+        <merge key="storage.drive_type" type="string">smart_media</merge>
+      </match>      
+      <match key="storage.model" contains="HS-SD">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>      
 
