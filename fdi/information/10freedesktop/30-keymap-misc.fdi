@@ -101,21 +101,29 @@
 	</match>
       </match>
 
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="SAMSUNG">
-        <append key="input.keymap.data" type="strlist">0075:www</append> <!-- WWW key -->
-        <append key="input.keymap.data" type="strlist">0078:mail</append> <!-- Mail key -->
-        <append key="input.keymap.data" type="strlist">0074:prog1</append> <!-- User key -->
-        <append key="input.keymap.data" type="strlist">e002:displaytoggle</append> <!-- Fn+F4 CRT/LCD -->
-        <append key="input.keymap.data" type="strlist">e003:battery</append> <!-- Fn+F2 battery icon -->
-        <append key="input.keymap.data" type="strlist">e004:prog1</append> <!-- Fn+F5 backlight on/off -->
-        <append key="input.keymap.data" type="strlist">e006:wlan</append> <!-- Fn+F9 Turn On/Off Wireless -->
-        <append key="input.keymap.data" type="strlist">e008:brightnessup</append> <!-- Fn-Up Brightness up -->
-        <append key="input.keymap.data" type="strlist">e009:brightnessdown</append> <!-- Fn-Down Brightness down -->
-        <append key="input.keymap.data" type="strlist">e031:prog2</append> <!-- Fn+F7 run Samsung Magic Doctor (keypressed event is generated twice) -->
-        <append key="input.keymap.data" type="strlist">e033:prog3</append> <!-- Fn+F8 switch power mode (battery/dynamic/performance) -->
-        <append key="input.keymap.data" type="strlist">e077:f22</append> <!-- Fn+F10 Touchpad on -->
-        <append key="input.keymap.data" type="strlist">e079:f22</append> <!-- Fn+F10 Touchpad off -->
-        <append key="info.capabilities" type="strlist">input.keymap</append>
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix_ncase="samsung">
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="SP55S;SQ45S70S">
+          <append key="input.keymap.data" type="strlist">e002:displaytoggle</append> <!-- Fn+F4 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e003:battery</append> <!-- Fn+F2 battery icon -->
+          <append key="input.keymap.data" type="strlist">e004:prog1</append> <!-- Fn+F5 backlight on/off -->
+          <append key="input.keymap.data" type="strlist">e006:wlan</append> <!-- Fn+F9 Turn On/Off Wireless -->
+          <append key="input.keymap.data" type="strlist">e008:brightnessup</append> <!-- Fn-Up Brightness up -->
+          <append key="input.keymap.data" type="strlist">e009:brightnessdown</append> <!-- Fn-Down Brightness down -->
+          <append key="input.keymap.data" type="strlist">e031:prog2</append> <!-- Fn+F7 run Samsung Magic Doctor (keypressed event is generated twice) -->
+          <append key="input.keymap.data" type="strlist">e033:prog3</append> <!-- Fn+F8 switch power mode (battery/dynamic/performance) -->
+          <append key="input.keymap.data" type="strlist">0074:prog1</append> <!-- User key -->
+          <append key="input.keymap.data" type="strlist">0075:www</append> <!-- WWW key -->
+          <append key="input.keymap.data" type="strlist">e077:f22</append> <!-- Fn+F10 Touchpad on -->
+          <append key="input.keymap.data" type="strlist">0078:mail</append> <!-- Mail key -->
+          <append key="input.keymap.data" type="strlist">e079:f22</append> <!-- Fn+F10 Touchpad off -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="SX20S">
+	  <append key="input.keymap.data" type="strlist">0074:mute</append> 	  
+	  <append key="input.keymap.data" type="strlist">0075:mute</append> 
+	  <append key="input.keymap.data" type="strlist">0077:f21</append> <!-- FIXME: Touchpad on -->
+	  <append key="input.keymap.data" type="strlist">0079:f21</append> <!-- FIXME: Touchpad off -->
+        </match>
       </match>
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="TOSHIBA">
