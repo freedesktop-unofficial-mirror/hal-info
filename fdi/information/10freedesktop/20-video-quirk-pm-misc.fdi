@@ -140,14 +140,18 @@
       <match key="system.hardware.product" string="MS-1012;MS-1013">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="MS-1057">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" string="PR210">
         <match key="system.hardware.version" string="MS-1222X">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" string="MS-1057">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      <match key="system.hardware.product" string="U-100">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="MS-1412">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
