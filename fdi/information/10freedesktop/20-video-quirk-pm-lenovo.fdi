@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="LENOVO">
@@ -17,10 +17,10 @@
       <match key="system.hardware.version" prefix_ncase="ThinkPad R60">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <!-- R60e 32bit works with S3_MODE, 64bit needs VBE_MODE -->
-        <match key="system.hardware.product" prefix="0657"> 
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge> 
+        <match key="system.hardware.product" prefix="0657">
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_not="0657">        
+        <match key="system.hardware.product" contains_not="0657">
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
       </match>
@@ -41,7 +41,7 @@
       <match key="system.hardware.product" prefix="7663">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <!-- T61 (8895), intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE 
+      <!-- T61 (8895), intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE
 	   T61p (6460), does not work with the NVidia driver-->
       <match key="system.hardware.product" prefix_outof="6457;6460;6465">
 	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>

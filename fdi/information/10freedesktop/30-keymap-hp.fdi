@@ -16,7 +16,7 @@
         <append key="input.keymap.data" type="strlist">e033:f21</append>      <!-- FIXME: Auto brightness -->
         <append key="input.keymap.data" type="strlist">e057:wlan</append>     <!-- Wlan -->
         <append key="info.capabilities" type="strlist">input.keymap</append>
-	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Pavilion"> 
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Pavilion">
           <!-- Home and entertainment machines -->
           <append key="input.keymap.data" type="strlist">e008:player</append> <!-- FIXME: quick play -->
           <append key="input.keymap.data" type="strlist">e058:f22</append>    <!-- touchpad off -->

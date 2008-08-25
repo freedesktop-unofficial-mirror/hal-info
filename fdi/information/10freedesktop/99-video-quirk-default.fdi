@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <!-- The aim of this file is to handle systems without any default video
        quirks. The vast majority of hardware will not function without either

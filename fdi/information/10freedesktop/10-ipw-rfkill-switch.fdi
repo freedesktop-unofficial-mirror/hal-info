@@ -12,7 +12,7 @@
       </match>
     </match>
   </device>
-  
+
   <device>
     <match key="info.udi" string="/org/freedesktop/Hal/devices/ipw_wlan_switch">
       <append key="info.capabilities" type="strlist">killswitch</append>

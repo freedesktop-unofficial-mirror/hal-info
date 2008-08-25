@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="TOSHIBA">
@@ -43,8 +43,8 @@
 	<!-- these need no quirks-->
         <match key="system.hardware.product" contains_outof="A80;Pro4600">
           <merge key="power_management.quirk.none" type="bool">true</merge>
-        </match>      
-      </match>      
+        </match>
+      </match>
 
       <!-- Tecra Laptops -->
       <match key="system.hardware.product" prefix="TECRA">
@@ -57,8 +57,8 @@
 	<!-- these need no quirks-->
         <match key="system.hardware.product" contains_outof=" A8; A9; S3; S1">
           <merge key="power_management.quirk.none" type="bool">true</merge>
-        </match>      
-      </match> 
+        </match>
+      </match>
 
       <!-- Portege Laptops -->
       <match key="system.hardware.product" prefix="PORTEGE">
@@ -76,7 +76,7 @@
 	<!-- these need no quirks-->
         <match key="system.hardware.product" contains="R100">
           <merge key="power_management.quirk.none" type="bool">true</merge>
-        </match> 
+        </match>
       </match>
 
       <!-- EQUIUM -->
@@ -85,7 +85,7 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-      </match> 
+      </match>
 
       <!-- Toshiba Portege 3490CT -->
       <match key="system.hardware.product" string="P3490">
@@ -116,12 +116,12 @@
       <!-- these need no quirks-->
       <match key="system.hardware.product" contains="Libretto L5/TNK">
         <merge key="power_management.quirk.none" type="bool">true</merge>
-      </match> 
+      </match>
       <match key="system.hardware.product" string="SP4600">
         <match key="system.hardware.version" string="Version 1.0">
           <merge key="power_management.quirk.none" type="bool">true</merge>
-        </match> 
-      </match> 
+        </match>
+      </match>
 
     </match>
   </device>

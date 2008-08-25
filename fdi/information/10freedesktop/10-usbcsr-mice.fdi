@@ -16,7 +16,7 @@
         </match>
 
         <!-- Receiver for Cordless Click! -->
-        <match key="usb_device.product_id" int="0xc510"> 
+        <match key="usb_device.product_id" int="0xc510">
           <merge key="info.product" type="string">Cordless Click Mouse</merge>
           <merge key="battery.type" type="string">mouse</merge>
 	  <!-- proprietary properties defining the behavior -->
@@ -26,7 +26,7 @@
         </match>
 
 	<!-- Receiver for Cordless Keyboard + Mouse combo -->
-        <match key="usb_device.product_id" int_outof="0xc512;0xc505"> 
+        <match key="usb_device.product_id" int_outof="0xc512;0xc505">
           <merge key="info.product" type="string">Cordless Keyboard+Mouse Receiver</merge>
           <merge key="battery.type" type="string">keyboard</merge>
 	  <!-- proprietary properties defining the behavior -->

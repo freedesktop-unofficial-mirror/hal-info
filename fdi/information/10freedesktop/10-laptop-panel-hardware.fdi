@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <!-- Some laptops have software controllable backlights and will provide
        notifications on keypresses, but will also change the brightness

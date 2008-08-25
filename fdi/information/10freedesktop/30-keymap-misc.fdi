@@ -48,7 +48,7 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
-      
+
       <match key="/org/freedesktop/Hal/devices/computer:system.chassis.manufacturer" prefix="MICRO-STAR">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="0131">
           <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
@@ -85,7 +85,7 @@
 	  <append key="info.capabilities" type="strlist">input.keymap</append>
 	</match>
       </match>
-      
+
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MAXDATA">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Pro 7000">
 	  <append key="input.keymap.data" type="strlist">97:prog2</append> <!-- "P2" programmable button -->
@@ -119,8 +119,8 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="SX20S">
-	  <append key="input.keymap.data" type="strlist">0074:mute</append> 	  
-	  <append key="input.keymap.data" type="strlist">0075:mute</append> 
+	  <append key="input.keymap.data" type="strlist">0074:mute</append> 	
+	  <append key="input.keymap.data" type="strlist">0075:mute</append>
 	  <append key="input.keymap.data" type="strlist">0077:f21</append> <!-- FIXME: Touchpad on -->
 	  <append key="input.keymap.data" type="strlist">0079:f21</append> <!-- FIXME: Touchpad off -->
         </match>
@@ -128,8 +128,8 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="TOSHIBA">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SATELLITE A100">
-          <append key="input.keymap.data" type="strlist">e024:stop</append> 
-          <append key="input.keymap.data" type="strlist">e032:www</append> 
+          <append key="input.keymap.data" type="strlist">e024:stop</append>
+          <append key="input.keymap.data" type="strlist">e032:www</append>
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>

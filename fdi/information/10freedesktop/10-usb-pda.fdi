@@ -171,7 +171,7 @@
           <merge key="pda.palm.hotsync_interface" type="copy_property">linux.device_file</merge>
         </match>
       </match>
-   
+
       <!-- Alphasmart -->
       <match key="usb_device.vendor_id" int="0x081e">
         <!-- Alphasmart Dana -->
@@ -185,5 +185,5 @@
     </match>
 
   </device>
-  
+
 </deviceinfo>

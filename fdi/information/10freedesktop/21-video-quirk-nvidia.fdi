@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <!-- According to nvidia, the only currently supported way to resume g80
      class hardware is to re-run a cached copy of the video BIOS. No other
      quirks will be effective -->

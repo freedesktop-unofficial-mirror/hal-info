@@ -3,7 +3,7 @@
 <deviceinfo version="0.2">
 
   <device>
-    <!-- Handle weird Dell Laptops that slow down the system if the optical 
+    <!-- Handle weird Dell Laptops that slow down the system if the optical
         drive is polled (RH Bug #138148) -->
     <match key="storage.bus" string="ide">
       <match key="storage.model" string="HL-DT-STCD-RW/DVD-ROM GCC-4240N">
@@ -101,6 +101,6 @@
       </match>
     </match>
 
-      
+
   </device>
 </deviceinfo>

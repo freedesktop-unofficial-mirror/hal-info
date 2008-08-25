@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" string="IBM">
@@ -18,11 +18,11 @@
 
       <!-- 600e -->
       <match key="system.hardware.product" prefix="2645">
-	<match key="system.firmware.version" string="INET17WW">      
+	<match key="system.firmware.version" string="INET17WW">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-	<match key="system.firmware.version" contains_not="INET17WW">      
+	<match key="system.firmware.version" contains_not="INET17WW">
 	  <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
       </match>
@@ -108,7 +108,7 @@
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
-      
+
     </match>
   </device>
 </deviceinfo>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- --> 
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <device>
 
@@ -50,7 +50,7 @@
 	  <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
-   
+
       <match key="system.hardware.product" prefix="N620c ">
     	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
  	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
@@ -123,7 +123,7 @@
           </match>
           <match key="system.firmware.version" contains_not="F.08">
             <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-          </match>          
+          </match>
         </match>
       </match>
       <match key="system.hardware.product" contains="nx6310">
@@ -144,7 +144,7 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <match key="system.firmware.version" contains_not="68YGU">
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-        </match>          
+        </match>
       </match>
 
       <match key="system.hardware.product" contains="Pavilion ">
@@ -189,7 +189,7 @@
             <merge key="power_management.quirk.none" type="bool">true</merge>
           </match>
         </match>
-        
+
         <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>

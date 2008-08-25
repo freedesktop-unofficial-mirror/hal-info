@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> <!-- -*- xml -*- --> 
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- xml -*- -->
 
 <deviceinfo version="0.2">
   <device>
@@ -21,33 +21,33 @@
     <match key="storage.bus" string="usb">
       <match key="storage.model" contains="HS-CF">
         <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="HS-MS">
         <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="HS-SM">
         <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="HS-xD">
         <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="HS-SD">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>      
+      </match>
 
       <!-- Another common theme -->
       <match key="storage.model" contains="USB CF Reader">
         <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="USB MS Reader">
         <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="USB SM Reader">
         <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>      
+      </match>
       <match key="storage.model" contains="USB SD Reader">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>      
+      </match>
 
       <!-- Yet another common theme -->
       <match key="storage.model" contains="Reader-CF">

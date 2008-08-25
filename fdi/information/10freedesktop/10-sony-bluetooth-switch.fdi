@@ -3,7 +3,7 @@
 <deviceinfo version="0.2">
 
   <device>
-    <match key="system.kernel.name" string="Linux"> 
+    <match key="system.kernel.name" string="Linux">
       <match key="system.hardware.vendor" string="Sony Corporation">
         <match key="system.formfactor" string="laptop">
 	  <match key="system.product" contains="VGN-S1XP">
