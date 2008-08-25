@@ -311,6 +311,12 @@
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
+        <match key="@info.parent:usb.product_id" int="0x6280">
+          <match key="@info.parent:usb.interface.number" int="1">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+          </match>
+        </match>
       </match>
 
       <!-- Communication Device Class Abstract Control Model (CDC ACM) modems,
