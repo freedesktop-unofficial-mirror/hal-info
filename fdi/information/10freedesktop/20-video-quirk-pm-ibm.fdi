@@ -3,6 +3,11 @@
   <device>
     <match key="system.hardware.vendor" string="IBM">
 
+      <match key="system.hardware.version" string="ThinkPad R50e">
+	<merge key="power_management.quirk.save_pci" type="bool">true</merge>
+	<merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+      </match>
+
       <match key="system.hardware.version" string="ThinkPad R51">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
