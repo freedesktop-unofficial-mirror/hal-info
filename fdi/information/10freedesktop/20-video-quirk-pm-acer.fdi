@@ -6,7 +6,7 @@
         <match key="system.hardware.product" contains="C300">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2350;2410;2420;2490;3220;4000;4650">
+        <match key="system.hardware.product" contains_outof="2350;2410;2420;2490;3220;4000;4650;5320">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -14,7 +14,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2300;3010;3020;3260">
+        <match key="system.hardware.product" contains_outof="2300;2310;3010;3020;3260">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -56,20 +56,10 @@
       </match>
 
       <match key="system.hardware.product" prefix="Aspire">
-        <match key="system.hardware.product" contains_outof="1690;1694">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" suffix="1350">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains_outof="5050;5630">
+        <match key="system.hardware.product" contains="5050">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="3610;3620;3690;5100">
+        <match key="system.hardware.product" contains_outof="3610;3620;3690;5630">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -89,11 +79,25 @@
         <match key="system.hardware.product" contains="1640">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="1520;1650;3000;5110;5570;5920">
+        <match key="system.hardware.product" contains="1500">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+	<match key="system.hardware.product" contains_outof="1520;1650;3000;5100;5110;5570;5920">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="3100;5500Z;5580">
+        <match key="system.hardware.product" contains_outof="1690;1694">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" suffix="1350">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="2920;3100;5500Z;5580">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -102,7 +106,7 @@
         <match key="system.hardware.product" contains="6220">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2900;4150;5620">
+        <match key="system.hardware.product" contains_outof="2900;3000;4150;5620">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -128,6 +132,13 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
+
+      <match key="system.hardware.product" prefix="AcerPower">
+        <match key="system.hardware.product" contains="2000">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
