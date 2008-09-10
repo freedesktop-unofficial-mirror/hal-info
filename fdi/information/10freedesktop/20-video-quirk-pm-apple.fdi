@@ -15,6 +15,7 @@
       </match>
 
       <match key="system.hardware.product" string_outof="MacBook1,1;MacBook3,1">
+	<!-- s2ram uses vbe_post + vbemode_restore for MacBook1,1 -->
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
 
