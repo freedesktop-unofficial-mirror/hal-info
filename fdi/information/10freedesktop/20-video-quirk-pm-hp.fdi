@@ -42,11 +42,11 @@
 	  <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
 	  <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="V3000 (EZ674UA#">
+        <match key="system.hardware.product" contains_outof="V3000 (EZ674UA#;V3700 Notebook PC">
     	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
  	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#;2100 (DP835E)">
+        <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#;2100 (DP835E);F500 (GF596UA#">
 	  <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -65,7 +65,7 @@
     </match>
 
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
-      <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV); 6715s">
+      <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV); 6715s;6820s">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" contains="HP OmniBook XT1000">
@@ -79,26 +79,22 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains="6710s">
-	<match key="system.firmware.version" contains="68DDU">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
-        </match>
-      </match>
-      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx7000;nc6120;nx6325;6510b;2510p">
+      <match key="system.hardware.product" contains_outof="OmniBook XE3 G;R3200;nx5000;nx7000;nc6120;nx6325;2510p">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
+      
       <!-- yes, system.hardware.version is correct for this machine -->
       <match key="system.hardware.version" string="HP OmniBook 6100 EB">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <!-- Note: PY507ET# is a nc6120 -->
-      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6710b;6720s;2710p;6910p;8510p;PY507ET#;6715b">
+      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6710b;6720s;2710p;8510p;PY507ET#;6715b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+
       <match key="system.hardware.product" contains="M2000 (EQ547PA">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
@@ -113,6 +109,68 @@
             <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
 	  </match>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="nx 7010">
+    	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <match key="system.hardware.product" contains="DU394T#">
+	   <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="nx7400">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        <match key="system.firmware.version" contains_not="68YGU">
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains_outof="HP Compaq dc5800 Small Form Factor;HP d330 uT">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
+
+
+      <!-- Handle machines which have the same product string, but differ -->
+      <match key="system.hardware.product" contains="6510b">
+	<match key="system.hardware.product" contains="KE134EA">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+	<match key="system.hardware.product" contains_not="KE134EA">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="6710s">
+	<match key="system.firmware.version" contains="68DDU">
+      	  <match key="system.hardware.product" contains="GC014ET">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          </match>
+      	  <match key="system.hardware.product" contains_not="GC014ET">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+          </match>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="6715b">
+        <match key="system.hardware.product" contains_outof="GB835EA;RK156AV">
+    	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="GB834EA">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="RM174UT">
+    	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="6910p">
+        <match key="system.firmware.version" contains="68MCD">
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.firmware.version" contains_not="68MCD">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
       <match key="system.hardware.product" contains="nc4400">
@@ -134,20 +192,9 @@
            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" contains="nx 7010">
-    	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <match key="system.hardware.product" contains="DU394T#">
-	   <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-        </match>
-      </match>
-      <match key="system.hardware.product" contains="nx7400">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <match key="system.firmware.version" contains_not="68YGU">
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
-        </match>
-      </match>
 
-      <match key="system.hardware.product" contains="Pavilion ">
+
+      <match key="system.hardware.product" contains_ncase="Pavilion ">
         <match key="system.hardware.product" contains="dv4000 (ES973EA#">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
@@ -190,7 +237,7 @@
           </match>
         </match>
 
-        <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF">
+        <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF;ze4900">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -211,6 +258,9 @@
     <match key="system.hardware.vendor" prefix="HP-Pavilion">
       <match key="system.hardware.product" contains="RZ418AA-ABH s3020">
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="RP829AV-ABA d4790y">
+	<merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
 
