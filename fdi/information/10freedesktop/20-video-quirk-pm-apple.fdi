@@ -27,11 +27,6 @@
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
 
-      <!-- works only from X -->
-      <match key="system.hardware.product" string="MacBookPro4,1">
-	<merge key="power_management.quirk.none" type="bool">true</merge>
-      </match>
-
     </match>
   </device>
 </deviceinfo>
