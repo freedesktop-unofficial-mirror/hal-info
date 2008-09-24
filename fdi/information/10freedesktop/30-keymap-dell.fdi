@@ -30,6 +30,14 @@
           <append key="input.keymap.data" type="strlist">e024:stop</append> <!-- Front panel stop -->
           <append key="input.keymap.data" type="strlist">e06d:media</append> <!-- MediaDirect button -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
+	
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="Latitude XT">
+            <append key="input.keymap.data" type="strlist">e058:screenlock</append> <!-- FIXME: Tablet lock button -->
+            <append key="input.keymap.data" type="strlist">e017:email</append> <!-- Tablet email button -->
+            <append key="input.keymap.data" type="strlist">e018:f21</append> <!-- FIXME: Tablet screen rotatation -->
+            <append key="input.keymap.data" type="strlist">e01a:setup</append> <!-- Tablet tools button -->
+          </match>
+
         </match>
       </match>
     </match>
