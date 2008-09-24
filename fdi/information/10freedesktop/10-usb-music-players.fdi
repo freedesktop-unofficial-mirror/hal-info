@@ -647,21 +647,21 @@
             <append key="portable_audio_player.audio_folders" type="strlist">AUDIO/</append>
           </match>
 
-	  <!-- Sony Ericsson K850i -->
-          <match key="@storage.originating_device:usb.product_id" int="0xe075">
-             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
-             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
-             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/amr</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/amr-wb</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.m-realaudio</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/x-m4b</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/midi</append>
-	     <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-             <append key="portable_audio_player.input_formats" type="strlist">audio/amr</append>
-             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+	  <!-- Sony Ericsson K850i, W910i -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0xe075;0xe076">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/amr</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/amr-wb</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.m-realaudio</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-m4b</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/midi</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/amr</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
 	</match>
 
