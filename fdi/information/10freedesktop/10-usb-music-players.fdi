@@ -297,15 +297,10 @@
           </match>
           <!-- Sony Walkman Video MP3 NWZ-xxxx -->
           <match key="@storage.originating_device:usb.product_id" int_outof="0x035b;0x035c">
-            <merge key="info.vendor" type="string">Sony</merge>
-            <merge key="info.product" type="string">Walkman Video MP3 Player</merge>
-            <merge key="info.category" type="string">portable_audio_player</merge>
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
-            <addset key="portable_audio_player.output_formats" type="strlist">audio/aac</addset>
-            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
-            <append key="portable_audio_player.input_formats" type="strlist"></append>
             <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
           </match>
 	</match>
