@@ -155,6 +155,17 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	  </match>
+          <!-- Philips GoGear SA3125 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x84a">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.output_formats" type="strlist">video/x-smv</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Video/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Voice/</append>
+          </match>
         </match>
 
 	<!-- Meizu -->
