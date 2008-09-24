@@ -31,7 +31,6 @@
           <!-- HP Compaq 6730s -->
           <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (brightness down) -->
           <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (brightness up) -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2510p">
           <!-- The 2510p seems to be unique in having a touchpad disable button despite being an enterprise model -->
