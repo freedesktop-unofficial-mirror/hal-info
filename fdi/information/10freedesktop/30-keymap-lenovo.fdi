@@ -8,6 +8,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LENOVO">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="3000">
+	  <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F7 video -->
           <append key="input.keymap.data" type="strlist">e016:wlan</append> <!-- Fn+F5 wireless -->
           <append key="input.keymap.data" type="strlist">e017:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">e018:suspend</append> <!-- Fn+F12 hibernate -->
