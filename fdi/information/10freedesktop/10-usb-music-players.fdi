@@ -292,8 +292,6 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Record/Voice/</append>
-            <append key="portable_audio_player.playlist_format" type="strlist"></append>
-            <append key="portable_audio_player.playlist_path" type="string"></append>
           </match>
           <!-- Sony Walkman Video MP3 NWZ-xxxx -->
           <match key="@storage.originating_device:usb.product_id" int_outof="0x035b;0x035c">
