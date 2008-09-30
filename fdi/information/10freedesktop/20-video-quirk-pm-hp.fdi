@@ -18,6 +18,9 @@
       </match>
 
       <match key="system.hardware.product" prefix="Evo">
+        <match key="system.hardware.product" contains="N600c">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="N800w ">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <!-- VBE_MODE does not work, text size changes -->
