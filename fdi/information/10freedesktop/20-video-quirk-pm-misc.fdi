@@ -15,6 +15,15 @@
     </match>
   </device>
   <device>
+    <match key="system.hardware.vendor" contains="DIXONSXP">
+      <match key="system.hardware.product" contains="To be filled by O.E.M.">
+        <match key="system.firmware.version" string="Ver.001">
+	  <merge key="power_management.quirk.none" type="bool">true</merge>
+     	</match>
+     </match>
+    </match>
+  </device>
+  <device>
     <match key="system.hardware.vendor" contains="ERGOUK">
       <match key="system.hardware.product" contains="M2N">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -24,9 +33,12 @@
   </device>
   <device>
     <match key="system.hardware.vendor" prefix="LG">
-      <match key="system.hardware.product" string_outof="M1-3DGBG;W1-JDGBG">
+      <match key="system.hardware.product" string_outof="M1-3DGBG;W1-JDGBG;LM50-DGHE;LW75-SGGV1">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="R500-U.CPCBG">
+	<merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -53,6 +65,9 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="CF-W4G">
+	<merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
     </match>
   </device>
   <!-- VIA EPIA M Mini-ITX Motherboard with onboard gfx -->
@@ -66,6 +81,10 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+      </match>
+      <match key="system.hardware.product" string_outof="KT400-8235;KT400A-8235">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -91,7 +110,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="Joybook S52">
+      <match key="system.hardware.product" string_outof="Joybook S52;Joybook S32">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -160,7 +179,7 @@
       </match>
     </match>
     <match key="system.hardware.vendor" prefix="MSI">
-      <match key="system.hardware.product" string_outof="MS-7350;MS-7207PV">
+      <match key="system.hardware.product" string_outof="MS-7350;MS-7207PV;MS-6417">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
@@ -190,7 +209,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string_outof="MS-7012;M295M">
+      <match key="system.hardware.product" string_outof="MS-7012;M295M;WIM 2000 ">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
@@ -255,6 +274,9 @@
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="TN120R">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
     </match>
   </device>
 
@@ -278,12 +300,12 @@
 
   <device>
     <match key="system.hardware.vendor" prefix="Gigabyte Technology">
-      <match key="system.hardware.product" string="945GZM-S2">
-        <merge key="power_management.quirk.none" type="bool">true</merge>
-      </match>
       <match key="system.hardware.product" string_outof="945GCMX-S2;P35-DS4">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string_outof="945GZM-S2;945GCM-S2L">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -329,6 +351,11 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+      </match>
+      <!-- medion MIM2080 -->
+      <match key="system.hardware.product" string="MIM2080">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
     </match>
   </device>
@@ -400,6 +427,10 @@
     <match key="system.hardware.vendor" string="Shuttle Inc">
       <match key="system.hardware.product" string="SD11V10">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="SD30V10">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="SN41UV10">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
