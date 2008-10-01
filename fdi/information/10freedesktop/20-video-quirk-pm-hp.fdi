@@ -34,7 +34,7 @@
             <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
           </match>
         </match>
-        <match key="system.hardware.product" contains="D510 USDT">
+        <match key="system.hardware.product" contains_outof="D510 USDT; N400c">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
