@@ -29,7 +29,12 @@
 
       <!-- A31-->
       <match key="system.hardware.product" prefix="2652">
-        <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        <!-- 
+          There are reports that this quirk makes 2652 crash/fail on second suspend (bnc#309742)
+	  <merge key="power_management.quirk.radeon_off" type="bool">true</merge> 
+        -->
         <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
       </match>
       <!-- X31, T30 , A31p-->
