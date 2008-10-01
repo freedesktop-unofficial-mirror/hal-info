@@ -14,7 +14,7 @@
         <match key="system.hardware.product" string="M Series">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="Amilo D Series;PRO V2030;PRO V2035;PRO V8010;Pi 1536;Pi 2515">
+        <match key="system.hardware.product" contains_outof="Amilo D Series;PRO V2030;PRO V2035;PRO V8010;Pi 1536;Pi 2515; L Series">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -84,7 +84,7 @@
         </match>
       </match>
 
-      <match key="system.hardware.product" prefix_outof="ESPRIMO P;ESPRIMO Mobile M9400">
+      <match key="system.hardware.product" prefix_outof="ESPRIMO P;ESPRIMO Mobile M9400;ESPRIMO Mobile D9500">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
