@@ -22,11 +22,9 @@
           <match key="system.hardware.version" contains_outof="-1 ;0.01">
             <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
             <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-            <!-- This machine need a special new quirk: power_management.quirk.pci_save
 	    <match key="system.firmware.version" prefix="R01-S0N">
               <merge key="power_management.quirk.pci_save" type="bool">true</merge>
             </match>
-            -->
           </match>
         </match>
         <match key="system.hardware.product" contains="A7645">
@@ -58,13 +56,11 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
-	<!-- This machine need a special new quirk: power_management.quirk.pci_save
         <match key="system.hardware.product" contains="T2010">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.pci_save" type="bool">true</merge>
         </match>
-         -->
         <match key="system.hardware.product" contains_outof="T4210;P7230">
           <!-- this need a key we currently not have in HAL:
 	  <merge key="power_management.quirk.pci_restore" type="bool">true</merge>
