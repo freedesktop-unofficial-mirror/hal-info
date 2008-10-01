@@ -229,7 +229,7 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
 	    <!-- Samsung YP-J70 -->
-            <match key="@storage.originating_device:usb.product_id" int_outof="0x5032">
+            <match key="@storage.originating_device:usb.product_id" int="0x5032">
               <append key="portable_audio_player.audio_folders" type="strlist">RECORDED/</append>
               <merge key="storage.requires_eject" type="bool">true</merge>
             </match>

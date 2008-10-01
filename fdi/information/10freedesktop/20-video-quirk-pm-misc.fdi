@@ -156,7 +156,7 @@
 
   <device>
     <match key="system.hardware.vendor" prefix_ncase="micro-star">
-      <match key="system.hardware.product" string="MS-1012;MS-1013">
+      <match key="system.hardware.product" string_outof="MS-1012;MS-1013">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="MS-1057">

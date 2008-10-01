@@ -33,7 +33,7 @@
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-	<match key="system.hardware.product" contains_outof="D630">
+	<match key="system.hardware.product" contains="D630">
 	  <match key="system.firmware.version" compare_lt="A12">
 	    <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
             <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>

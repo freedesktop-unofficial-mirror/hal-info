@@ -29,7 +29,7 @@
 	<merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="PCG-Z1MP">
+      <match key="system.hardware.product" contains="PCG-Z1MP">
 	<merge key="power_management.quirk.vbe_post" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
 	<merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
