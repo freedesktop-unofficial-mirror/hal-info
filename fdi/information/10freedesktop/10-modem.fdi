@@ -392,6 +392,18 @@
             </match>
           </match>
         </match>
+
+        <!-- E71 -->
+        <match key="@info.parent:usb.product_id" int="0xab">
+          <match key="@info.parent:usb.interface.class" int="0x02">
+            <match key="@info.parent:usb.interface.subclass" int="0x02">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">V.250</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+            </match>
+          </match>
+        </match>
       </match>
 
     </match>
