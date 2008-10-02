@@ -357,8 +357,8 @@
       
       <!-- Nokia -->
       <match key="@info.parent:usb.vendor_id" int="0x421">
-        <!-- 6300 as a GPRS/EDGE modem (CDC ACM) -->
-        <match key="@info.parent:usb.product_id" int="0x4f9">
+        <!-- 6300/3109c/6120 Classic/E71 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x4f9;0x64;0x2f;0xab">
           <match key="@info.parent:usb.interface.class" int="0x02">
             <match key="@info.parent:usb.interface.subclass" int="0x02">
               <append key="info.capabilities" type="strlist">modem</append>
@@ -368,44 +368,6 @@
             </match>
           </match>
         </match>
-
-        <!-- 3109c as a GPRS/EDGE modem (CDC ACM) -->
-        <match key="@info.parent:usb.product_id" int="0x64">
-          <match key="@info.parent:usb.interface.class" int="0x02">
-            <match key="@info.parent:usb.interface.subclass" int="0x02">
-              <append key="info.capabilities" type="strlist">modem</append>
-              <append key="modem.command_sets" type="strlist">V.250</append> 
-              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.05</append>                  
-            </match>
-          </match>
-        </match>
-
-        <!-- 6120 Classic -->
-        <match key="@info.parent:usb.product_id" int="0x2f">
-          <match key="@info.parent:usb.interface.class" int="0x02">
-            <match key="@info.parent:usb.interface.subclass" int="0x02">
-              <append key="info.capabilities" type="strlist">modem</append>
-              <append key="modem.command_sets" type="strlist">V.250</append> 
-              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.05</append>                  
-            </match>
-          </match>
-        </match>
-
-        <!-- E71 -->
-        <match key="@info.parent:usb.product_id" int="0xab">
-          <match key="@info.parent:usb.interface.class" int="0x02">
-            <match key="@info.parent:usb.interface.subclass" int="0x02">
-              <append key="info.capabilities" type="strlist">modem</append>
-              <append key="modem.command_sets" type="strlist">V.250</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-            </match>
-          </match>
-        </match>
-      </match>
-
     </match>
   </device>
 </deviceinfo>
