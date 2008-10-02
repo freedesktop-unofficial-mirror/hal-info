@@ -367,6 +367,8 @@
             </match>
           </match>
         </match>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
