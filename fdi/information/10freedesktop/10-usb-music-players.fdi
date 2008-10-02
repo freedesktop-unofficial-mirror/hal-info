@@ -9,8 +9,6 @@
         <match key="storage.model" contains="iPod">
           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
           <addset key="portable_audio_player.access_method.protocols" type="strlist">ipod</addset>
-          <!-- portable_audio_player.type is deprecated and get removed in the future -->
-          <merge key="portable_audio_player.type" type="string">ipod</merge>
           <addset key="portable_audio_player.output_formats" type="strlist">audio/aac</addset>
           <merge key="storage.requires_eject" type="bool">true</merge>
         </match>
@@ -814,11 +812,11 @@
 	    <merge key="storage.model" type="string">V3 series</merge>
 	    <match key="@storage.originating_device:@info.parent:usb_device.product" contains="Motorola Phone (V3i)">
                <merge key="storage.model" type="string">Motorola Phone (V3i)</merge>
-               <merge key="portable_audio_player.type" type="string">ipod</merge>
+               <addset key="portable_audio_player.access_method.protocols" type="strlist">ipod</addset>
             </match>
 	    <match key="@storage.originating_device:@info.parent:usb_device.product" contains_ncase="iTunes">
                <merge key="storage.model" type="string">Motorola iTunes Phone</merge>
-               <merge key="portable_audio_player.type" type="string">ipod</merge>
+               <addset key="portable_audio_player.access_method.protocols" type="strlist">ipod</addset>
             </match>
 	    <merge key="storage.vendor" type="string">Motorola</merge>
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
@@ -871,10 +869,6 @@
     <!-- Set common keys for detected audio player if you have special cases add the player below this match -->
     <match key="portable_audio_player.access_method.protocols" exists="true">
       <match key="portable_audio_player.access_method.protocols" contains="storage">
-        <!-- NOTE: for backward compatibility until key get removed finally -->
-        <merge key="portable_audio_player.access_method" type="string">storage</merge>
-        <!-- NOTE: for backward compatibility until key get removed finally -->
-        <merge key="portable_audio_player.type" type="string">generic</merge>
 	<merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
       </match>
       <append key="info.capabilities" type="strlist">portable_audio_player</append>
@@ -891,10 +885,7 @@
         <match key="storage.model" string="PSP">
           <append key="info.capabilities" type="strlist">portable_audio_player</append>
           <!-- NOTE: for backward compatibility until key get removed finally -->
-	  <merge key="portable_audio_player.access_method" type="string">storage</merge>
           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
-          <!-- NOTE: for backward compatibility until key get removed finally -->
-	  <merge key="portable_audio_player.type" type="string">psp</merge>
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
