@@ -8,6 +8,15 @@
     </match>
   </device>
   <device>
+    <match key="system.hardware.vendor" string="AnabelleB">
+      <!-- ASI Claro TW7M Notebook -->
+      <match key="system.hardware.version" string="Claro TW7M">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
     <match key="system.hardware.vendor" prefix="COMPAL">
       <match key="system.hardware.product" contains_outof="HEL80C;HEL80I;HEL81I">
         <merge key="power_management.quirk.none" type="bool">true</merge>
@@ -75,6 +84,12 @@
     <match key="system.hardware.vendor" prefix="VIA">
       <match key="system.hardware.product" string="VT8623-8235">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" string="K8N800">
+        <match key="system.firmware.version" string="VT8204B ">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
       </match>
       <match key="system.hardware.product" string="K8T400">
         <match key="system.hardware.version" string="VT8204B ">
@@ -159,7 +174,7 @@
       <match key="system.hardware.product" string_outof="MS-1012;MS-1013">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="MS-1057">
+      <match key="system.hardware.product" string_outof="MS-1057;U-100">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
@@ -168,9 +183,9 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" string="U-100">
+      <match key="system.hardware.product" string="EX610">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+        <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string="MS-1412">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
@@ -179,7 +194,7 @@
       </match>
     </match>
     <match key="system.hardware.vendor" prefix="MSI">
-      <match key="system.hardware.product" string_outof="MS-7350;MS-7207PV;MS-6417">
+      <match key="system.hardware.product" string_outof="MS-7350;MS-7207PV;MS-6417;MS-6702">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
@@ -348,8 +363,7 @@
     <match key="system.hardware.vendor" string="NOTEBOOK">
       <match key="system.hardware.product" string="SAM2000">
         <match key="system.hardware.version" string="0131">
-          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
       <!-- medion MIM2080 -->
