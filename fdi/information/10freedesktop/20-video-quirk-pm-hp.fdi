@@ -126,10 +126,16 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" contains_outof="HP Compaq dc5800 Small Form Factor;HP d330 uT">
+      <match key="system.hardware.product" contains_outof="HP Compaq dc5800 Small Form Factor;HP d330 uT; nw9440">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
+      <match key="system.hardware.product" contains_outof="HP Compaq 2133;HP 2133">
+	<match key="system.firmware.version" contains="68VGU">
+    	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+	</match>
+      </match>
 
       <!-- Handle machines which have the same product string, but differ -->
       <match key="system.hardware.product" contains="6510b">
@@ -169,7 +175,13 @@
       </match>
       <match key="system.hardware.product" contains="6910p">
         <match key="system.firmware.version" contains="68MCD">
-          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+	  <match key="system.hardware.product" contains="GB951EA">
+            <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+          </match>
+	  <match key="system.hardware.product" string="HP Compaq 6910p">
+    	    <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
         </match>
         <match key="system.firmware.version" contains_not="68MCD">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
@@ -196,7 +208,6 @@
         </match>
       </match>
 
-
       <match key="system.hardware.product" contains_ncase="Pavilion ">
         <match key="system.hardware.product" contains="dv4000 (ES973EA#">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
@@ -206,6 +217,10 @@
         <match key="system.hardware.product" contains_outof="dv4000 (EB911EA#; dv2600; dv6500">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	</match>
+	<match key="system.hardware.product" contains="dv4000 (PX306UA#">
+	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains="zd8000 (EL030EA#">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
