@@ -14,7 +14,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2300;2310;3010;3020;3260">
+        <match key="system.hardware.product" contains_outof="2300;2310;3010;3020;3260;6291">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -137,6 +137,11 @@
         <match key="system.hardware.product" contains="2000">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
+      </match>
+
+      <!-- Aspire One 110 -->
+      <match key="system.hardware.product" prefix="AOA110">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
     </match>
