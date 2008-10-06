@@ -79,7 +79,7 @@
 
     <match key="system.firmware.version" prefix="ASUS M2A-VM ACPI BIOS Revision">
       <match key="system.firmware.version" contains=" 1101">
-        <merge key="power_management.quirk.s2_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <match key="system.firmware.version" contains_not=" 1101">
