@@ -9,13 +9,13 @@
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!--NOTE: s2ram list the F3F with power_management.quirk.none=true -->
-      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;P5LD2;A8He;A6Kt ;F3JC ">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;P5LD2;A8He;A6Kt ;F3JC ;F3Sc">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string="F3Sc">
+      <match key="system.hardware.product" prefix="Z35FM ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        <merge key="power_management.quirk.pci_save" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix_outof="A6M;Z84F">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>

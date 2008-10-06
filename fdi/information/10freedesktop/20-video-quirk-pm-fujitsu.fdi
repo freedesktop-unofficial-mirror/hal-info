@@ -48,6 +48,7 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+        <!-- S7020 is also reported with s3_bios/s3_mode/pci_save -->
         <match key="system.hardware.product" contains_outof="S7020;S7110">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.reset_brightness" type="bool">true</merge>

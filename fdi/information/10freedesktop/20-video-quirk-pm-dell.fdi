@@ -62,7 +62,14 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains=" 5100 ">
-          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+	  <match key="system.firmware.version" string="Revision A0">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+            <merge key="power_management.quirk.pci_save" type="bool">true</merge>
+          </match>
+	  <match key="system.firmware.version" contains_not="Revision A0">
+            <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+          </match>
         </match>
         <match key="system.hardware.product" contains_outof="5150;8000;8500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
