@@ -2,7 +2,7 @@
 <deviceinfo version="0.2">
   <device>
     <match key="system.hardware.vendor" prefix="ASUS">
-      <match key="system.hardware.product" prefix_outof="U5F ;M2000E">
+      <match key="system.hardware.product" prefix_outof="U5F ;M2000E;F2J ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne;M51Sr ;U6S">
@@ -38,7 +38,7 @@
          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
       </match>
       <!-- these need no quirks, whitelist them -->
-      <match key="system.hardware.product" prefix_outof="A2H/L;A6Km;A6JC ;A6K ;A6T;A6G;A6VA;F3Sg;F3T;F9E ;G1S;K8V-MX">
+      <match key="system.hardware.product" prefix_outof="A2H/L;A6Km;A6JC ;A6K ;A6T;A6G;A6VA;A8JS ;F3Sg;F3T;F9E ;G1S;K8V-MX">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
@@ -52,6 +52,12 @@
     </match>
     <!-- ASUS Mainboard with different vendor string -->
     <match key="system.hardware.vendor" string="System manufacturer">
+      <match key="system.hardware.product" string="P5Q DELUXE">
+        <match key="system.firmware.version" prefix="System Version">
+	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+      </match>
       <match key="system.hardware.version" prefix="P5KR">
         <match key="system.hardware.product" prefix="System Version">
           <merge key="power_management.quirk.none" type="bool">true</merge>
@@ -64,11 +70,13 @@
       <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
     </match>
+
     <!-- another ASUS Mainboard -->
     <match key="system.firmware.version" prefix_outof="ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1201;ASUS M2N32-SLI DELUXE ACPI BIOS Revision 1101;ASUS M2A-VM HDMI ACPI BIOS Revision 1603">
       <merge key="power_managiement.quirk.vbe_post" type="bool">true</merge>
       <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
     </match>
+
     <match key="system.firmware.version" prefix="ASUS M2A-VM ACPI BIOS Revision">
       <match key="system.firmware.version" contains=" 1101">
         <merge key="power_management.quirk.s2_bios" type="bool">true</merge>
