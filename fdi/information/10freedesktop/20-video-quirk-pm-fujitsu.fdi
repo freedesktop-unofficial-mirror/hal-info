@@ -11,6 +11,9 @@
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains="A1650G">
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" string="M Series">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
@@ -57,9 +60,15 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="T2010">
-          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-          <merge key="power_management.quirk.pci_save" type="bool">true</merge>
+	  <match key="system.hardware.product" string="FUJITSU SIEMENS">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+            <merge key="power_management.quirk.pci_save" type="bool">true</merge>
+          </match>
+          <match key="system.hardware.product" string="FUJITSU">
+            <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+            <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
         </match>
         <match key="system.hardware.product" contains_outof="T4210;P7230">
           <!-- this need a key we currently not have in HAL:
@@ -68,7 +77,7 @@
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
 	  -->
         </match>
-        <match key="system.hardware.product" contains_outof="B Series;T Series;S7010;S7110">
+        <match key="system.hardware.product" contains_outof="B Series;T Series;S7010;S7110;E8110">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -98,5 +107,15 @@
       </match>
 
     </match>
+    
+    <!-- different vendor string -->
+    <match key="system.hardware.vendor" prefix="FUJITSO">
+      <match key="system.hardware.product" string="FMVLT70R">
+        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        <merge key="power_management.quirk.pci_save" type="bool">true</merge>
+      </match>
+    </match>
+
   </device>
 </deviceinfo>
