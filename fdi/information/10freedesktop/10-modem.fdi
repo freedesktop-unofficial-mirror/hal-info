@@ -149,6 +149,17 @@
         </match>
       </match>
 
+      <!-- ZTE MF628 HSDPA USB dongle -->
+      <match key="@info.parent:usb.vendor_id" int="0x19d2">
+        <match key="@info.parent:usb.product_id" int="0x0015">
+          <match key="@info.parent:usb.interface.number" int="3">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+      </match>
+
       <!-- Novatel -->
       <match key="@info.parent:usb.vendor_id" int="0x1410">
         <!-- Merlin XS620/S640,S620,EX720,S720,EV620 CDMA/EV-DO,ES620/Merlin ES720/Ovation U720,ES620 SM Bus,U727 -->
