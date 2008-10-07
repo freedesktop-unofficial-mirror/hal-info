@@ -405,6 +405,17 @@
         </match>
       </match>
 
+      <!-- NEC -->
+      <match key="@info.parent:usb.vendor_id" int="0xaae">
+        <!-- emobile -->
+        <match key="@info.parent:usb.product_id" int="0x1c">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="info.capabilities" type="strlist">modem</append>
+            <append key="modem.command_sets" type="strlist">IS-707-A</append>
+          </match>
+        </match>
+      </match>
+
     </match>
   </device>
 </deviceinfo>
