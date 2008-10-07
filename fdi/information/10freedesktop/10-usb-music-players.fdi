@@ -92,6 +92,16 @@
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
+          <!-- Nokia 5310 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x6a">
+            <merge key="storage.model" type="string">5310</merge>
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+          </match>
   	  <!-- Nokia 6300 -->
           <match key="@storage.originating_device:usb.product_id" int="0x4fa">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
