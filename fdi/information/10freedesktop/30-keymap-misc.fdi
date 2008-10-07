@@ -124,6 +124,17 @@
 	  <append key="input.keymap.data" type="strlist">0077:f21</append> <!-- FIXME: Touchpad on -->
 	  <append key="input.keymap.data" type="strlist">0079:f21</append> <!-- FIXME: Touchpad off -->
         </match>
+        <!-- Samsung Q1 Ultra -->
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SQ1US">
+          <append key="input.keymap.data" type="strlist">e054:menu</append> <!-- Menu: mute -->
+          <append key="input.keymap.data" type="strlist">e058:f1</append> <!-- Up arrow: mute -->
+          <append key="input.keymap.data" type="strlist">e059:f10</append> <!-- Right arrow: mute -->
+          <append key="input.keymap.data" type="strlist">e056:f3</append> <!-- Down arrow: mute -->
+          <append key="input.keymap.data" type="strlist">e057:f9</append> <!-- Left arrow: mute -->
+          <append key="input.keymap.data" type="strlist">e064:f5</append> <!-- Shutter key: mute -->
+          <append key="input.keymap.data" type="strlist">e06e:f11</append> <!-- UDF key: mute -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
       </match>
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="TOSHIBA">
