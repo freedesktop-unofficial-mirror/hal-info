@@ -25,7 +25,9 @@
           <append key="input.keymap.data" type="strlist">e012:media</append> <!-- MediaDirect button (house icon) -->
           <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
           <append key="input.keymap.data" type="strlist">e015:camera</append> <!-- Shutter button Takes a picture if optional camera available -->
+          <append key="input.keymap.data" type="strlist">e00c:f23</append> <!-- Fn+Right arrow Auto Brightness -->
           <append key="input.keymap.data" type="strlist">e019:nextsong</append> <!-- Front panel next song -->
+          <append key="input.keymap.data" type="strlist">e01b:switchvideomode</append> <!-- Display Toggle button -->
           <append key="input.keymap.data" type="strlist">e022:playpause</append> <!-- Front panel play/pause -->
           <append key="input.keymap.data" type="strlist">e024:stop</append> <!-- Front panel stop -->
           <append key="input.keymap.data" type="strlist">e06d:media</append> <!-- MediaDirect button -->
