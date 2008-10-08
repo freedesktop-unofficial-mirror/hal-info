@@ -212,13 +212,24 @@
         </match>
       </match>
 
-      <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u) -->
       <match key="@info.parent:usb.vendor_id" int="0x22b8">
+        <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u) -->
         <match key="@info.parent:usb.product_id" int="0x3802">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="info.capabilities" type="strlist">modem</append>
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+        <!-- Motorola V3xx/C650 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6402;0x4902">
+          <match key="@info.parent:usb.interface.class" int="0x02">
+            <match key="@info.parent:usb.interface.subclass" int="0x02">
+              <append key="info.capabilities" type="strlist">modem</append>
+              <append key="modem.command_sets" type="strlist">V.250</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+              <append key="modem.command_sets" type="strlist">GSM-07.05</append>    
+            </match>
           </match>
         </match>
       </match>
@@ -387,21 +398,6 @@
           <append key="info.capabilities" type="strlist">modem</append>
           <append key="modem.command_sets" type="strlist">GSM-07.07</append>
           <append key="modem.command_sets" type="strlist">GSM-07.05</append>
-        </match>
-      </match>
-
-      <!-- Motorola -->
-      <match key="@info.parent:usb.vendor_id" int="0x22b8">
-        <!-- V3xx/C650 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x6402;0x4902">
-          <match key="@info.parent:usb.interface.class" int="0x02">
-            <match key="@info.parent:usb.interface.subclass" int="0x02">
-              <append key="info.capabilities" type="strlist">modem</append>
-              <append key="modem.command_sets" type="strlist">V.250</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.05</append>    
-            </match>
-          </match>
         </match>
       </match>
 
