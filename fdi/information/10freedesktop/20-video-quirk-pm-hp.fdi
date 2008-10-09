@@ -255,6 +255,19 @@
           </match>
         </match>
 
+	<!-- HP Pavilion ZT1000-IC -->
+	<match key="system.hardware.product" string="HP Pavilion Notebook PC">
+	  <match key="system.hardware.version" string="HP Pavilion Notebook">
+            <match key="system.firmware.vendor" string="Insyde Software">
+              <match key="system.firmware.version" string=" IC.M1.04">
+    	        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+ 	        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+                <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+	      </match>
+	    </match>
+	  </match>
+	</match>
+
         <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF;ze4900">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
