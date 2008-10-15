@@ -102,7 +102,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains="nc4200">
+      <match key="system.hardware.product" contains_outof="nc4200;HP 530 Notebook PC">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
 
