@@ -9,7 +9,7 @@
       <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell">
           <append key="input.keymap.data" type="strlist">e001:playpause</append> <!-- Play/Pause -->
-          <append key="input.keymap.data" type="strlist">e002:stop</append> <!-- Stop -->
+          <append key="input.keymap.data" type="strlist">e002:stopcd</append> <!-- Stop -->
           <append key="input.keymap.data" type="strlist">e003:previoussong</append> <!-- Previous song -->
           <append key="input.keymap.data" type="strlist">e004:nextsong</append> <!-- Next song -->
           <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
@@ -29,7 +29,7 @@
           <append key="input.keymap.data" type="strlist">e019:nextsong</append> <!-- Front panel next song -->
           <append key="input.keymap.data" type="strlist">e01b:switchvideomode</append> <!-- Display Toggle button -->
           <append key="input.keymap.data" type="strlist">e022:playpause</append> <!-- Front panel play/pause -->
-          <append key="input.keymap.data" type="strlist">e024:stop</append> <!-- Front panel stop -->
+          <append key="input.keymap.data" type="strlist">e024:stopcd</append> <!-- Front panel stop -->
           <append key="input.keymap.data" type="strlist">e06d:media</append> <!-- MediaDirect button -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
 	
