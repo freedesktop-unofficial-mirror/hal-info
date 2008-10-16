@@ -131,8 +131,13 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SATELLITE A100">
           <append key="input.keymap.data" type="strlist">e024:stop</append>
           <append key="input.keymap.data" type="strlist">e032:www</append>
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="Satellite A110">
+	</match>
+          <append key="input.keymap.data" type="strlist">e01f:screenlock</append>
+          <append key="input.keymap.data" type="strlist">e059:brightnessup</append>
+          <append key="input.keymap.data" type="strlist">e06e:F21</append> <!-- Fixme: Touchpad enable/disable -->
+	</match>
       </match>
 
       <!-- set the common key now --> 
