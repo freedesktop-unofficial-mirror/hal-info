@@ -11,7 +11,6 @@
           <append key="input.keymap.data" type="strlist">6e:wlan</append> <!-- Fn + F1 wireless network radio on and off. -->
           <!-- <append key="input.keymap.data" type="strlist">6d:brightnessdown</append> (Fn + F6 brightness down.) -->
           <!-- <append key="input.keymap.data" type="strlist">6d:brightnessup</append> (Fn + F7 brightness. up) -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -19,7 +18,6 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro V3205">
 	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
           <append key="input.keymap.data" type="strlist">e077:switchvideomode</append> <!-- Fn+F3 switch screen -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -27,7 +25,6 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="FID2060">
           <append key="input.keymap.data" type="strlist">6b:channeldown</append> <!-- Thottle Down -->
           <append key="input.keymap.data" type="strlist">6d:channelup</append> <!-- Thottle Up -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -45,7 +42,6 @@
           <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F4   Brightness down -->
           <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F5   Brightness up -->
           <append key="input.keymap.data" type="strlist">e079:search</append> <!-- Search -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -64,7 +60,6 @@
           <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F5   Brightness down -->
           <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F4   Brightness up -->
           <append key="input.keymap.data" type="strlist">e079:search</append> <!-- search button -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -74,7 +69,6 @@
           <append key="input.keymap.data" type="strlist">66:prog1</append> <!-- link 1 button -->
           <append key="input.keymap.data" type="strlist">67:email</append> <!-- envelope button -->
           <append key="input.keymap.data" type="strlist">69:prog2</append> <!-- link 2 button -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 	
@@ -82,7 +76,6 @@
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SYMPHONY 6.0/7.0">
 	  <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P2" programmable button -->
 	  <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "P1" programmable button -->
-	  <append key="info.capabilities" type="strlist">input.keymap</append>
 	</match>
       </match>
 
@@ -93,11 +86,10 @@
 	  <append key="input.keymap.data" type="strlist">a0:mute</append> <!-- Fn-F5   Sound On/Off -->
 	  <append key="input.keymap.data" type="strlist">82:www</append> <!-- www button -->
 	  <append key="input.keymap.data" type="strlist">ec:email</append> <!-- envelope button -->
-            <append key="input.keymap.data" type="strlist">ae:volumedown</append> <!-- Fn-Down   Volume down -->
-            <append key="input.keymap.data" type="strlist">b0:volumeup</append> <!-- Fn-Up   Volume up -->
+          <append key="input.keymap.data" type="strlist">ae:volumedown</append> <!-- Fn-Down   Volume down -->
+          <append key="input.keymap.data" type="strlist">b0:volumeup</append> <!-- Fn-Up   Volume up -->
 	  <append key="input.keymap.data" type="strlist">df:suspend</append> <!-- Fn+F2 hibernate -->
-            <append key="input.keymap.data" type="strlist">f5:help</append> <!-- Help button -->
-	  <append key="info.capabilities" type="strlist">input.keymap</append>
+          <append key="input.keymap.data" type="strlist">f5:help</append> <!-- Help button -->
 	</match>
       </match>
 
@@ -116,7 +108,6 @@
           <append key="input.keymap.data" type="strlist">e077:f22</append> <!-- Fn+F10 Touchpad on -->
           <append key="input.keymap.data" type="strlist">0078:mail</append> <!-- Mail key -->
           <append key="input.keymap.data" type="strlist">e079:f22</append> <!-- Fn+F10 Touchpad off -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="SX20S">
 	  <append key="input.keymap.data" type="strlist">0074:mute</append> 	
@@ -133,7 +124,6 @@
           <append key="input.keymap.data" type="strlist">e057:f9</append> <!-- Left arrow: mute -->
           <append key="input.keymap.data" type="strlist">e064:f5</append> <!-- Shutter key: mute -->
           <append key="input.keymap.data" type="strlist">e06e:f11</append> <!-- UDF key: mute -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
@@ -144,6 +134,13 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
+
+      <!-- set the common key now --> 
+      <match key="input.keymap.data" exists="true">
+	<match key="input.keymap.data" contains_not="input.keymap">
+ 	  <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>	
 
     </match>
 
