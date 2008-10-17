@@ -133,9 +133,16 @@
           <append key="input.keymap.data" type="strlist">e032:www</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="Satellite A110">
-          <append key="input.keymap.data" type="strlist">e01f:screenlock</append>
+          <append key="input.keymap.data" type="strlist">e012:stop</append>
+          <append key="input.keymap.data" type="strlist">e013:www</append>
+          <append key="input.keymap.data" type="strlist">e014:media</append> <!-- Multimedia Player -->
+          <append key="input.keymap.data" type="strlist">e01e:f21</append> <!-- FIXME: Touchpad on -->
+          <append key="input.keymap.data" type="strlist">e01f:f21</append> <!-- FIXME: Touchpad off -->
+          <append key="input.keymap.data" type="strlist">e039:nextsong</append> <!-- Next song -->
           <append key="input.keymap.data" type="strlist">e059:brightnessup</append>
-          <append key="input.keymap.data" type="strlist">e06e:F21</append> <!-- Fixme: Touchpad enable/disable -->
+          <append key="input.keymap.data" type="strlist">e06e:screenlock</append>
+          <append key="input.keymap.data" type="strlist">e074:previoussong</append> <!-- Previous song -->
+          <append key="input.keymap.data" type="strlist">e077:playpause</append>
 	</match>
       </match>
 
