@@ -21,7 +21,7 @@
         </match>
       </match>
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="Hewlett-Packard">
-        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2710p;nc2400">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2510p;2710p;nc2400">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
       </match>
