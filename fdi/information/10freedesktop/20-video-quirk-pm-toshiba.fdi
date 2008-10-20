@@ -4,7 +4,7 @@
     <match key="system.hardware.vendor" string="TOSHIBA">
       <!-- Satellite Laptops -->
       <match key="system.hardware.product" prefix="Satellite">
-        <match key="system.hardware.product" contains_outof=" M30X; 1130">
+        <match key="system.hardware.product" contains=" M30X">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="Pro A120;M35X;P100;P200; P205D; A100; A105; A135; A200; A205; A210; L30; M105;M70">
@@ -36,7 +36,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="A30">
+        <match key="system.hardware.product" contains_outof="A30; 1130">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains="Pro 6100">
