@@ -47,7 +47,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <!-- these need no quirks -->
-        <match key="system.hardware.product" contains="CPx J650GT">
+        <match key="system.hardware.product" contains_outof="CPx J650GT;LS ">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -119,7 +119,7 @@
 	
       <!-- Dell Dimension -->
       <match key="system.hardware.product" prefix="Dimension">
-        <match key="system.hardware.product" contains_outof="2400;3000">
+        <match key="system.hardware.product" contains_outof="2400;3000;9100">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
@@ -127,6 +127,10 @@
 
       <!-- Dell Vostro -->
       <match key="system.hardware.product" prefix="Vostro">
+        <match key="system.hardware.product" contains=" 1000 ">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains=" 1500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
@@ -136,27 +140,37 @@
         </match>
       </match>
 
+      <!-- Dell OptiPlex -->
+      <match key="system.hardware.product" prefix_ncase="OptiPlex">
+        <match key="system.hardware.product" contains_outof="GX520;GX260">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains="755">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.no_fb" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_ncase="fx160">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+        <match key="system.hardware.product" contains_outof="170L;GX620">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+
       <!-- Dell Inspiron 640m, XPS M1210 -->
       <match key="system.hardware.product" contains_outof="MXC061;MXC062">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
-      <!-- Dell XPS M1330, OptiPlex GX520 (desktop with intel)
-           MM061 = Inspiron E1505 or/and 6400 -->
-      <match key="system.hardware.product" contains_outof="XPS M1330;OptiPlex GX520;MM061;OptiPlex GX260">
+      <!-- Dell XPS M1330, MM061 = Inspiron E1505 or/and 6400 -->
+      <match key="system.hardware.product" contains_outof="XPS M1330;MM061;">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains="OptiPlex 755">
-        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-        <merge key="power_management.quirk.no_fb" type="bool">true</merge>
-      </match>
-      <match key="system.hardware.product" contains_ncase="optiplex fx160">
-        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
-        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
-      </match>
 
       <!-- these need no quirks : Dimension E520, DXP051, Inspiron: 1300, E1702/E1705, 630m; M1710 (only resumes with vesafb) -->
-      <match key="system.hardware.product" contains_outof="DM061 ;DXP051;ME051;MP061;MXC051;MXG061;XPS M1530;OptiPlex GX620">
+      <match key="system.hardware.product" contains_outof="DM061 ;DXP051;ME051;MP061;MXC051;MXG061;XPS M1530">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
