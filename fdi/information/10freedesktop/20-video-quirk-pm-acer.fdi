@@ -24,7 +24,7 @@
         <match key="system.hardware.product" contains="6460">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="C200;2450;4400">
+        <match key="system.hardware.product" contains_outof="C200;2450;4400;6492">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
 
@@ -59,7 +59,7 @@
         <match key="system.hardware.product" contains="5050">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="3610;3620;3690;5630">
+        <match key="system.hardware.product" contains_outof="1670;3610;3620;3690;5630">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -97,7 +97,7 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2920;3100;5500Z;5580">
+        <match key="system.hardware.product" contains_outof="2920;3100;4520;5500Z;5580;5920G">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -133,6 +133,12 @@
         </match>
       </match>
 
+      <match key="system.hardware.product" prefix="Xspire">
+        <match key="system.hardware.product" contains="1650">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
+
       <match key="system.hardware.product" prefix="AcerPower">
         <match key="system.hardware.product" contains="2000">
           <merge key="power_management.quirk.none" type="bool">true</merge>
@@ -140,7 +146,7 @@
       </match>
 
       <!-- Aspire One 110 -->
-      <match key="system.hardware.product" prefix="AOA110">
+      <match key="system.hardware.product" prefix_outof="AOA110;AOA150">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
