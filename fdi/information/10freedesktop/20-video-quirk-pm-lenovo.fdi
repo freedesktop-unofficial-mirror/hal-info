@@ -13,6 +13,10 @@
       <match key="system.hardware.product" prefix="63664DU">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" prefix="6457">
+        <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+      </match>
 
       <!-- R60 -->
       <match key="system.hardware.version" prefix_ncase="ThinkPad R60">
@@ -44,7 +48,7 @@
       </match>
       <!-- T61 (8895), intel card 32bit works with S3_MODE, but 64bit needs VBE_MODE
 	   T61p (6460), does not work with the NVidia driver-->
-      <match key="system.hardware.product" prefix_outof="6457;6460;6465">
+      <match key="system.hardware.product" prefix_outof="6460;6465">
 	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -77,7 +81,7 @@
 	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
 	</match>
-	<match key="system.hardware.product" string_outof="0769B9G;0769BEG">
+	<match key="system.hardware.product" string_outof="0769B9G;0769BEG;0769AH9">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
