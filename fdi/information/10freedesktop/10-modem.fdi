@@ -343,8 +343,8 @@
       
       <!-- Nokia -->
       <match key="@info.parent:usb.vendor_id" int="0x421">
-        <!-- 6300/3109c/6120 Classic/E71/E70/N95-3/E90/N70/E61/N95-2/N96 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x4f9;0x64;0x2f;0xab;0x418;0x4f0;0x4ce;0x43a;0x44d;0x070;0x3a">
+        <!-- 6300/3109c/6120 Classic/E71/E70/N95-3/E90/N70/E61/N95-2/N96/N82 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x4f9;0x64;0x2f;0xab;0x418;0x4f0;0x4ce;0x43a;0x44d;0x070;0x3a;0x72">
           <match key="@info.parent:usb.interface.class" int="0x02">
             <match key="@info.parent:usb.interface.subclass" int="0x02">
               <append key="modem.command_sets" type="strlist">V.250</append> 
