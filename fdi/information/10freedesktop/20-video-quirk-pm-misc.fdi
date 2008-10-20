@@ -41,6 +41,13 @@
     </match>
   </device>
   <device>
+    <match key="system.hardware.vendor" string="JVC">
+      <match key="system.hardware.product" string="J2N       ">
+	<merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
+    </match>
+  </device>
+  <device>
     <match key="system.hardware.vendor" prefix="LG">
       <match key="system.hardware.product" string_outof="M1-3DGBG;W1-JDGBG;LM50-DGHE;LW75-SGGV1">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
@@ -192,6 +199,9 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         <merge key="power_management.quirk.no_fb" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="MS-1003">
+        <merge key="power_management.quirk.none" type="bool">true</merge>
+      </match>
     </match>
     <match key="system.hardware.vendor" prefix="MSI">
       <match key="system.hardware.product" string_outof="MS-7350;MS-7207PV;MS-6417;MS-6702">
@@ -224,7 +234,7 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string_outof="MS-7012;M295M;WIM 2000 ">
+      <match key="system.hardware.product" string_outof="MS-7012;M295M;WIM 2000 ;WIM 2140">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
