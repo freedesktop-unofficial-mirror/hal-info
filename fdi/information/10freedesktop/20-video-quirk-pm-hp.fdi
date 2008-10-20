@@ -49,7 +49,7 @@
     	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
  	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#;2100 (DP835E);F500 (GF596UA#">
+        <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#;2100 (DP835E);F500 (GF596UA#;2200 (PR309UA#;C700 (GV681LA#">
 	  <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -93,7 +93,7 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <!-- Note: PY507ET# is a nc6120 -->
-      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6710b;6720s;2710p;8510p;PY507ET#;6715b">
+      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6720s;2710p;8510p;PY507ET#;6715b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -145,6 +145,15 @@
 	<match key="system.hardware.product" contains_not="KE134EA">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
+      </match>
+      <match key="system.hardware.product" contains="6710b">
+	<match key="system.hardware.product" contains="KE123EA">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+	<match key="system.hardware.product" contains="KE124EA">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
       <match key="system.hardware.product" contains="6710s">
@@ -217,7 +226,7 @@
         <match key="system.hardware.product" contains_outof="dv4000 (EB911EA#; dv2600; dv6500">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	</match>
-	<match key="system.hardware.product" contains="dv4000 (PX306UA#">
+	<match key="system.hardware.product" contains_outof="dv4000 (PX306UA#; dv6700 ">
 	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -255,20 +264,24 @@
           </match>
         </match>
 
-	<!-- HP Pavilion ZT1000-IC -->
 	<match key="system.hardware.product" string="HP Pavilion Notebook PC">
 	  <match key="system.hardware.version" string="HP Pavilion Notebook">
             <match key="system.firmware.vendor" string="Insyde Software">
+	      <!-- HP Pavilion ZT1000-IC -->
               <match key="system.firmware.version" string=" IC.M1.04">
     	        <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
  	        <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
                 <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
 	      </match>
+	      <!-- HP Pavilion xz275  -->
+              <match key="system.firmware.version" string=" IC.M1.02">
+                <merge key="power_management.quirk.none" type="bool">true</merge>
+	      </match>
 	    </match>
 	  </match>
 	</match>
 
-        <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF;ze4900">
+        <match key="system.hardware.product" contains_outof="8710p;dv2000;dv2500;tx1000;dv5000 (EZ535UA#;HP d530 SFF;ze4900; dv9700 ">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
@@ -281,7 +294,7 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" string_outof="D7223K-ABA A650E;EJ192AA-ABS t3250.se;EP198AA-UUZ t3335.ch;ES061AA-ABD t3320">
+      <match key="system.hardware.product" string_outof="D7223K-ABA A650E;EJ192AA-ABS t3250.se;EP198AA-UUZ t3335.ch;ES061AA-ABD t3320;PC098A-ABA M1070N">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
     </match>
