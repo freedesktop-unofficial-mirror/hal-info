@@ -41,7 +41,7 @@
       <match key="system.hardware.product" prefix_outof="2366;2653">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
       </match>
-      <!-- X22, X40; X32 -->
+      <!-- X22, X40, X32 -->
       <match key="system.hardware.product" prefix_outof="2662;2672;2673">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
         <match key="system.hardware.version" contains_not="X31">

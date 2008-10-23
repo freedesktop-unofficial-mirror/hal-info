@@ -24,7 +24,7 @@
           <merge key="storage.drive_type" type="string">zip</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
 	
@@ -33,7 +33,7 @@
           <merge key="storage.drive_type" type="string">zip</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
 	
@@ -42,7 +42,7 @@
           <merge key="storage.drive_type" type="string">jaz</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
       </match>
@@ -55,7 +55,7 @@
           <merge key="storage.drive_type" type="string">zip</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
 	
@@ -64,7 +64,7 @@
           <merge key="storage.drive_type" type="string">zip</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
 	
@@ -73,7 +73,7 @@
           <merge key="storage.drive_type" type="string">jaz</merge>
           <merge key="storage.no_partitions_hint" type="bool">true</merge>
           <merge key="storage.requires_eject" type="bool">true</merge>
-          <!-- treat as floppy and data at partition 4; adjust device file -->
+          <!-- treat as floppy and data at partition 4, adjust device file -->
 	  <append key="block.device" type="string">4</append>
 	</match>
       </match>

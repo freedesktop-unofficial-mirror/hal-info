@@ -77,7 +77,7 @@
         </match>
       </match>
       <match key="system.hardware.version" prefix_ncase="3000 N200">
-        <match key="system.hardware.product" string="0769BBG;0769AC6">
+        <match key="system.hardware.product" string_outof="0769BBG;0769AC6">
 	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
 	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
 	</match>
