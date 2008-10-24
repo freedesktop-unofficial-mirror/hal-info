@@ -20,9 +20,11 @@ get_line ()
 	cat "$1" | sed -ne '/<!--/ { :c; /-->/! { N; b c; }; /-->/s/<!--.*-->//g }; /^  *$/!p;' | grep "input.keymap.data" | while read line
 	do
 		data=`echo "${line}" | cut -d":" -f2 | cut -d"<" -f1`
-		found=`isin $data`
-		if [ "$found" = "0" ]; then
-			echo "$data "
+		if [ -n "${data}" ] ; then
+			found=`isin $data`
+			if [ "$found" = "0" ]; then
+				echo "$data "
+			fi
 		fi
 	done
 }
