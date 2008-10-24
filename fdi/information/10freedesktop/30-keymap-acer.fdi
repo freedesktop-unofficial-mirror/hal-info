@@ -27,23 +27,23 @@
         <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "P1" programmable button -->
         <append key="input.keymap.data" type="strlist">e075:presentation</append> <!-- Minimise all Windows -->
         <append key="input.keymap.data" type="strlist">e078:fn</append> <!-- Fn key -->
-        <append key="input.keymap.data" type="strlist">e079:sync</append> <!-- Launch NTI shadow -->
+        <append key="input.keymap.data" type="strlist">e079:f23</append> <!-- Launch NTI shadow -->
         <append key="info.capabilities" type="strlist">input.keymap</append>
 
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Extensa">
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="5210;5220;5610;5620;5720">
             <remove key="input.keymap.data" type="strlist">e06e:brightnessup</remove>
-	    <append key="input.keymap.data" type="strlist">e06e:lock</append> <!--  Windows Lock function -->
+	    <append key="input.keymap.data" type="strlist">e06e:screenlock</append> <!--  Windows Lock function -->
           </match>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="TravelMate">
           <!-- TravelMate C300 -->
           <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="C300">
-            <append key="input.keymap.data" type="strlist">0x67:f22</append> <!-- FIXME: rotate screen -->
+            <append key="input.keymap.data" type="strlist">0x67:f24</append> <!-- FIXME: rotate screen -->
             <append key="input.keymap.data" type="strlist">0x68:up</append>
             <append key="input.keymap.data" type="strlist">0x69:down</append>
             <append key="input.keymap.data" type="strlist">0x6b:fn</append>
-            <append key="input.keymap.data" type="strlist">0x6c:f23</append> <!-- FIXME: lock tablet device/buttons-->
+            <append key="input.keymap.data" type="strlist">0x6c:screenlock</append> <!-- FIXME: lock tablet device/buttons-->
           </match>
         </match>
       </match>
