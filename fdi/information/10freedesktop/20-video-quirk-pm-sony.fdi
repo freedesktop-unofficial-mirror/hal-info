@@ -30,7 +30,7 @@
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
 	<merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="PCG-Z1RMP;VGN-TX770P;VGN-FW11;VGN-TX670P">
+      <match key="system.hardware.product" contains_outof="PCG-Z1RMP;VGN-TX770P;VGN-FW11;VGN-TX670P;PCG-V505ECP">
 	<merge key="power_management.quirk.vbe_post" type="bool">true</merge>
 	<merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
