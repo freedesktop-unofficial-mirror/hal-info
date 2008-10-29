@@ -904,7 +904,9 @@
           <!-- Android Phone, HTC Diamond -->
           <match key="@storage.originating_device:usb.product_id" int_outof="0xc01;0xc13">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
-             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+             <match key="@storage.originating_device:usb.product_id" int="0xc01">
+	       <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	     </match>
              <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
              <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
              <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
