@@ -5,7 +5,7 @@
       <match key="system.hardware.product" prefix_outof="U5F ;M2000E;F2J ">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne;M51Sr ;U6S">
+      <match key="system.hardware.product" prefix_outof="K8N-E-Deluxe;L2000D;M6Ne;M51Sr ;U6S;A8N">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!--NOTE: s2ram list the F3F with power_management.quirk.none=true -->
