@@ -142,6 +142,13 @@
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
+        <!-- ONDA MF632 HSDPA USB dongle -->
+        <match key="@info.parent:usb.product_id" int="0x002">
+          <match key="@info.parent:usb.interface.number" int="2">
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
       </match>
 
       <!-- Novatel -->
