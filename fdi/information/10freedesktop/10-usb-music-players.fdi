@@ -942,9 +942,12 @@
           <!-- NOTE: for backward compatibility until key get removed finally -->
           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
+          <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+          <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
           <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.sony.atrac3</append>
 	  <append key="portable_audio_player.audio_folders" type="strlist">PSP/MUSIC/</append>
+          <merge key="portable_audio_player.folder_depth" type="int">0</merge>
           <merge key="storage.drive_type" type="string">memory_stick</merge>
         </match>
       </match>
