@@ -139,7 +139,6 @@
         </match>
       </match>
 
-
       <!-- LG -->
       <match key="@info.parent:usb.vendor_id" int="0x1004">
         <!-- U990 -->
@@ -148,7 +147,6 @@
           <append key="modem.command_sets" type="strlist">GSM-07.05</append>
         </match>
       </match>
-
 
       <!-- Pantech -->
       <match key="@info.parent:usb.vendor_id" int="0x106c">
@@ -259,14 +257,8 @@
       </match>
 
       <match key="@info.parent:usb.vendor_id" int="0x19d2">
-        <!-- Qualcomm: Telstra/NextG CDMA -->
-        <match key="@info.parent:usb.product_id" int="0x0001">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="modem.command_sets" type="strlist">IS-707-A</append>
-          </match>
-        </match>
-        <!-- ZTE CDMA Tech -->
-        <match key="@info.parent:usb.product_id" int="0xfffe">
+        <!-- Qualcomm: Telstra/NextG CDMA , ZTE CDMA Tech -->
+        <match key="@info.parent:usb.product_id" int_outof="0x0001;0xfffe">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
@@ -298,8 +290,8 @@
       </match>
 
       <match key="@info.parent:usb.vendor_id" int="0x22b8">
-        <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u) -->
-        <match key="@info.parent:usb.product_id" int="0x3802">
+        <!-- BUSlink UM-864GW USB GPRS Modem (Model SCWi275u), Motorola G24 USB GPRS Modem -->
+        <match key="@info.parent:usb.product_id" int_outof="0x3802;0x4902">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
@@ -313,13 +305,6 @@
               <append key="modem.command_sets" type="strlist">GSM-07.07</append>
               <append key="modem.command_sets" type="strlist">GSM-07.05</append>    
             </match>
-          </match>
-        </match>
-        <!-- Motorola G24 USB GPRS Modem -->
-        <match key="@info.parent:usb.product_id" int="0x4902">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
       </match>
