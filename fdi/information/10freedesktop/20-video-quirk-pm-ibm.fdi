@@ -38,7 +38,7 @@
         <merge key="power_management.quirk.dpms_suspend" type="bool">true</merge>
       </match>
       <!-- X31, T30 , A31p-->
-      <match key="system.hardware.product" prefix_outof="2366;2653">
+      <match key="system.hardware.product" prefix_outof="2366;2367;2653">
         <merge key="power_management.quirk.radeon_off" type="bool">true</merge>
       </match>
       <!-- X22, X40, X32 -->
