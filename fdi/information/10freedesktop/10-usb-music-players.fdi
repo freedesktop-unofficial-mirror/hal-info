@@ -936,7 +936,7 @@
 
     <match key="info.category" string="storage">
       <!-- Sony PSP (PlayStation Portable) -->
-      <match key="storage.vendor" prefix_ncase="SONY">
+      <match key="storage.vendor" prefix_ncase="sony">
         <match key="storage.model" contains="PSP">
           <append key="info.capabilities" type="strlist">portable_audio_player</append>
           <!-- NOTE: for backward compatibility until key get removed finally -->
