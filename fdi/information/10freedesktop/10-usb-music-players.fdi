@@ -325,7 +325,10 @@
           </match>
 	</match>
 
-	<!-- LG Fusic Phone -->
+	<!-- Deactived entry. Looks as if this is a generic USB chip, since it matches
+             also a Option GlobeTrotter Express 7.2 HSDPA modem card. Find another way to identify the
+             LG Fusic Phone.
+
         <match key="@storage.originating_device:usb.vendor_id" int="0x05c6">
           <match key="@storage.originating_device:usb.product_id" int="0x1000">
             <addset key="info.capabilities" type="strlist">portable_audio_player</addset>
@@ -337,6 +340,7 @@
             <addset key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</addset>
           </match>
         </match>
+	-->
 	
 	<!-- Jetflash MP3 Player, AKA NAPA LCD-HD, AKA Medion, AKA Tevion  and other -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x066f">
