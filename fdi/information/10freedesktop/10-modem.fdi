@@ -66,9 +66,9 @@
       <match key="@info.parent:usb.vendor_id" int="0x0af0">
         <!-- Colt,Ricola,Ricola Light,Ricola Quad,Ricola Quad Light,Ricola Ndis,Ricola Ndis Light, Ricola Ndis Quad,Ricola Ndis Quad Light,
 	     Cobra,Cobra Bus,Viper,Viper Bus,Gt Max Ready,Gt Max,Fuji Modem Light,Fuji Modem Gt,Fuji Modem Ex,Fuji Network Light,Fuji Network Gt,
-	     Fuji Network Ex,Koi Modem,Koi Network,Scorpion Modem,Scorpion Network,Etna Modem,Etna Network,Etna Modem Lite, Etna Modem Gt,
+	     Fuji Network Ex,Koi Modem,Koi Network,Scorpion Modem,Scorpion Network,Etna Modem,Globetrotter HSDPA Modem,Etna Network,Etna Modem Lite, Etna Modem Gt,
              Etna Modem Ex,Etna Network Lite,Etna Network Gt,Etna Network Ex,Etna Koi Modem,Etna Koi Network -->
-        <match key="@info.parent:usb.product_id" int_outof="0x5000;0x6000;0x6100;0x6200;0x6300;0x6050;0x6150;0x6250;0x6350;0x6500;0x6501;0x6600;0x6601;0x6701;0x6711;0x6721;0x6741;0x6761;0x6731;0x6751;0x6771;0x6800;0x6811;0x6901;0x6911;0x7001;0x7021;0x7041;0x7061;0x7031;0x7051;0x7071;0x7100;0x7111">
+        <match key="@info.parent:usb.product_id" int_outof="0x5000;0x6000;0x6100;0x6200;0x6300;0x6050;0x6150;0x6250;0x6350;0x6500;0x6501;0x6600;0x6601;0x6701;0x6711;0x6721;0x6741;0x6761;0x6731;0x6751;0x6771;0x6800;0x6811;0x6901;0x6911;0x6971;0x7001;0x7021;0x7041;0x7061;0x7031;0x7051;0x7071;0x7100;0x7111">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
