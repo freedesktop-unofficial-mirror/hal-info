@@ -218,8 +218,8 @@
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
-        <!-- U730,U740,EU870,XU870 HSDPA/3G,EU740,MC950 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x1400;0x1410;0x1420;0x1430;0x2410;0x4400">
+        <!-- U730,U740,EU870,XU870 HSDPA/3G,EU740,EU870D,MC950 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x1400;0x1410;0x1420;0x1430;0x2410;0x2420;0x4400">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
