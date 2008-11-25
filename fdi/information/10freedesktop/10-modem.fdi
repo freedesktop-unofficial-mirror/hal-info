@@ -117,7 +117,7 @@
       </match>
 
       <!-- Sierra Wireless MC5720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x0f30">
+      <match key="@info.parent:usb.vendor_id" int="0x3f0">
         <match key="@info.parent:usb.product_id" int="0x1b1d">
           <match key="@info.parent:usb.interface.number" int="0">
             <match key="serial.port" int="0">
