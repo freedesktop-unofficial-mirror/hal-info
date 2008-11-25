@@ -27,7 +27,16 @@
             </match>
           </match>
         </match>
+        <!-- Sierra Wireless MC5720 -->
+        <match key="@info.parent:usb.product_id" int="0x1b1d">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <match key="serial.port" int="0">
+              <append key="modem.command_sets" type="strlist">IS-707-A</append>
+            </match>
+          </match>
+        </match>
       </match>
+
 
       <!-- Nokia -->
       <match key="@info.parent:usb.vendor_id" int="0x421">
@@ -108,17 +117,6 @@
       <match key="@info.parent:usb.vendor_id" int="0x0c88">
         <!-- KPC680,KPC650/Passport, -->
         <match key="@info.parent:usb.product_id" int_outof="0x180a;0x17da">
-          <match key="@info.parent:usb.interface.number" int="0">
-            <match key="serial.port" int="0">
-              <append key="modem.command_sets" type="strlist">IS-707-A</append>
-            </match>
-          </match>
-        </match>
-      </match>
-
-      <!-- Sierra Wireless MC5720 -->
-      <match key="@info.parent:usb.vendor_id" int="0x3f0">
-        <match key="@info.parent:usb.product_id" int="0x1b1d">
           <match key="@info.parent:usb.interface.number" int="0">
             <match key="serial.port" int="0">
               <append key="modem.command_sets" type="strlist">IS-707-A</append>
