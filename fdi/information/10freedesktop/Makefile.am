@@ -66,7 +66,8 @@ dist_fdi_DATA +=				\
 		20-video-quirk-pm-samsung.fdi   \
 		20-video-quirk-pm-sony.fdi	\
 		20-video-quirk-pm-toshiba.fdi	\
-		21-video-quirk-nvidia.fdi
+		21-video-quirk-nvidia.fdi	\
+		99-video-quirk-default.fdi
 endif
 
 if BUILD_KEYMAPS
