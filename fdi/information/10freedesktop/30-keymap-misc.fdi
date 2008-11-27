@@ -19,15 +19,11 @@
 	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
           <append key="input.keymap.data" type="strlist">e077:switchvideomode</append> <!-- Fn+F3 switch screen -->
         </match>
-      </match>
-
-      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="FUJITSU">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro Edition V3505">
           <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn-F1 help -->
           <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn-F3 Display toggle -->
           <append key="input.keymap.data" type="strlist">e059:brightnessdown</append> <!--  Fn-F8 brigtness-down -->
           <append key="input.keymap.data" type="strlist">e060:brightnessup</append> <!--  Fn-F9 brigtness-up -->
-          <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
       </match>
 
