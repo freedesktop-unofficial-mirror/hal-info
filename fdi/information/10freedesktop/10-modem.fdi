@@ -289,6 +289,13 @@
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
         </match>
+        <!-- ZTE MF626 HSDPA USB dongle -->
+        <match key="@info.parent:usb.product_id" int="0x2000">
+          <match key="@info.parent:usb.interface.number" int="0">
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
         <!-- ZTE MF628 HSDPA USB dongle -->
         <match key="@info.parent:usb.product_id" int="0x0015">
           <match key="@info.parent:usb.interface.number" int="3">
@@ -297,7 +304,7 @@
           </match>
         </match>
         <!-- ONDA MF632 HSDPA USB dongle -->
-        <match key="@info.parent:usb.product_id" int="0x002">
+        <match key="@info.parent:usb.product_id" int="0x0002">
           <match key="@info.parent:usb.interface.number" int="2">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
