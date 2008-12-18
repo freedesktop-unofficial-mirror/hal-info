@@ -65,8 +65,11 @@ dist_fdi_DATA +=				\
 		20-video-quirk-pm-misc.fdi	\
 		20-video-quirk-pm-samsung.fdi   \
 		20-video-quirk-pm-sony.fdi	\
-		20-video-quirk-pm-toshiba.fdi	\
-		21-video-quirk-nvidia.fdi	
+		20-video-quirk-pm-toshiba.fdi	
+
+if BUILD_VIDEO_NVIDIA_QUIRKS
+dist_fdi_DATA += 21-video-quirk-nvidia.fdi	
+endif
 
 if BUILD_VIDEO_DEFAULT_QUIRKS
 dist_fdi_DATA += 99-video-quirk-default.fdi
