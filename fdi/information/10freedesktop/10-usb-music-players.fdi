@@ -75,8 +75,8 @@
 
 	<!-- Nokia -->
         <match key="@storage.originating_device:usb.vendor_id" int="0x421">
-  	  <!-- Nokia 770, N800 -->
-          <match key="@storage.originating_device:usb.product_id" int_outof="0x431;0x4c3">
+  	  <!-- Nokia 770, N800, N810 -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0x431;0x4c3;0x96">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
