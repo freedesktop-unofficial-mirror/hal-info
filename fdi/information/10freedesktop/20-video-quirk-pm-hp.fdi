@@ -68,8 +68,13 @@
     </match>
 
     <match key="system.hardware.vendor" prefix="Hewlett-Packard">
-      <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV); 6715s;6820s; 8510w">
+      <match key="system.hardware.product" contains_outof="V2000 (EP381UA#;X1000 (DK454AV); 6715s;6820s">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+      </match>
+      <match key="system.hardware.product" contains=" 8510w">
+        <match key="system.hardware.primary_video.vendor" int="0x1002">
+          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+        </match>
       </match>
       <match key="system.hardware.product" contains="HP OmniBook XT1000">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
