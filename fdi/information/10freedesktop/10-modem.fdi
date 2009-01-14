@@ -368,6 +368,16 @@
         </match>
       </match>
 
+      <!-- Quanta 3G modem -->
+      <match key="@info.parent:usb.vendor_id" int="0x0408">
+        <match key="@info.parent:usb.product_id" int="0xea02">
+          <match key="@info.parent:usb.interface.number" int="0x2">
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+          </match>
+        </match>
+      </match>
+
 <!-- ***************************************************** 
 			PCMCIA cards 
      ***************************************************** --> 
