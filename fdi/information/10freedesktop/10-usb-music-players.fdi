@@ -468,6 +468,18 @@
 	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
 	    <merge key="storage.requires_eject" type="bool">true</merge>
           </match>
+	  <!-- Sansa Fuze -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x74c1">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
+            <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+            <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
+            <merge key="storage.requires_eject" type="bool">true</merge> 
+	  </match>
 	</match>
 
         <!-- Olympus -->
