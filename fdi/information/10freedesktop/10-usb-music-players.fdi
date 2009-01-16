@@ -458,6 +458,27 @@
             <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
             <merge key="storage.requires_eject" type="bool">true</merge>
           </match>
+	  <!-- Sansa Clip version II -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0x7434;0x7435">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/audible</append>
+            <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/ogg</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-pn-audibleaudio</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">PODCAST/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">RECORD/FM/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">RECORD/VOICE/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">AUDIBLE/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">AUDIOBOOKS/</append>
+            <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
+            <append key="portable_audio_player.playlist_path" type="strlist">%File</append>
+            <merge key="storage.requires_eject" type="bool">true</merge>
+          </match>
 	  <!-- Sansa c250 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x7451">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
