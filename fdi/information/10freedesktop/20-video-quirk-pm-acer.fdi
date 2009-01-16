@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
 <deviceinfo version="0.2">
   <device>
-    <match key="system.hardware.vendor" prefix="Acer">
+    <match key="system.hardware.vendor" prefix_ncase="Acer">
       <match key="system.hardware.product" prefix="TravelMate">
         <match key="system.hardware.product" contains="C300">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
@@ -21,7 +21,7 @@
         <match key="system.hardware.product" contains_outof="7520;8000">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="6460">
+        <match key="system.hardware.product" contains_outof="C100;6460">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="C200;2450;4400;6492">
