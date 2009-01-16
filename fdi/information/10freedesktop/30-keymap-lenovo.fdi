@@ -12,6 +12,7 @@
           <append key="input.keymap.data" type="strlist">e016:wlan</append> <!-- Fn+F5 wireless -->
           <append key="input.keymap.data" type="strlist">e017:sleep</append> <!-- Fn+F4 suspend -->
           <append key="input.keymap.data" type="strlist">e018:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">e034:prog1</append> <!-- Lenovo Care -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>
 	<!-- match for X60/X61/ ... ThinkPad Tablets -->
