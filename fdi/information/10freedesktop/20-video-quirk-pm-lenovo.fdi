@@ -47,8 +47,6 @@
         </match>
       </match>
 
-      </match>
-
       <!-- T61 -->
       <match key="system.hardware.product" prefix="7663">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
