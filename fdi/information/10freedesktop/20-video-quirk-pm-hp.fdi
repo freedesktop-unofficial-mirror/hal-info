@@ -49,6 +49,10 @@
     	  <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
  	  <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
+        <match key="system.hardware.product" contains=" X1000 ">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+        </match>
         <match key="system.hardware.product" contains_outof="V3000 (EZ755UA#;V5000 (ET826UA#;2100 (DP835E);F500 (GF596UA#;2200 (PR309UA#;C700 (GV681LA#">
 	  <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
