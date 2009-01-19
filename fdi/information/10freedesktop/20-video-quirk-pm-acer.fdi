@@ -79,11 +79,11 @@
         <match key="system.hardware.product" contains="1640">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains="1500">
+        <match key="system.hardware.product" contains_outof="1500;3000">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-	<match key="system.hardware.product" contains_outof="1520;1650;3000;5100;5110;5570;5920">
+	<match key="system.hardware.product" contains_outof="1520;1650;5100;5110;5570;5920">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
