@@ -19,6 +19,11 @@
 	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
           <append key="input.keymap.data" type="strlist">e077:switchvideomode</append> <!-- Fn+F3 switch screen -->
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pa 2548">
+	  <append key="input.keymap.data" type="strlist">e060:volumedown</append>
+	  <append key="input.keymap.data" type="strlist">e061:volumeup</append>
+	  <append key="input.keymap.data" type="strlist">e065:prog1</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro Edition V3505">
           <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn-F1 help -->
           <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn-F3 Display toggle -->
