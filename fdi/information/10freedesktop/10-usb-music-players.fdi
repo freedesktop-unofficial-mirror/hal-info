@@ -717,8 +717,8 @@
 	    <append key="portable_audio_player.playlist_path" type="strlist">Music/playlists</append>
 	  </match>
 
-	  <!-- W880i Walkman Phone -->
-	  <match key="@storage.originating_device:usb.product_id" int="0xe068">
+	  <!-- W880i/890i Walkman Phone -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0xe068;0xe0b3">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
