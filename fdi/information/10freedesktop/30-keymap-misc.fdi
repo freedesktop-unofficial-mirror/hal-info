@@ -153,6 +153,13 @@
 	</match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="ASUS">
+          <append key="input.keymap.data" type="strlist">e06f:mute</append>
+          <append key="input.keymap.data" type="strlist">e06d:volumeup</append>
+          <append key="input.keymap.data" type="strlist">e06e:volumedown</append>
+      </match>
+
+
       <!-- set the common key now --> 
       <match key="input.keymap.data" exists="true">
 	<match key="input.keymap.data" contains_not="input.keymap">
