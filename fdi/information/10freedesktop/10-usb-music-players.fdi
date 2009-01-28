@@ -981,7 +981,7 @@
       <match key="portable_audio_player.access_method.protocols" contains="storage">
 	<merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>
       </match>
-      <append key="info.capabilities" type="strlist">portable_audio_player</append>
+      <addset key="info.capabilities" type="strlist">portable_audio_player</addset>
       <merge key="info.category" type="string">portable_audio_player</merge>
       <!-- all player in the list above support this output format -->
       <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
@@ -993,7 +993,7 @@
       <!-- Sony PSP (PlayStation Portable) -->
       <match key="storage.vendor" prefix_ncase="sony">
         <match key="storage.model" contains="PSP">
-          <append key="info.capabilities" type="strlist">portable_audio_player</append>
+          <addset key="info.capabilities" type="strlist">portable_audio_player</addset>
           <!-- NOTE: for backward compatibility until key get removed finally -->
           <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
           <merge key="portable_audio_player.storage_device" type="copy_property">info.udi</merge>

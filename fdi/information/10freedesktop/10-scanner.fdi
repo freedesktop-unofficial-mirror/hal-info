@@ -6,7 +6,7 @@
   <device>
     <match key="info.category" string="scsi_generic">
       <match key="@info.parent:scsi.type" string="scanner">
-        <append key="info.capabilities" type="strlist">scanner</append>
+        <addset key="info.capabilities" type="strlist">scanner</addset>
       </match>
     </match>
   </device>

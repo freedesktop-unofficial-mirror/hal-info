@@ -18,7 +18,7 @@
 
   <device>
     <match key="info.udi" string="/org/freedesktop/Hal/devices/dell_wlan_switch">
-      <append key="info.capabilities" type="strlist">killswitch</append>
+      <addset key="info.capabilities" type="strlist">killswitch</addset>
       <merge key="info.product" type="string">Dell WLAN Switch</merge>
       <merge key="info.category" type="string">killswitch</merge>
       <merge key="killswitch.type" type="string">wlan</merge>
