@@ -18,6 +18,15 @@
           <append key="input.keymap.data" type="strlist">e057:wlan</append>     <!-- Wlan -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
 
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Tablet">
+            <append key="input.keymap.data" type="strlist">e002:prog2</append>   <!-- Funny Key -->
+            <append key="input.keymap.data" type="strlist">e003:prog1</append>   <!-- Q -->
+            <append key="input.keymap.data" type="strlist">e004:tab</append>     <!-- Tab -->
+            <append key="input.keymap.data" type="strlist">e005:esc</append>     <!-- Esc -->
+            <append key="input.keymap.data" type="strlist">e006:pageup</append>  <!-- PgUp -->
+            <append key="input.keymap.data" type="strlist">e007:pagedown</append>  <!-- PgDown -->
+          </match>
+
 	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Pavilion">
             <!-- Home and entertainment machines -->
             <append key="input.keymap.data" type="strlist">e008:player</append> <!-- FIXME: quick play -->
