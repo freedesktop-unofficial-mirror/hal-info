@@ -356,8 +356,8 @@
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
-        <!-- Motorola V3xx/C650 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x6402;0x4902">
+        <!-- Motorola V3xx/C650/E770V -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6402;0x4902;0x3002">
           <match key="@info.parent:usb.interface.class" int="0x02">
             <match key="@info.parent:usb.interface.subclass" int="0x02">
               <append key="modem.command_sets" type="strlist">GSM-07.07</append>
