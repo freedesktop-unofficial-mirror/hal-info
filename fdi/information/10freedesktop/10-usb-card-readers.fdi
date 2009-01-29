@@ -19,34 +19,22 @@
 
     <!-- Generic catch all -->
     <match key="storage.bus" string="usb">
-      <match key="storage.model" contains="HS-CF">
-        <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>
-      <match key="storage.model" contains="HS-MS">
-        <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>
-      <match key="storage.model" contains="HS-SM">
-        <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>
-      <match key="storage.model" contains="HS-xD">
-        <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>
-      <match key="storage.model" contains="HS-SD">
-        <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>
-
-      <!-- Yet another common theme -->
-      <match key="storage.model" contains="Reader-CF">
-        <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>
-      <match key="storage.model" contains="Reader-MS">
-        <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>
-      <match key="storage.model" contains="Reader-SM">
-        <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>
-      <match key="storage.model" contains="Reader-SD">
-        <merge key="storage.drive_type" type="string">sd_mmc</merge>
+      <match key="storage.model" prefix_outof="HS-;Reader-;IC1210        ">
+        <match key="storage.model" suffix="CF">
+          <merge key="storage.drive_type" type="string">compact_flash</merge>
+        </match>
+        <match key="storage.model" suffix="MS">
+          <merge key="storage.drive_type" type="string">memory_stick</merge>
+        </match>
+        <match key="storage.model" suffix="SM">
+          <merge key="storage.drive_type" type="string">smart_media</merge>
+        </match>
+        <match key="storage.model" suffix="xD">
+          <merge key="storage.drive_type" type="string">smart_media</merge>
+        </match>
+        <match key="storage.model" suffix="SD">
+          <merge key="storage.drive_type" type="string">sd_mmc</merge>
+        </match>
       </match>
 
       <!-- Yet another common theme -->
@@ -63,20 +51,6 @@
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>
       <match key="storage.model" contains="Storage-SDC">
-        <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>
-
-      <!-- Some noname USB2.0 Card Reader -->
-      <match key="storage.model" string="IC1210        CF">
-        <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>
-      <match key="storage.model" string="IC1210        MS">
-        <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>
-      <match key="storage.model" string="IC1210        SM">
-        <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>
-      <match key="storage.model" string="IC1210    MMC/SD">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>
 
