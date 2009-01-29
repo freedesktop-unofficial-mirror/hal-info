@@ -35,20 +35,6 @@
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>
 
-      <!-- Another common theme -->
-      <match key="storage.model" contains="USB CF Reader">
-        <merge key="storage.drive_type" type="string">compact_flash</merge>
-      </match>
-      <match key="storage.model" contains="USB MS Reader">
-        <merge key="storage.drive_type" type="string">memory_stick</merge>
-      </match>
-      <match key="storage.model" contains="USB SM Reader">
-        <merge key="storage.drive_type" type="string">smart_media</merge>
-      </match>
-      <match key="storage.model" contains="USB SD Reader">
-        <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>
-
       <!-- Yet another common theme -->
       <match key="storage.model" contains="Reader-CF">
         <merge key="storage.drive_type" type="string">compact_flash</merge>
@@ -95,7 +81,7 @@
       </match>
 
       <!-- Hama card reader -->
-      <match key="storage.model" contains="Card">
+      <match key="storage.model" contains_outof="Card;USB">
         <match key="storage.model" contains="Reader">
 	  <match key="storage.model" contains=" CF">
 	    <merge key="storage.drive_type" type="string">compact_flash</merge>
