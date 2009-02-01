@@ -40,8 +40,8 @@
 
       <!-- Nokia -->
       <match key="@info.parent:usb.vendor_id" int="0x421">
-        <!-- 6300/3109c/6120 Classic/E71/E70/N95-3/E90/N70/E61/N95-2/N96/N82/N82 (alternate chip)/E66/E61i/E60/N93/N71/N77/N90/N91/N80/E62/N76/N73/N92/N72/E50/N75/N93i/E65/N78 -->
-        <match key="@info.parent:usb.product_id" int_outof="0x4f9;0x64;0x2f;0xab;0x418;0x4f0;0x4ce;0x43a;0x44d;0x070;0x3a;0x71;0x72;0xb0;0x01;0x419;0x420;0x425;0x00e;0x432;0x42f;0x445;0x475;0x481;0x486;0x48e;0x4c4;0x4c9;0x4df;0x04e6;0x508;0x078">
+        <!-- E51/6300/3109c/6120 Classic/E71/E70/N95-3/E90/N70/E61/N95-2/N96/N82/N82 (alternate chip)/E66/E61i/E60/N93/N71/N77/N90/N91/N80/E62/N76/N73/N92/N72/E50/N75/N93i/E65/N78 -->
+        <match key="@info.parent:usb.product_id" int_outof="0x42;0x4f9;0x64;0x2f;0xab;0x418;0x4f0;0x4ce;0x43a;0x44d;0x070;0x3a;0x71;0x72;0xb0;0x01;0x419;0x420;0x425;0x00e;0x432;0x42f;0x445;0x475;0x481;0x486;0x48e;0x4c4;0x4c9;0x4df;0x04e6;0x508;0x078">
           <match key="@info.parent:usb.interface.class" int="0x02">
             <match key="@info.parent:usb.interface.subclass" int="0x02">
               <append key="modem.command_sets" type="strlist">GSM-07.07</append>
@@ -49,17 +49,6 @@
             </match>
           </match>
         </match>
-
-        <!-- E51 as a GPRS/EDGE modem (CDC ACM) -->
-        <match key="@info.parent:usb.product_id" int="0x42">
-          <match key="@info.parent:usb.interface.class" int="0x02">
-            <match key="@info.parent:usb.interface.subclass" int="0x02">
-              <append key="modem.command_sets" type="strlist">GSM-07.07</append>
-              <append key="modem.command_sets" type="strlist">GSM-07.05</append>                  
-            </match>
-          </match>
-        </match>
-
       </match>
 
       <!-- Samsung SGH-A707 (AT&T Sync) -->
