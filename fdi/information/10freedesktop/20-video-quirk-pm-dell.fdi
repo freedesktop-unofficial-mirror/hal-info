@@ -47,7 +47,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         </match>
         <!-- these need no quirks -->
-        <match key="system.hardware.product" contains_outof="CPx J650GT;LS ">
+        <match key="system.hardware.product" contains_outof="CPx J650GT;LS ;D810">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
