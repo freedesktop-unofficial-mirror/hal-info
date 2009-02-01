@@ -465,7 +465,7 @@
 
       <!-- set common properties for all above matched modem devices -->
       <match key="modem.command_sets" exists="true">
-        <append key="info.capabilities" type="strlist">modem</append>
+        <addset key="info.capabilities" type="strlist">modem</addset>
       </match>
 
     </match>
