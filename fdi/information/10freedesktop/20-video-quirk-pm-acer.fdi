@@ -97,7 +97,7 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
           <merge key="power_management.quirk.no_fb" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="2920;3100;4520;5500Z;5580;5920G">
+        <match key="system.hardware.product" contains_outof="2010;2920;3100;4520;5500Z;5580;5920G">
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
