@@ -229,8 +229,8 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	  </match>	
-	  <!-- Samsung YP-MT6V, YP-F1,YP-U1, YP-U2Z -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x5026;0x502b;0x503b;0x5050">
+	  <!-- Samsung YP-MT6V, YP-F1,YP-U1, YP-U2Z, YP-U4 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x5026;0x502b;0x503b;0x5050;0x5092">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
