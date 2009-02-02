@@ -536,10 +536,23 @@
 
 	<!-- Cowon -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0xe21">
-	  <!-- iAudio M3, X5, M5, 5, G2 -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x500;0x510;0x520;0x602;0x604;0x760">
+	  <!-- iAUDIO M3 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x500">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
+	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	  </match>
+	  <!-- iAUDIO X5, M5 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x510;0x520">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
@@ -547,36 +560,62 @@
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
-	    <match key="@storage.originating_device:usb.product_id" int="0x760">
-	      <append key="portable_audio_player.audio_folders" type="strlist">RECORD/</append>
-	    </match>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORD/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">VOICE/</append>
 	  </match>
-	  <!-- iAudio U2 -->
-	  <match key="@storage.originating_device:usb.product_id" int="0x600">
+	  <!-- iAUDIO 5 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x602;0x604">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
+	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	  </match>
+	  <!-- iAUDIO G2 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x760">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
+	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">RECORD/</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">VOICE/</append>
+	  </match>
+	  <!-- iAUDIO U2 -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x600">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/FM/</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	  </match>
-	  <!-- iAudio G3 -->
+	  <!-- iAUDIO G3 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x601">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.playlist_formats" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
 	  </match>
-	  <!-- iAudio U3 -->
+	  <!-- iAUDIO U3 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x700">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
@@ -590,10 +629,11 @@
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	  </match>
-          <!-- iAudio F2, iAudio 7 -->
+          <!-- iAUDIO F2, iAUDIO 7 -->
           <match key="@storage.originating_device:usb.product_id" int_outof="0x710;0x730;0x750">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/mpeg</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
