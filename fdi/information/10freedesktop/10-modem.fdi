@@ -263,8 +263,8 @@
 
       <!-- Anydata -->
       <match key="@info.parent:usb.vendor_id" int="0x16d5">
-        <!-- Adu E100a,500a -->
-        <match key="@info.parent:usb.product_id" int_outof="0x6501;0x6502">
+        <!-- ADU-610WK, Adu E100a,500a -->
+        <match key="@info.parent:usb.product_id" int_outof="0x6202;0x6501;0x6502">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
