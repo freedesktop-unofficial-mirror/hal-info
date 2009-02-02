@@ -46,6 +46,10 @@
             <append key="input.keymap.data" type="strlist">0x6c:screenlock</append> <!-- FIXME: lock tablet device/buttons-->
           </match>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="Aspire 5920G">
+	  <remove key="input.keymap.data" type="strlist">e073:prog2</remove>
+	  <append key="input.keymap.data" type="strlist">e012:prog2</append> 
+        </match>
       </match>
     </match>
   </device>
