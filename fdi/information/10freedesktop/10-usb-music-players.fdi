@@ -69,6 +69,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
           </match>
 	</match>
