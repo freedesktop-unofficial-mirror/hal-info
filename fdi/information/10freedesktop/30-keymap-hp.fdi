@@ -40,8 +40,8 @@
             <append key="input.keymap.data" type="strlist">e059:info</append>   <!-- I key -->
           </match>
 
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="6730s">
-            <!-- HP Compaq 6730s -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4410s;4415s;6730s">
+            <!-- HP Compaq 4410s, 4415s, 6730s -->
             <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (brightness down) -->
             <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (brightness up) -->
           </match>
