@@ -43,7 +43,7 @@
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
       <!-- Asus Eee PC (Note: there is a report from s2ram to use vbe_post, vbemode_restore)-->
-      <match key="system.hardware.product" string="701">
+      <match key="system.hardware.product" string="701;900">
          <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
          <merge key="power_management.quirk.dpms_on" type="bool">true</merge>
       </match>
