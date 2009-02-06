@@ -86,8 +86,7 @@ dist_fdi_DATA +=					\
 		30-keymap-compaq.fdi			\
 		30-keymap-lenovo.fdi			\
 		30-keymap-dell.fdi			\
-		30-keymap-acer.fdi 			\
-		30-keymap-module-asus-laptop.fdi
+		30-keymap-acer.fdi 			
 endif
 
 check:
