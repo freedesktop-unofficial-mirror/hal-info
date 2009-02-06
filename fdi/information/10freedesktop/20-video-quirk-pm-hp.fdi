@@ -106,6 +106,13 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" contains="4410s">
+        <!-- ATI 0x1002:0x9552-->
+        <match key="system.hardware.primary_video.vendor" int="0x1002">
+          <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+          <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+        </match>
+      </match>
 
       <match key="system.hardware.product" contains="M2000 (EQ547PA">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
