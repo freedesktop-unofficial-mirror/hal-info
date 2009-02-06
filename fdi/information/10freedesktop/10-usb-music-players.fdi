@@ -95,7 +95,7 @@
             <append key="portable_audio_player.audio_folders" type="strlist">Sounds/Digital/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Sounds/Simple/</append>
             <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-            <append key="portable_audio_player.playlist_path" type="strlist">Playlists/%File</append>
+            <append key="portable_audio_player.playlist_path" type="string">Playlists/%File</append>
           </match>
           <!-- Nokia 5300 -->
           <match key="@storage.originating_device:usb.product_id" int="0x4b9">
@@ -262,7 +262,7 @@
 	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-scpls</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">Playlists/</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Playlists/</append>
           </match>
 	  <!-- Samsung YP-T9  -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x5055">
@@ -457,7 +457,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/audible</append>
             <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
-            <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+            <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
             <merge key="storage.requires_eject" type="bool">true</merge>
           </match>
 	  <!-- Sansa Clip version II -->
@@ -478,7 +478,7 @@
             <append key="portable_audio_player.audio_folders" type="strlist">AUDIBLE/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">AUDIOBOOKS/</append>
             <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-            <append key="portable_audio_player.playlist_path" type="strlist">%File</append>
+            <append key="portable_audio_player.playlist_path" type="string">%File</append>
             <merge key="storage.requires_eject" type="bool">true</merge>
           </match>
 	  <!-- Sansa c250 -->
@@ -488,7 +488,7 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
   	    <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
 	    <merge key="storage.requires_eject" type="bool">true</merge>
           </match>
 	  <!-- Sansa Fuze -->
@@ -499,7 +499,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
-            <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+            <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
             <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
             <merge key="storage.requires_eject" type="bool">true</merge> 
 	  </match>
@@ -546,7 +546,7 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
 	    <!-- iAUDIO X5, M5, F2, 7 -->
 	    <match key="@storage.originating_device:usb.product_id" int_outof="0x510;0x520;0x710;0x730;0x750">
 	      <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
@@ -568,7 +568,7 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">PLAYLIST/%File</append>
+	    <append key="portable_audio_player.playlist_path" type="string">PLAYLIST/%File</append>
 	    <!-- iAUDIO G2 -->
 	    <match key="@storage.originating_device:usb.product_id" int="0x760">
 	      <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
@@ -594,7 +594,7 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
             <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-            <append key="portable_audio_player.playlist_path" type="strlist">Playlist/</append>
+            <append key="portable_audio_player.playlist_path" type="string">Playlist/</append>
           </match>
 	  <!-- Archos XS 100 -->
           <match key="@storage.originating_device:usb.product_id" int="0x1205">
@@ -693,7 +693,7 @@
 	    <append key="portable_audio_player.input_formats" type="strlist">audio/x-wav</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">Music/playlists</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Music/playlists</append>
 	  </match>
 
 	  <!-- W880i/890i Walkman Phone -->
@@ -702,7 +702,7 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-mpegurl</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">Music/playlists</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Music/playlists</append>
 	  </match>
 
           <!-- Sony Ericsson K320i -->
@@ -901,7 +901,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-iriver-pla</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">Playlists/%File</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Playlists/%File</append>
           </match>
           <!-- iFP 100 UMS, 300 UMS, 500 UMS (supports application/ogg only after firmware upgrade),
                N10 UMS
@@ -919,7 +919,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
 	    <append key="portable_audio_player.playlist_format" type="strlist">audio/x-iriver-pla</append>
-	    <append key="portable_audio_player.playlist_path" type="strlist">Playlists/%File</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Playlists/%File</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Recordings/</append>
           </match>
