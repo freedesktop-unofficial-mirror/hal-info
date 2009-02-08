@@ -19,7 +19,7 @@
           <append key="input.keymap.data" type="strlist">0x07e:bluetooth</append>
           <!-- Performance -->
           <!-- <append key="input.keymap.data" type="strlist">0x05c:unknown</append> -->
-          <append key="input.keymap.data" type="strlist">0x08a:tv</append>
+          <append key="input.keymap.data" type="strlist">0x08a:media</append> <!-- high keycode: "tv" -->
           <!-- TODO: sleep/power buttons -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
         </match>

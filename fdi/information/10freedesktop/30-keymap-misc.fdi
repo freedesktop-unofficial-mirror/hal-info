@@ -106,7 +106,7 @@
 
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix_ncase="samsung">
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="NC10;SP55S;SQ45S70S;SX60P;R59P/R60P/R61P;Q310;X05">
-          <append key="input.keymap.data" type="strlist">e002:displaytoggle</append> <!-- Fn+F4 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e002:switchvideomode</append> <!-- Fn+F4 CRT/LCD (high keycode: "displaytoggle") -->
           <append key="input.keymap.data" type="strlist">e003:battery</append> <!-- Fn+F2 battery icon -->
           <append key="input.keymap.data" type="strlist">e004:prog1</append> <!-- Fn+F5 backlight on/off -->
           <append key="input.keymap.data" type="strlist">e006:wlan</append> <!-- Fn+F9 Turn On/Off Wireless -->

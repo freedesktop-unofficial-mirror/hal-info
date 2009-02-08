@@ -20,7 +20,7 @@
         <append key="input.keymap.data" type="strlist">0x14:volumeup</append> <!-- Volume Up button -->
 	<append key="input.keymap.data" type="strlist">0x15:volumedown</append> <!-- Volume Down button -->
         <append key="input.keymap.data" type="strlist">0x16:mute</append> <!-- Mute button -->
-        <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+        <append key="input.keymap.data" type="strlist">0x17:prog1</append> <!-- ThinkPad/ThinkVantage button  (high keycode: "vendor") -->
         <append key="info.capabilities" type="strlist">input.keymap</append>
       </match>
       <!-- Lenovo systems have a similar but different layout to IBM systems -->
@@ -40,7 +40,7 @@
         <append key="input.keymap.data" type="strlist">0x14:volumeup</append> <!-- Volume Up button -->
 	<append key="input.keymap.data" type="strlist">0x15:volumedown</append> <!-- Volume Down button -->
         <append key="input.keymap.data" type="strlist">0x16:mute</append> <!-- Mute button -->
-        <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+        <append key="input.keymap.data" type="strlist">0x17:prog1</append> <!-- ThinkPad/ThinkVantage button (high keycode: "vendor") -->
         <append key="info.capabilities" type="strlist">input.keymap</append>
       </match>
     </match>

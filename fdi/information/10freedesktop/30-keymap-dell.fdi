@@ -18,7 +18,7 @@
           <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Turn On/Off Wireless -->
           <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
           <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
-          <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD (high keycode: "displaytoggle") -->
           <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
           <append key="input.keymap.data" type="strlist">e010:previoussong</append> <!-- Front panel previous song -->
           <append key="input.keymap.data" type="strlist">e011:prog1</append> <!-- Wifi Catcher (DELL Specific) -->
