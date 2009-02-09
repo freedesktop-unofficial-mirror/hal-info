@@ -17,6 +17,7 @@
         <match key="system.hardware.product" contains_outof="2300;2310;3010;3020;3260;6291">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
+          <merge key="power_management.quirk.pci_save" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="7520;8000">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
