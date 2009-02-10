@@ -731,6 +731,21 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/amr</append>
             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
+
+          <!-- P1i mobile phone -->
+          <match key="@storage.originating_device:usb.product_id" int="0xe092">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.rn-realaudio</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-amr</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-imy</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-midi</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+            <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+            <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
+          </match>
 	</match>
 
 	<match key="@storage.originating_device:usb.vendor_id" int="0x1006">
