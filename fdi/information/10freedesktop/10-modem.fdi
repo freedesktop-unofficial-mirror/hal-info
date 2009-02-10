@@ -94,7 +94,7 @@
           </match>
         </match>
 
-        <match key="@info.parent:usb.product_id" int_outof="0x7011;0x7211">
+        <match key="@info.parent:usb.product_id" int_outof="0x7011">
 	  <match key="@serial.originating_device:info.linux.driver" string="hso">
 	    <match key="@info.parent:usb.interface.number" int="0">
 	      <match key="serial.port" int="0">
@@ -108,6 +108,13 @@
               <append key="modem.command_sets" type="strlist">GSM-07.07</append>
               <append key="modem.command_sets" type="strlist">GSM-07.05</append>
             </match>
+          </match>
+        </match>
+
+        <match key="@info.parent:usb.product_id" int_outof="0x7211">
+	  <match key="@info.parent:usb.interface.number" int="2">
+            <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+            <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
         </match>
 
