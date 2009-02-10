@@ -45,6 +45,11 @@
             <append key="input.keymap.data" type="strlist">0x6b:fn</append>
             <append key="input.keymap.data" type="strlist">0x6c:screenlock</append> <!-- FIXME: lock tablet device/buttons-->
           </match>
+          <!-- TravelMate 6292 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="6292">
+            <remove key="input.keymap.data" type="strlist">e059:brightnessup</remove>
+            <append key="input.keymap.data" type="strlist">e059:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+          </match>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="Aspire 5920G">
 	  <remove key="input.keymap.data" type="strlist">e073:prog2</remove>
