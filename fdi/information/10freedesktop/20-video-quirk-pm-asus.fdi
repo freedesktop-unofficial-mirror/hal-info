@@ -9,7 +9,7 @@
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
       <!--NOTE: s2ram list the F3F with power_management.quirk.none=true -->
-      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;P5LD2;A8He;A6Kt ;F3JC ;F3Sc">
+      <match key="system.hardware.product" prefix_outof="M6VA;M6N ;M5N;M7A;S6F;S5N ;W3A;W5A ;M2N ;A2D ;F3F ;V6V;A8He;A6Kt ;F3JC ;F3Sc">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
@@ -73,6 +73,11 @@
           <merge key="power_management.quirk.none" type="bool">true</merge>
         </match>
       </match>
+    </match>
+
+    <!-- Board with broken system.hardware.* fields. Use system.board.* instead -->
+    <match key="system.board.product" prefix="P5LD2">
+      <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
     </match>
 
     <!-- ASUS a7v600 motherboard, has no usable sys_* entries besides bios_version -->
