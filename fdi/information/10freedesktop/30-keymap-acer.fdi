@@ -13,6 +13,7 @@
         <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
         <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
         <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+        <append key="input.keymap.data" type="strlist">e04e:brightnessup</append> <!-- Fn+Right Brightness Up -->
         <append key="input.keymap.data" type="strlist">e054:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
         <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
         <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
