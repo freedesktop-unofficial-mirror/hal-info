@@ -102,7 +102,7 @@
         <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
       <!-- Note: PY507ET# is a nc6120 -->
-      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;nw8440;6720s;2710p;8510p;PY507ET#;6715b">
+      <match key="system.hardware.product" contains_outof="nc2400;nx6110;nc6120;nc6320;nx7300;6720s;2710p;8510p;PY507ET#;6715b">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
@@ -142,7 +142,7 @@
           <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
         </match>
       </match>
-      <match key="system.hardware.product" contains_outof="HP Compaq dc5800 Small Form Factor;HP d330 uT; nw9440">
+      <match key="system.hardware.product" contains_outof="HP Compaq dc5800 Small Form Factor;HP d330 uT; nw9440;nw8440">
         <merge key="power_management.quirk.none" type="bool">true</merge>
       </match>
 
