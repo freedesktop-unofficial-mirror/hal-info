@@ -24,6 +24,10 @@
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2510p;2710p;nc2400">
           <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
         </match>
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4410s;4415s;4416s;Compaq 5X5">
+	  <!-- needed since the acpi video module reports it handle the events, but it don't work on this machines-->
+          <merge key="laptop_panel.brightness_in_hardware" type="bool">false</merge>
+        </match>
       </match>
 
       <match key="linux.sysfs_path" string="/sys/class/backlight/thinkpad_screen">
