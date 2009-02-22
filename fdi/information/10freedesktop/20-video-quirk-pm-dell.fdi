@@ -75,7 +75,7 @@
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
-        <match key="system.hardware.product" contains_outof="8600">
+        <match key="system.hardware.product" contains="8600">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="500m;600m;1100;1420;1525;2200;5160">

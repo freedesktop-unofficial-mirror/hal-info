@@ -60,7 +60,7 @@
         </match>
       </match>
       <!-- T23(2647) -->
-      <match key="system.hardware.product" prefix_outof="2647">
+      <match key="system.hardware.product" prefix="2647">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
       <!-- R50p, R52, X41t, X40, T30, T41p, T41p, T42, X40, Z60t, X41, Z60m-->
