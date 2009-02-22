@@ -167,7 +167,7 @@
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
       </match>
       <!-- Dell XPS M1330, MM061 = Inspiron E1505 or/and 6400 -->
-      <match key="system.hardware.product" contains_outof="XPS M1330;MM061;">
+      <match key="system.hardware.product" contains_outof="XPS M1330;MM061">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
         <merge key="power_management.quirk.vbemode_restore" type="bool">true</merge>
       </match>
