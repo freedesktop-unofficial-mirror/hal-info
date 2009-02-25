@@ -454,6 +454,14 @@
         </match>
       </match>
 
+      <!-- Qualcomm 3G modem -->
+      <match key="@info.parent:usb.vendor_id" int="0x05c6">
+        <match key="@info.parent:usb.product_id" int="0x9212">
+          <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+          <append key="modem.command_sets" type="strlist">GSM-07.05</append>
+        </match>
+      </match>
+
 <!-- ***************************************************** 
 			PCMCIA cards 
      ***************************************************** --> 
