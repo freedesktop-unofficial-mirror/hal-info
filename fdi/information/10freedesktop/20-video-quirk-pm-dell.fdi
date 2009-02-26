@@ -54,7 +54,7 @@
 
       <!-- Dell Inspiron -->
       <match key="system.hardware.product" prefix="Inspiron">
-        <match key="system.hardware.product" contains="1501">
+        <match key="system.hardware.product" contains_outof="1501;8600">
           <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
@@ -73,9 +73,6 @@
         </match>
         <match key="system.hardware.product" contains_outof="5150;8000;8500">
           <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
-          <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
-        </match>
-        <match key="system.hardware.product" contains="8600">
           <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
         </match>
         <match key="system.hardware.product" contains_outof="500m;600m;1100;1420;1525;2200;5160">
