@@ -40,6 +40,18 @@
          <merge key="info.ignore" type="bool">true</merge>
        </match>
      </match>
+
+     <!-- Ignore the system partition on the Samsung YP S5 music player; the
+          first one is the interesting one with the music, etc. LP #332913 -->
+     <match key="@info.parent:storage.vendor" contains="Samsung">
+       <match key="@info.parent:storage.model" contains="YP-S5">
+         <match key="volume.label" string="S5">
+           <match key="volume.partition.number" int="2">
+             <merge key="volume.ignore" type="bool">true</merge>
+           </match>
+         </match>
+       </match>
+     </match>
    </match>
   </device>
 </deviceinfo>
