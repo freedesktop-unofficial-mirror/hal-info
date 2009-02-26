@@ -70,13 +70,19 @@
         </match>
       </match>
 
-      <!-- BSNL -->
+      <!-- BSNL/Qualcomm -->
       <match key="@info.parent:usb.vendor_id" int="0x5c6">
         <!-- ZTE CDMA/EVDO AC8700 usb modem -->
         <match key="@info.parent:usb.product_id" int_outof="0x3197;0x6000">
           <match key="@info.parent:usb.interface.number" int="0">
             <append key="modem.command_sets" type="strlist">IS-707-A</append>
           </match>
+        </match>
+
+        <!-- Qualcomm 3G modem -->
+        <match key="@info.parent:usb.product_id" int="0x9212">
+          <append key="modem.command_sets" type="strlist">GSM-07.07</append>
+          <append key="modem.command_sets" type="strlist">GSM-07.05</append>
         </match>
       </match>
 
