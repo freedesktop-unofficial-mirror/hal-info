@@ -81,6 +81,7 @@
 
         <!-- Qualcomm 3G modem -->
         <match key="@info.parent:usb.product_id" int="0x9212">
+          <!-- There's only one port bound to by the driver, so no need to specify the specific port. -->
           <append key="modem.command_sets" type="strlist">GSM-07.07</append>
           <append key="modem.command_sets" type="strlist">GSM-07.05</append>
         </match>
