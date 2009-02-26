@@ -184,9 +184,10 @@
         </match>
       </match>
 
-      <!-- Sony Ericsson K750i -->
+      <!-- Sony Ericsson -->
       <match key="@info.parent:usb.vendor_id" int="0x0fce">
-        <match key="@info.parent:usb.product_id" int="0xd016">
+        <!-- K750i, w880i -->
+        <match key="@info.parent:usb.product_id" int_outof="0xd016;0xd068">
           <match key="@info.parent:usb.interface.number" int="1">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
