@@ -166,6 +166,17 @@
 	</match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="OQO Inc.">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="OQO Model 2">
+          <append key="input.keymap.data" type="strlist">e070:switchvideomode</append> <!-- video -->
+	  <append key="input.keymap.data" type="strlist">e00e:wlan</append> <!-- Wireless (toggle) -->
+	  <append key="input.keymap.data" type="strlist">e072:volumedown</append> 
+	  <append key="input.keymap.data" type="strlist">e073:volumeup</append> 
+	  <append key="input.keymap.data" type="strlist">e071:mute</append> 
+	  <append key="input.keymap.data" type="strlist">e07-:f21</append>
+        </match>
+      </match>
+
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="ASUS">
           <append key="input.keymap.data" type="strlist">e06f:mute</append>
           <append key="input.keymap.data" type="strlist">e06d:volumeup</append>
