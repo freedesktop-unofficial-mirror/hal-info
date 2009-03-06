@@ -53,8 +53,13 @@
           </match>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="Aspire 5920G">
-	  <remove key="input.keymap.data" type="strlist">e073:prog2</remove>
-	  <append key="input.keymap.data" type="strlist">e012:prog2</append> 
+          <remove key="input.keymap.data" type="strlist">e059:brightnessup</remove>
+          <remove key="input.keymap.data" type="strlist">e073:prog2</remove>
+
+          <append key="input.keymap.data" type="strlist">e00a:media</append>
+          <append key="input.keymap.data" type="strlist">e032:www</append>
+          <append key="input.keymap.data" type="strlist">e012:prog2</append> 
+          <append key="input.keymap.data" type="strlist">e059:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
         </match>
       </match>
     </match>
