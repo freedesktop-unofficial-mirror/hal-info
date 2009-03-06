@@ -10,6 +10,7 @@ dist_fdi_DATA = 10-usb-card-readers.fdi		\
 		10-laptop-panel-hardware.fdi	\
 		10-cd-dvd-burner.fdi		\
 		10-battery.fdi			\
+		10-tablet-wacom.fdi		\
 		10-modem.fdi			\
 		10-scanner.fdi			\
 		10-usb-obex.fdi

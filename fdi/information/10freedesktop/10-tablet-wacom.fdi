@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- this is probably a bit imprecise -->
+<deviceinfo version="0.2">
+  <device>
+    <match key="info.capabilities" contains="serial">
+      <match key="@info.parent:pnp.id" contains_outof="WACf001;WACf002;WACf003;WACf004;WACf005;WACf006;WACf007;WACf008;WACf009;WACf00a;WACf00b;WACf00c;FUJ02e5">
+        <append key="info.capabilities" type="strlist">input</append>
+        <merge key="input.x11_driver" type="string">wacom</merge>
+        <!-- Wacom isn't yet suited well for hotplugging, as we need three
+             devices off one kernel device, but HAL only reports this device
+             once. This needs fixing in the driver.
+             Use stylus by default for this single device, if you want erasor
+             or cursor, specify in the line below.  -->
+        <merge key="input.x11_options.Type" type="string">stylus</merge>
+        <merge key="input.x11_options.ForceDevice" type="string">ISDV4</merge>
+        <merge key="input.device" type="copy_property">serial.device</merge>
+        <append key="info.callouts.add" type="strlist">hal-setup-wacom</append>
+        <append key="wacom.types" type="strlist">eraser</append>
+        <match key="@info.parent:pnp.id" contains_outof="WACf008;WACf009">
+          <append key="wacom.types" type="strlist">touch</append>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>
+
