@@ -1015,6 +1015,7 @@
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
             <append key="portable_audio_player.output_formats" type="strlist">video/mpeg4</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+            <append key="portable_audio_player.input_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">video/</append>
             <append key="portable_audio_player.audio_folders" type="strlist">record/</append>
