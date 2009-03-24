@@ -15,6 +15,9 @@
             <match key="storage.model" string="U3 Cruzer Micro">
 	      <merge key="info.ignore" type="bool">true</merge>
 	    </match>
+	    <match key="storage.model" string="U3 Titanium">
+	      <merge key="info.ignore" type="bool">true</merge>
+	    </match>
 	  </match>
 	  <match key="storage.vendor" string="Intuix">
             <match key="storage.model" string="U3">
