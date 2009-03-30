@@ -16,6 +16,9 @@
           <append key="input.keymap.data" type="strlist">e031:help</append>     <!-- FnF1 (help) -->
           <append key="input.keymap.data" type="strlist">e033:f21</append>      <!-- FIXME: Auto brightness -->
           <append key="input.keymap.data" type="strlist">e057:wlan</append>     <!-- Wlan -->
+	  <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (FnF9 on 6730b) (brightness down) -->
+	  <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (FnF10 on 6730b) (brightness up) -->
+	  <append key="input.keymap.data" type="strlist">e06e:switchvideomode</append>   <!-- FnF4 (video switch) -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
 
 	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Tablet">
@@ -38,13 +41,6 @@
             <!-- Business and enterprise machines -->
             <append key="input.keymap.data" type="strlist">e008:presentation</append>   <!-- Presentation -->
             <append key="input.keymap.data" type="strlist">e059:help</append>   <!-- I key (high keycode: "info") -->
-          </match>
-
-          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4410s;4411s;4415s;4416s;6730s;6730b;Compaq 5X5">
-            <!-- HP Compaq 4410s, 4415s, 4416s, 6730s, 6730b, Compaq 5X5 -->
-            <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (FnF9 on 6730b) (brightness down) -->
-            <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (FnF10 on 6730b) (brightness up) -->
-	    <append key="input.keymap.data" type="strlist">e06e:switchvideomode</append>   <!-- FnF4 (video switch) -->
           </match>
 
 	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="2510p">
