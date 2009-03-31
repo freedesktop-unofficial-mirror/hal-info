@@ -24,6 +24,10 @@
 	  <append key="input.keymap.data" type="strlist">e061:volumeup</append>
 	  <append key="input.keymap.data" type="strlist">e065:prog1</append>
         </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="ESPRIMO Mobile">
+	  <append key="input.keymap.data" type="strlist">e059:brightnessdown</append>
+	  <append key="input.keymap.data" type="strlist">e06f:brightnessup</append>
+        </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro Edition V3505">
           <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn-F1 help -->
           <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn-F3 Display toggle -->
