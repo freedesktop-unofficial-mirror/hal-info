@@ -43,6 +43,17 @@
         </match>
       </match>
     </match>
+
+    <!-- Dell USB Keyboard Hub -->
+    <match key="@input.originating_device:info.linux.driver" string="usbhid">
+      <match key="info.product" string="Dell Dell USB Keyboard Hub">
+        <match key="@input.originating_device:usb.interface.number" int="0x1">
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+          <append key="input.keymap.data" type="strlist">ce103:media</append> <!-- Media/Music key -->
+        </match>
+      </match>
+    </match>
+
   </device>
 </deviceinfo>
 
