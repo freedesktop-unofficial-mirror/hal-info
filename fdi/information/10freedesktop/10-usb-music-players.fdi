@@ -548,8 +548,8 @@
 	      <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
 	    </match>
 	  </match>
-	  <!-- iAUDIO U2, G3, 5, G2 -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x600;0x601;0x602;0x604;0x760">
+	  <!-- iAUDIO G3, 5, G2 -->
+	  <match key="@storage.originating_device:usb.product_id" int_outof="0x601;0x602;0x604;0x760">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -565,6 +565,11 @@
 	    </match>
 	    <!-- iAUDIO U2 -->
 	    <match key="@storage.originating_device:usb.product_id" int="0x600">
+	      <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	      <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	      <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+	      <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	      <append key="portable_audio_player.audio_folders" type="strlist">MUSIC/</append>
 	      <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/FM/</append>
 	      <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/LINEIN/</append>
 	      <append key="portable_audio_player.audio_folders" type="strlist">RECORDS/VOICE/</append>
