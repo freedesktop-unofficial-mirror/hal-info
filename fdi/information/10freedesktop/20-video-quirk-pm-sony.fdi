@@ -5,7 +5,7 @@
       <match key="system.hardware.product" string="VGN-FS115Z">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
-      <match key="system.hardware.product" contains_outof="VGN-FS730;PCG-FX405;VGN-C2S_G;VGN-B1XP;VGN-FE21B">
+      <match key="system.hardware.product" contains_outof="VGN-FS730;PCG-FX405;VGN-C2S_G;VGN-B1XP;VGN-FE21B;VGN-B100B">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
       </match>
       <match key="system.hardware.product" string_outof="VGN-FS115B;VGN-C140G;VGN-TX3XP_L;VGN-T250P;VGN-AR31S;PCV-RX612;VGN-FS485B;VGN-SZ61XN_C;VGN-TZ37;VGN-TZ170N;VGN-FS920;VGN-C240E;PCG-FX601;VGN-SR11M">
