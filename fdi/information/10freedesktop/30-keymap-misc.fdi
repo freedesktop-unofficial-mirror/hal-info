@@ -181,7 +181,7 @@
 	  <append key="input.keymap.data" type="strlist">e072:volumedown</append> 
 	  <append key="input.keymap.data" type="strlist">e073:volumeup</append> 
 	  <append key="input.keymap.data" type="strlist">e071:mute</append> 
-	  <append key="input.keymap.data" type="strlist">e07-:f21</append>
+	  <!-- <append key="input.keymap.data" type="strlist">e07-:f21</append> FIXME: invalid key code-->
         </match>
       </match>
 
