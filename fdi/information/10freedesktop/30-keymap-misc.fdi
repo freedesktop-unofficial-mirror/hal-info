@@ -72,7 +72,7 @@
         </match>
       </match>
 
-      <match key="/org/freedesktop/Hal/devices/computer:system.chassis.manufacturer" prefix="MICRO-STAR">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MICRO-STAR">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string_outof="0031;0131">
           <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
           <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
