@@ -19,9 +19,9 @@
 
 	<!-- Older Vaios have a different keymap -->
 	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="PCG-C1;PCG-K25;PCG-F1;PCG-F2;PCG-F3;PCG-F4;PCG-F5;PCG-F6;PCG-FX;PCG-FRV;PCG-GR;PCG-TR;PCG-NV;PCG-Z;VGN-S360;VGN-SZ2HP_B">
-          <remove key="input.keymap.data" type="strlist">0x06:mute</append>
+          <remove key="input.keymap.data" type="strlist">0x06:mute</remove>
 	  <append key="input.keymap.data" type="strlist">0x06:battery</append>
-          <remove key="input.keymap.data" type="strlist">0x07:volumedown</append>
+          <remove key="input.keymap.data" type="strlist">0x07:volumedown</remove>
           <append key="input.keymap.data" type="strlist">0x07:mute</append>
 	</match>
 	
