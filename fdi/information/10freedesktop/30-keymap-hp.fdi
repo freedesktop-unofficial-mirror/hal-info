@@ -14,7 +14,7 @@
           <append key="input.keymap.data" type="strlist">e00c:media</append>      <!-- music -->
           <append key="input.keymap.data" type="strlist">e00e:dvd</append>      <!-- dvd -->
           <append key="input.keymap.data" type="strlist">e031:help</append>     <!-- FnF1 (help) -->
-          <append key="input.keymap.data" type="strlist">e033:f21</append>      <!-- FIXME: Auto brightness -->
+          <append key="input.keymap.data" type="strlist">e033:f23</append>      <!-- FIXME: Auto brightness -->
           <append key="input.keymap.data" type="strlist">e057:wlan</append>     <!-- Wlan -->
 	  <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (FnF9 on 6730b) (brightness down) -->
 	  <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (FnF10 on 6730b) (brightness up) -->
@@ -28,6 +28,12 @@
             <append key="input.keymap.data" type="strlist">e005:esc</append>     <!-- Esc -->
             <append key="input.keymap.data" type="strlist">e006:pageup</append>  <!-- PgUp -->
             <append key="input.keymap.data" type="strlist">e007:pagedown</append>  <!-- PgDown -->
+          </match>
+
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="tx2">	
+            <append key="input.keymap.data" type="strlist">e042:media</append>
+            <append key="input.keymap.data" type="strlist">e058:f22</append>      <!-- Toggle touchpad button on tx2 (OFF)  -->
+            <append key="input.keymap.data" type="strlist">e059:f22</append>      <!-- Toggle touchpad button on tx2 (ON) -->
           </match>
 
 	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Pavilion">
