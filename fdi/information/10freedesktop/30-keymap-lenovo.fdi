@@ -29,6 +29,17 @@
             <append key="info.capabilities" type="strlist">input.keymap</append>
           </match>
         </match>
+	<!-- match for X200 ThinkPad Tablets -->
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" prefix="ThinkPad X200 Tablet">
+          <append key="input.keymap.data" type="strlist">0067:cyclewindows</append> <!-- bezel circular arrow -->
+          <append key="input.keymap.data" type="strlist">006c:direction</append> <!-- bezel rotate screen -->
+          <append key="input.keymap.data" type="strlist">0068:setup</append> <!-- bezel setup / menu -->
+          <append key="input.keymap.data" type="strlist">0066:screenlock</append> <!-- bezel screenlock -->
+          <append key="input.keymap.data" type="strlist">e05d:menu</append> <!-- keyboard menu / was mapped as xf86wakeup -->
+          <append key="input.keymap.data" type="strlist">e063:fn</append> <!-- keyboard fn shift / was mapped as xf86wakeup -->
+		  <!-- (Volume Mute) button generates no known atkbd or acpi event -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+	</match>
       </match>
 
     </match>
