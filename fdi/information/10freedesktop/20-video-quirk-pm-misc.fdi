@@ -117,6 +117,9 @@
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" string="3200">
+        <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+      </match>
       <match key="system.hardware.product" string="5500 Series">
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
