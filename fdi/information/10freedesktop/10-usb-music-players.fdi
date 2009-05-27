@@ -732,8 +732,8 @@
             <append key="portable_audio_player.audio_folders" type="strlist">AUDIO/</append>
           </match>
 
-	  <!-- Sony Ericsson K850i, W910i -->
-          <match key="@storage.originating_device:usb.product_id" int_outof="0xe075;0xe076">
+	  <!-- Sony Ericsson K850i, W910i, W580i -->
+          <match key="@storage.originating_device:usb.product_id" int_outof="0xe075;0xe076;0xe089">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
