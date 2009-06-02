@@ -25,7 +25,9 @@
 	  <append key="input.keymap.data" type="strlist">e065:prog1</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="ESPRIMO Mobile V5">
+	  <append key="input.keymap.data" type="strlist">e029:switchvideomode</append>
 	  <append key="input.keymap.data" type="strlist">e059:brightnessdown</append>
+	  <append key="input.keymap.data" type="strlist">e05f:sleep</append>
 	  <append key="input.keymap.data" type="strlist">e06f:brightnessup</append>
         </match>
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="ESPRIMO Mobile V6">
