@@ -1000,7 +1000,7 @@
         <!-- High Tech Computer Corp. -->
         <match key="@storage.originating_device:usb.vendor_id" int="0xbb4">
           <!-- Android Phone, HTC Diamond -->
-          <match key="@storage.originating_device:usb.product_id" int_outof="0xc01;0xc13">
+          <match key="@storage.originating_device:usb.product_id" int_outof="0xc01;0xc02;0xc13">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
              <match key="@storage.originating_device:usb.product_id" int="0xc01">
 	       <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
