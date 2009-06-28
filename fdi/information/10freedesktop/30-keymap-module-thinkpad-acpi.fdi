@@ -8,7 +8,7 @@
         <append key="input.keymap.data" type="strlist">0x01:battery</append> <!-- Fn+F2 battery -->
         <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
         <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
-        <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
+        <append key="input.keymap.data" type="strlist">0x04:wlan</append> <!-- Fn+F5 switch radio -->
         <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
         <append key="input.keymap.data" type="strlist">0x07:zoom</append> <!-- Fn+F8 screen expand -->
         <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
@@ -28,7 +28,7 @@
         <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
         <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
         <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
-        <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
+        <append key="input.keymap.data" type="strlist">0x04:wlan</append> <!-- Fn+F5 wifi -->
         <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
         <append key="input.keymap.data" type="strlist">0x07:f22</append> <!-- Fn+F8 touchpadtoggle -->
         <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
