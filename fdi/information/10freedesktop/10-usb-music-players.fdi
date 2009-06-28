@@ -321,6 +321,25 @@
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
 	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
 	  </match>
+	  <!-- Samsung Yepp YP-P3 -->
+	  <match key="@storage.originating_device:usb.product_id" int="0x5119">
+	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">audio/flac</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">image/jpeg</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">text/plain</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">application/x-shockwave-flash</append>
+	    <append key="portable_audio_player.output_formats" type="strlist">video/x-ms-wmv</append>
+	    <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Video/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Datacasts/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Recorded Files/FM Radio/</append>
+	    <append key="portable_audio_player.audio_folders" type="strlist">Recorded Files/Voice/</append>
+	    <append key="portable_audio_player.playlist_path" type="string">Playlists/%File</append>
+	  </match>
 	</match>
  	
 	<!-- Sony -->
