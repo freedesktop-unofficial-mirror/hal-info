@@ -154,9 +154,9 @@
 
       <!-- Ericsson -->
       <match key="@info.parent:usb.vendor_id" int="0x0bdb">
-        <!-- Ericsson F3507g Mobile Broadband Minicard -->
-        <match key="@info.parent:usb.product_id" int="0x1900">
-          <match key="@info.parent:usb.interface.number" int="4">
+        <!-- Ericsson F3507g Mobile Broadband -->
+        <match key="@info.parent:usb.product_id" int_outof="0x1900;0x1902;0x1904">
+          <match key="@info.parent:usb.interface.number" int="1">
             <append key="modem.command_sets" type="strlist">GSM-07.07</append>
             <append key="modem.command_sets" type="strlist">GSM-07.05</append>
           </match>
