@@ -14,6 +14,17 @@
         </match>
       </match>
 
+      <!-- Clevo D410J laptop reports hardware vendor "VIA", product "K8N800" and version "VT8204B" -->
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="VIA">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="K8N800">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="VT8204B">
+            <match key="/org/freedesktop/Hal/devices/computer:system.firmware.version" string="4.06CJ15">
+              <append key="input.keymap.data" type="strlist">e001:prog1</append> <!-- "Application Launch" programmable button -->
+            </match>
+          </match>
+        </match>
+      </match>
+
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="FUJITSU">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro V3205">
 	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
