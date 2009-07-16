@@ -38,6 +38,11 @@
 	<merge key="power_management.quirk.vbe_post" type="bool">true</merge>
 	<merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
       </match>
+      <match key="system.hardware.product" contains="PCG-FX905">
+	<merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	<merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+	<merge key="power_management.quirk.dpms_on" type="bool">true</merge>
+      </match>
 
       <!-- machines which need no quirks -->
       <!-- Note:
