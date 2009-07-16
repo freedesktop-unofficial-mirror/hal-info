@@ -309,6 +309,20 @@
   </device>
 
   <device>
+    <!-- Clevo D410J laptop reports hardware vendor "VIA", product "K8N800" and version "VT8204B" -->
+    <match key="system.hardware.vendor" string="VIA">
+      <match key="system.hardware.product" string="K8N800">
+        <match key="system.hardware.version" string="VT8204B">
+          <match key="system.firmware.version" string="4.06CJ15">
+            <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
+            <merge key="power_management.quirk.vbestate_restore" type="bool">true</merge>
+          </match>
+        </match>
+      </match>
+    </match>
+  </device>
+
+  <device>
     <match key="system.hardware.vendor" string="ECS">
       <match key="system.hardware.product" string="536">
         <merge key="power_management.quirk.vbe_post" type="bool">true</merge>
