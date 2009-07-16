@@ -107,7 +107,10 @@
       <!-- need no quirks: a X40, T40 -->
       <match key="system.hardware.version" string="ThinkPad X40">
 	<match key="system.firmware.version" prefix="1UETD2WW">
-          <merge key="power_management.quirk.none" type="bool">true</merge>
+	  <!-- one particular X40 was reported to need above quirks -->
+          <match  key="system.hardware.product" contains_not="2371">
+	    <merge key="power_management.quirk.none" type="bool">true</merge>
+          </match>
         </match>
       </match>
       <match key="system.hardware.version" string="ThinkPad T40 ">
