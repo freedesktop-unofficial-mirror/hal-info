@@ -520,5 +520,22 @@
       </match>
 
     </match>
+
+<!-- ***************************************************** 
+       Remove the net.80203 capability of mobile broadband devices which appear
+       after sending some AT commands. These should not be treated as real
+       ethernet interfaces by NetworkManager and friends.
+     ***************************************************** --> 
+    <match key="info.parent" contains_outof="413c_8147;bdb_1902;bdb_1900;930_130b">
+      <match key="info.parent" suffix="_if7">
+            <remove key="info.capabilities" type="strlist">net.80203</remove>
+      </match>
+    </match>
+    <match key="info.parent" contains_outof="bdb_1904">
+      <match key="info.parent" suffix="_if6">
+            <remove key="info.capabilities" type="strlist">net.80203</remove>
+      </match>
+    </match>
+
   </device>
 </deviceinfo>
