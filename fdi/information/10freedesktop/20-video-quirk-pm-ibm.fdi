@@ -122,7 +122,7 @@
     </match>
 
     <match key="system.hardware.vendor" string="IBM CORPORATION">
-      <match key="system.hardware.product" string_outof="4800723;4800743;4800783">
+      <match key="system.hardware.product" string_outof="4800723;4800743;4800783;4800C43">
         <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
         <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
       </match>
