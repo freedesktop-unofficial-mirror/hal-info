@@ -77,11 +77,8 @@
         <match key="storage.model" contains="Compact Flash">
           <merge key="storage.drive_type" type="string">compact_flash</merge>
         </match>
-        <match key="storage.model" contains="SD/MMC">
+        <match key="storage.model" contains_outof="SD/MMC;microSD">
           <merge key="storage.drive_type" type="string">sd_mmc</merge>
-        </match>
-        <match key="storage.model" contains="microSD">
-          <merge key="storage.drive_type" type="string">micro_sd</merge>
         </match>
         <match key="storage.model" contains="MS/MS-PRO">
           <merge key="storage.drive_type" type="string">memory_stick</merge>
