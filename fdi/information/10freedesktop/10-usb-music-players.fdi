@@ -666,8 +666,14 @@
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mp4</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
-            <append key="portable_audio_player.audio_folders" type="strlist">BlackBerry/music/</append>
-            <append key="portable_audio_player.audio_folders" type="strlist">BlackBerry/videos/</append>
+	    <match key="@storage.originating_device:usb.product_id" int_outof="0x6;0x8004">
+              <append key="portable_audio_player.audio_folders" type="strlist">BlackBerry/music/</append>
+              <append key="portable_audio_player.audio_folders" type="strlist">BlackBerry/videos/</append>
+            </match>
+	    <match key="@storage.originating_device:usb.product_id" int="0x4">
+              <append key="portable_audio_player.audio_folders" type="strlist">blackberry/music/</append>
+              <append key="portable_audio_player.audio_folders" type="strlist">blackberry/videos/</append>
+            </match>
           </match>
 	  <match key="@storage.originating_device:usb.product_id" int="0x8004">
             <append key="portable_audio_player.audio_folders" type="strlist">home/user/music/</append>
