@@ -106,6 +106,17 @@
       </match>
     </match>
     
+    <match key="system.firmware.version" prefix="ASUS P4B266 ACPI BIOS Revision">
+      <match key="system.firmware.version" contains=" 1010">
+	<match key="system.hardware.primary_video.vendor" int="0x1002">	
+	  <match key="system.hardware.primary_video.product" int="0x4966">	
+	    <merge key="power_management.quirk.s3_bios" type="bool">true</merge>
+	    <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+          </match>
+        </match>
+      </match>
+    </match>
+
     <!-- another ASUS Mainboard, this need no quirk -->
     <match key="system.firmware.version" prefix_outof="ASUS M2N-E ACPI BIOS Revision;ASUS Striker ACPI BIOS Revision;ASUS A7V ACPI BIOS Revision">
       <merge key="power_management.quirk.none" type="bool">true</merge>
