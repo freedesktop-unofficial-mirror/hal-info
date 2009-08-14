@@ -531,7 +531,7 @@
             <remove key="info.capabilities" type="strlist">net.80203</remove>
       </match>
     </match>
-    <match key="info.parent" contains_outof="bdb_1904">
+    <match key="info.parent" contains="bdb_1904">
       <match key="info.parent" suffix="_if6">
             <remove key="info.capabilities" type="strlist">net.80203</remove>
       </match>
