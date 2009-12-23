@@ -103,6 +103,22 @@
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LG">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="X110">
+          <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
+          <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-Left   Volume down -->
+          <append key="input.keymap.data" type="strlist">e02f:search</append> <!-- Fn-F3   Search -->
+          <append key="input.keymap.data" type="strlist">e030:volumeup</append> <!-- Fn-Right   Volume up -->
+          <append key="input.keymap.data" type="strlist">e031:battery</append> <!-- Fn-F10   Info -->
+          <append key="input.keymap.data" type="strlist">e033:suspend</append> <!-- Fn-F12   Hibernate -->
+          <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F4   Sleep -->
+          <append key="input.keymap.data" type="strlist">e064:f22</append> <!-- Fn-F5   Touchpad disable -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- Fn-F6   satellite dish1 -->
+          <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-Down   Brightness down -->
+          <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-Up   Brightness up -->
+        </match>
+      </match>
+
       <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MEDIONNB">
         <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="A555">
           <append key="input.keymap.data" type="strlist">63:www</append> <!-- N button -->
