@@ -30,6 +30,12 @@
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix_ncase="micro-star">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="U100;U-100">
+          <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
+        </match>
+      </match>
+
       <match key="linux.sysfs_path" suffix="/backlight/thinkpad_screen">
         <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
