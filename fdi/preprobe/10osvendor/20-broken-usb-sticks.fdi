@@ -40,7 +40,9 @@
      <!-- Ignore the Huawei E220 USB HSDPA modem -->
      <match key="@storage.originating_device:usb.vendor_id" int="0x12d1">
        <match key="@storage.originating_device:usb.product_id" int="0x1003">
-         <merge key="info.ignore" type="bool">true</merge>
+	 <match key="@info.parent:scsi.type" string="cdrom">
+           <merge key="info.ignore" type="bool">true</merge>
+         </match>
        </match>
      </match>
 
