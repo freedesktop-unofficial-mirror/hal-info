@@ -596,7 +596,7 @@
 	<!-- Cowon -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0xe21">
 	  <!-- iAUDIO M3 -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x500">
+	  <match key="@storage.originating_device:usb.product_id" int="0x500">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
 	    <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
@@ -712,7 +712,7 @@
             <append key="portable_audio_player.audio_folders" type="strlist">blackberry/videos/</append>
           </match>
           <!-- Blackberry 8000 (Curve) -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x6">
+	  <match key="@storage.originating_device:usb.product_id" int="0x6">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mp4</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
@@ -720,7 +720,7 @@
             <append key="portable_audio_player.audio_folders" type="strlist">BlackBerry/videos/</append>
           </match>
           <!-- Blackberry 9000 (Bold) -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x8004">
+	  <match key="@storage.originating_device:usb.product_id" int="0x8004">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mp4</append>
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
@@ -1054,7 +1054,7 @@
             <append key="portable_audio_player.input_formats" type="strlist">audio/mpeg</append>
           </match>
 	  <!-- T30 UMS firmware v1.7 , S10 UMS firmware v1.05 -->
-	  <match key="@storage.originating_device:usb.product_id" int_outof="0x1023">
+	  <match key="@storage.originating_device:usb.product_id" int="0x1023">
             <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
