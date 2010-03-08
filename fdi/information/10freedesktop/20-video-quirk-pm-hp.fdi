@@ -311,6 +311,13 @@
         </match>
       </match>
 
+      <!-- This is Compaq nc8430, at least with F.16 BIOS. Blank system.hardware.product! -->
+      <match key="system.firmware.version" prefix="68YVD">
+        <match key="system.hardware.product" string="">
+          <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
+        </match>
+      </match>
+
     </match>
 
     <!-- HP Media Center PC m7330n w/ ATI RS480 [Radeon Xpress 200G Series] -->
