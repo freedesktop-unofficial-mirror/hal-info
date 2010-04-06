@@ -317,6 +317,12 @@
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
       </match>
+      <!-- HP NX9420 RH450EA -->
+      <match key="system.firmware.version" prefix="68YAF">
+        <match key="system.hardware.product" string="">
+          <merge key="power_management.quirk.none" type="bool">true</merge>
+        </match>
+      </match>
 
     </match>
 
