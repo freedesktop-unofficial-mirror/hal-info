@@ -22,23 +22,6 @@
           <append key="info.capabilities" type="strlist">input.keymap</append>
 	  
 	  <!-- We're so sorry... -->
- 	  <match key="/org/freedesktop/Hal/devices/computer:system.firmware.release_date" contains_outof="2009;2010;2011;2012;2013;2014;2015">
-            <!-- [make code:kernel define lower case (linux/input.h)]                    comment: description according to HP spec -->
-            <append key="input.keymap.data" type="strlist">e008:presentation</append>    <!-- presentation mode -->
-            <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>  <!-- brightness down -->
-            <append key="input.keymap.data" type="strlist">e017:brightnessup</append>    <!-- brightness up -->
-            <append key="input.keymap.data" type="strlist">e020:mute</append>            <!-- volume mute -->
-            <append key="input.keymap.data" type="strlist">e02e:volumedown</append>      <!-- volume down -->
-            <append key="input.keymap.data" type="strlist">e030:volumeup</append>        <!-- volume up  -->
-            <append key="input.keymap.data" type="strlist">e05f:sleep</append>           <!-- sleep -->
-            <append key="input.keymap.data" type="strlist">e06b:computer</append>        <!-- browser button (cf. bnc#550670 comment 17) -->
-            <append key="input.keymap.data" type="strlist">e06c:mail</append>	          <!-- envelope button (cf. bnc#550670 comment 17) -->
-            <append key="input.keymap.data" type="strlist">e06e:switchvideomode</append> <!-- LCD/CRT -->
-            <append key="input.keymap.data" type="strlist">e075:info</append>            <!-- info center -->
-            <append key="input.keymap.data" type="strlist">e078:wlan</append>            <!-- wireless toggle -->
-	  </match>
-
-	  <!-- We're so sorry... -->
           <match key="/org/freedesktop/Hal/devices/computer:system.firmware.release_date" contains_outof="2009;2010;2011;2012;2013;2014;2015">
             <!-- [make code:kernel define lower case (linux/input.h)]                    comment: description according to HP spec -->
             <append key="input.keymap.data" type="strlist">e008:presentation</append>    <!-- presentation mode -->
@@ -86,6 +69,11 @@
             <append key="input.keymap.data" type="strlist">e058:f22</append>    <!-- touchpad off -->
             <append key="input.keymap.data" type="strlist">e059:f23</append>    <!-- touchpad on  -->
 	  </match>
+
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4310s;4410s;4411s;4415s;4416s;4510s;4515s;4710s;6730s;Compaq 5X5;Compaq 515;Compaq 516;Compaq 615;Compaq 6530b;HP Mini 5102">
+            <!-- HP Compaq 4310s, 4410s, 4415s, 4416s, 4510s, 4515s, 4710s, 6730s, Compaq 5X5, Compaq 515, Compaq 516, Compaq 615, Compaq 6530b, HP Mini 5102 -->
+            <append key="input.keymap.data" type="strlist">e003:email</append>	<!-- envelope button -->
+          </match>
 
 	  <match key="/org/freedesktop/Hal/devices/computer:system.board.vendor" string="Quanta">
 	    <!-- HP Pavillion dv6315ea with empty system.hardware.* keys fd.o#19936 -->

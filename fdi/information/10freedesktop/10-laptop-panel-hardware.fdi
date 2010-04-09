@@ -36,6 +36,12 @@
         </match>
       </match>
 
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="Hewlett-Packard">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4310s;4410s;4411s;4415s;4416s;4510s;4515s;4710s;Compaq 5X5;Compaq 515;Compaq 516;Compaq 615;HP Mini 5102">
+          <merge key="laptop_panel.brightness_in_hardware" type="bool">false</merge>
+        </match>
+      </match>
+
       <match key="linux.sysfs_path" suffix="/backlight/thinkpad_screen">
         <merge key="laptop_panel.brightness_in_hardware" type="bool">true</merge>
       </match>
