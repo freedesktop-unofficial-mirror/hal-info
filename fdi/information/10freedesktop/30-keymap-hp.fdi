@@ -13,13 +13,27 @@
           <append key="input.keymap.data" type="strlist">e00b:camera</append>     <!-- camera -->
           <append key="input.keymap.data" type="strlist">e00c:media</append>      <!-- music -->
           <append key="input.keymap.data" type="strlist">e00e:dvd</append>      <!-- dvd -->
+	  <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (FnF9 on 6730b) (brightness down) -->
+	  <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (FnF10 on 6730b) (brightness up) -->
           <append key="input.keymap.data" type="strlist">e031:help</append>     <!-- FnF1 (help) -->
           <append key="input.keymap.data" type="strlist">e033:f23</append>      <!-- FIXME: Auto brightness -->
           <append key="input.keymap.data" type="strlist">e057:wlan</append>     <!-- Wlan -->
-	  <append key="input.keymap.data" type="strlist">e012:brightnessdown</append>	<!-- FnF7 (FnF9 on 6730b) (brightness down) -->
-	  <append key="input.keymap.data" type="strlist">e017:brightnessup</append>	<!-- FnF8 (FnF10 on 6730b) (brightness up) -->
-	  <append key="input.keymap.data" type="strlist">e06e:switchvideomode</append>   <!-- FnF4 (video switch) -->
+	  <append key="input.keymap.data" type="strlist">e06e:switchvideomode</append>   <!-- FnF4 (video switch LCD/CRT) -->
           <append key="info.capabilities" type="strlist">input.keymap</append>
+
+	  <!-- We're so sorry... -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.firmware.release_date" contains_outof="2009;2010;2011;2012;2013;2014;2015">
+            <!-- [make code:kernel define lower case (linux/input.h)]                    comment: description according to HP spec -->
+            <append key="input.keymap.data" type="strlist">e008:presentation</append>    <!-- presentation mode -->
+            <append key="input.keymap.data" type="strlist">e020:mute</append>            <!-- volume mute -->
+            <append key="input.keymap.data" type="strlist">e02e:volumedown</append>      <!-- volume down -->
+            <append key="input.keymap.data" type="strlist">e030:volumeup</append>        <!-- volume up  -->
+            <append key="input.keymap.data" type="strlist">e05f:sleep</append>           <!-- sleep -->
+            <append key="input.keymap.data" type="strlist">e06b:computer</append>        <!-- browser button (cf. bnc#550670 comment 17) -->
+            <append key="input.keymap.data" type="strlist">e06c:mail</append>            <!-- envelope button (cf. bnc#550670 comment 17) -->
+            <append key="input.keymap.data" type="strlist">e075:info</append>            <!-- info center -->
+            <append key="input.keymap.data" type="strlist">e078:wlan</append>            <!-- wireless toggle -->
+	  </match>
 
 	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_ncase="Tablet">
             <append key="input.keymap.data" type="strlist">e002:prog2</append>   <!-- Funny Key -->
