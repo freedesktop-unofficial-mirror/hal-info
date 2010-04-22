@@ -26,6 +26,7 @@
           </match>
 	</match>
       </match>
+
      <!-- some usb sticks don't like polling -->
      <match key="@storage.originating_device:usb.vendor_id" int="0x054c">
        <match key="@storage.originating_device:usb.product_id" int="0x008b">
@@ -37,6 +38,7 @@
          <merge key="storage.media_check_enabled" type="bool">false</merge>
        </match>
      </match>
+
      <!-- Ignore the Huawei E220 USB HSDPA modem -->
      <match key="@storage.originating_device:usb.vendor_id" int="0x12d1">
        <match key="@storage.originating_device:usb.product_id" int="0x1003">
@@ -45,6 +47,14 @@
          </match>
        </match>
      </match>
+
+     <!-- Don't probe the cdrom device on Appotech ax203 v3.3.x based picture  
+          frames, as it does not like being probed -->                         
+     <match key="@storage.originating_device:usb.vendor_id" int="0x1908">
+       <match key="@storage.originating_device:usb.product_id" int="0x1315">
+         <merge key="info.ignore" type="bool">true</merge>
+       </match>
+     </match>  
 
      <!-- Ignore the system partition on the Samsung YP S5 music player; the
           first one is the interesting one with the music, etc. LP #332913 -->
