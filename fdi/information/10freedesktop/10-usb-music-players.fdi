@@ -624,6 +624,7 @@
              <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
              <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
           </match>
+
 	  <!-- Windows Mobile PPC HTC Touch HD -->
           <match key="@storage.originating_device:usb.product_id" int="0xc25">
              <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
@@ -1209,6 +1210,23 @@
             <!-- portable_audio_player.folder_depth 2 -->
           </match>
 	</match>
+
+        <!-- Dell Computer Corp. -->
+        <match key="@storage.originating_device:usb.vendor_id" int="0x413c">
+          <!-- Android Phone, Dell Streak -->
+          <match key="@storage.originating_device:usb.product_id" int="0xb007">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/x-ms-wma</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/3gpp</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/mp4</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/aac</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/vnd.rn-realaudio</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/x-midi</append>
+             <append key="portable_audio_player.output_formats" type="strlist">audio/x-wav</append>
+             <append key="portable_audio_player.output_formats" type="strlist">application/ogg</append>
+             <append key="portable_audio_player.audio_folders" type="strlist">Music/</append>
+          </match>
+        </match>
 
       </match>
     </match>
