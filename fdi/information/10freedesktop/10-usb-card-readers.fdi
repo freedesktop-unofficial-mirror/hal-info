@@ -47,10 +47,7 @@
       <match key="storage.model" contains="Storage-SMC">
         <merge key="storage.drive_type" type="string">smart_media</merge>
       </match>
-      <match key="storage.model" contains="Storage-MMC">
-        <merge key="storage.drive_type" type="string">sd_mmc</merge>
-      </match>
-      <match key="storage.model" contains="Storage-SDC">
+      <match key="storage.model" contains_outof="Storage-MMC;Storage-SDC;Multi-Card">
         <merge key="storage.drive_type" type="string">sd_mmc</merge>
       </match>
 
