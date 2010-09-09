@@ -1091,11 +1091,17 @@
 
 	<!-- Amazon -->
 	<match key="@storage.originating_device:usb.vendor_id" int="0x1949">
-	  <!-- Amazon Kindle -->
+	  <!-- Amazon Kindle 1 -->
 	  <match key="@storage.originating_device:usb.product_id" int="0x0001">
 	    <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
 	    <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
 	  </match>
+	  <!-- Amazon Kindle 2 -->
+          <match key="@storage.originating_device:usb.product_id" int="0x2">
+            <addset key="portable_audio_player.access_method.protocols" type="strlist">storage</addset>
+	    <append key="portable_audio_player.audio_folders" type="strlist">music/</append>
+            <merge key="storage.requires_eject" type="bool">true</merge>
+          </match>
 	</match>
 
 	<!-- Insignia -->
