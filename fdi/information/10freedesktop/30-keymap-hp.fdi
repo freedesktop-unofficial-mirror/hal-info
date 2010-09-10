@@ -82,7 +82,7 @@
 	  <match key="/org/freedesktop/Hal/devices/computer:system.board.vendor" string="Quanta">
 	    <!-- HP Pavillion dv6315ea with empty system.hardware.* keys fd.o#19936 -->
 	    <match key="/org/freedesktop/Hal/devices/computer:system.board.product" string="30B7">
-	      <match key="/org/freedesktop/Hal/devices/computer:system.board.version" string="65.2B">
+	      <match key="/org/freedesktop/Hal/devices/computer:system.board.version" string_outof="65.2B;65.28">
                 <remove key="input.keymap.data" type="strlist">e008:presentation</remove>
                 <append key="input.keymap.data" type="strlist">e008:media</append> <!-- FIXME: quick play -->
 	      </match>
