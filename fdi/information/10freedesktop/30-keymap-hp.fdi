@@ -89,6 +89,11 @@
 	    </match>
 	  </match>
 
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="Presario CQ43;Presario CQ57;HP 635">
+            <!-- HP Compaq Presario CQ43, Presario CQ57, HP 635 -->
+            <append key="input.keymap.data" type="strlist">e066:switchvideomode</append>       <!-- FnF4 (video switch) -->
+          </match>
+
       	</match>
       </match>
     </match>
