@@ -63,7 +63,7 @@
             <append key="input.keymap.data" type="strlist">e059:help</append>   <!-- I key (high keycode: "info") -->
           </match>
 
-	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2510p;2530p">
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2510p;2530p;2760p">
             <!-- The 2510p seems to be unique in having a touchpad disable button despite being an enterprise model -->
             <remove key="input.keymap.data" type="strlist">e059:help</remove>
             <append key="input.keymap.data" type="strlist">e058:f22</append>    <!-- touchpad off -->
