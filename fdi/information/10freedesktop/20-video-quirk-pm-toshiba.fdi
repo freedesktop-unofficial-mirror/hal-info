@@ -49,7 +49,7 @@
       </match>
 
       <!-- Tecra Laptops -->
-      <match key="system.hardware.product" prefix="TECRA">
+      <match key="system.hardware.product" prefix_outof="TECRA;T8;T9">
         <match key="system.hardware.product" contains_outof="8100;8200; M9">
           <merge key="power_management.quirk.s3_mode" type="bool">true</merge>
         </match>
